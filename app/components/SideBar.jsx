@@ -1,7 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useSession, signOut } from "next-auth/react"
+
 const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
+  const { data, status } = useSession()
+
   return (
     <>
       {showSidebar ? (
@@ -39,7 +44,19 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
           <div className="mt-auto">
             <div className="text-sm md:text-base">Redes</div>
             <hr className="border-t border-main my-4 w-3/4" />
-            <button className="text-sm md:text-base">Login</button>
+            {status === "authenticated"
+              ? 
+                <div className="">
+                  <div className="text-sm md:text-base">Hola {data.user.name}</div>
+                  <button className="text-sm md:text-base" onClick={() => signOut()}>
+                    Logout
+                  </button>
+                </div>
+              : 
+                <Link href="recursos-humanos">
+                  <button className="text-sm md:text-base">Login</button>
+                </Link>
+            }
           </div>
         </div>
       </div>
