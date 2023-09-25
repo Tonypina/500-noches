@@ -36,10 +36,25 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
           </div>
           <hr className="border-t border-main my-4 w-3/4" />
           <nav className="space-y-4 mt-5">
-            <div className="text-sm md:text-base">Inicio</div>
+            <Link href="/">
+              <div className="text-sm md:text-base">Inicio</div>
+            </Link>
             <div className="text-sm md:text-base">Nosotros</div>
             <div className="text-sm md:text-base">Restaurantes</div>
             <div className="text-sm md:text-base">Contacto</div>
+
+            {status === "authenticated"
+              ? 
+                <div>
+                  <hr className="border-t border-main my-4" />
+                  <div className="text-sm md:text-base">Administración</div>
+                  <hr className="border-t border-main my-4" />
+                  <Link href="recursos-humanos">
+                    <div className="text-sm md:text-base">Vacantes</div>
+                  </Link>
+                </div>
+              : null
+            }
           </nav>
           <div className="mt-auto">
             <div className="text-sm md:text-base">Redes</div>

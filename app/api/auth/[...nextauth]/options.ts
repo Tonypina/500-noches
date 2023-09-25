@@ -16,6 +16,7 @@ export const options: NextAuthOptions = {
                     type: "password"
                 }
             },
+            
             async authorize(credentials, req) {
                 // Aquí tengo que traer la información del usuario
                 const user = {
@@ -32,4 +33,8 @@ export const options: NextAuthOptions = {
             }
         })
     ],
+
+    pages: {
+        signIn: '/auth/signin',
+    },
 }
