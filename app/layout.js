@@ -1,6 +1,7 @@
 import "./globals.css";
 import { PT_Serif } from "next/font/google";
 import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 const ptSerif = PT_Serif({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={ptSerif.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
