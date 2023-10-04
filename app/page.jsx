@@ -73,7 +73,7 @@ export default function Home() {
           <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
             <div className="text-main text-center">
               <Image
-                src="/espacio-500-chiapas.jpg"
+                src="/espacio-500-chiapas.png"
                 width={800}
                 height={450}
                 alt="Grupo 500 Noches"
