@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 
 import { headers } from 'next/headers'
 import AuthProvider from './context/AuthProvider'
+import Footer from "./components/Footer";
 
 const ptSerif = PT_Serif({ weight: ["400", "700"], subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }) {
         <AuthProvider session={session}>
           <Navbar />
           {children}
+          <Footer />
         </AuthProvider>
       </body>
     </html>
