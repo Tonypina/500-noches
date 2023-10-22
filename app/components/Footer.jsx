@@ -44,7 +44,7 @@ const Footer = () => {
         <hr className="border-t border-white my-4 w-full" />
       </div>
       <div className="flex justify-between">
-        <div>@2023, Grupo 500 Noches por ROSOFT</div>
+        <div>@2023, Grupo 500 Noches</div>
         <div className="flex">
           Siguenos:
           <div className="flex gap-2">

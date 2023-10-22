@@ -84,12 +84,12 @@ export default function Home() {
         </section>
         <section
           id="conoce-la-familia"
-          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2"
+          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 bg-[url(http://localhost:3000/azul-concreto.png)]"
         >
-          <h2 className="text-main text-md md:text-xlg font-bold text-center">
+          <h2 className="text-white text-md md:text-xlg font-bold text-center">
             Conoce a la Familia
           </h2>
-          <p className="text-main text-xs md:text-sm mt-4 text-center px-10">
+          <p className="text-white text-xs md:text-sm mt-4 text-center px-10">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
             repudiandae. Qui tempore, cum in assumenda eius laboriosam? Tempore
             suscipit, dicta, error laborum iure in nobis ullam ipsa quaerat odio

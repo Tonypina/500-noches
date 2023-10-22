@@ -33,7 +33,7 @@ const SwiperMeet = () => {
             imagen={
               <Image
                 src={"/restaurantes/500Noches/espacio500Noches.png"}
-                width={250}
+                width={270}
                 height={250}
                 alt="logo San Juan Leñero"
               />
@@ -54,7 +54,7 @@ const SwiperMeet = () => {
             imagen={
               <Image
                 src={"/restaurantes/nacionDelTaco/tacos.png"}
-                width={250}
+                width={270}
                 height={250}
                 alt="logo San Juan Leñero"
               />
@@ -75,7 +75,7 @@ const SwiperMeet = () => {
             imagen={
               <Image
                 src={"/restaurantes/merendero/espacioMerenderoMadero.png"}
-                width={250}
+                width={270}
                 height={250}
                 alt="logo San Juan Leñero"
               />
@@ -96,7 +96,7 @@ const SwiperMeet = () => {
             imagen={
               <Image
                 src={"/restaurantes/Peruano/espacioPeruano.png"}
-                width={250}
+                width={270}
                 height={250}
                 alt="logo San Juan Leñero"
               />
@@ -117,7 +117,7 @@ const SwiperMeet = () => {
             imagen={
               <Image
                 src={"/restaurantes/sanJuanLeñero/mesa.png"}
-                width={250}
+                width={270}
                 height={250}
                 alt="logo San Juan Leñero"
               />

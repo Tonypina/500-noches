@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);
+  const [navbarWhite, setNavbarWhite] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
   //Referencia para el Sidebar
@@ -38,6 +39,10 @@ const Navbar = () => {
       } else {
         setNavbarSticky(false);
       }
+
+      if (window.scrollY > 10) {
+        setNavbarSticky
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,21 +54,36 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full pt-2 px-10 ${
-        navbarSticky ? " shadow-md" : "bg-transparent "
+        navbarSticky ? " shadow-md bg-white" : "bg-transparent "
       } transition-all duration-300 ease-in-out z-50`}
     >
       <div className="container mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Image
-            src="/logos/Grupo500Noches.svg"
-            width={150}
-            height={150}
-            alt="Grupo 500 Noches"
-          />
+          { !navbarSticky ? 
+            <Image
+              src="/logos/Grupo500Noches.svg"
+              width={150}
+              height={150}
+              alt="Grupo 500 Noches"
+            />
+            :
+            <Image
+              src="/logos/Grupo500NochesOscuro.svg"
+              width={150}
+              height={150}
+              alt="Grupo 500 Noches"
+            />
+          }
         </div>
         <div>
           <button
-            className="text-white hover:text-gray-800 focus:outline-none"
+            className={`
+              ${ !navbarSticky ?
+                "text-white hover:text-gray-800"
+                :
+                "hover:text-blue-800"
+              }
+              focus:outline-none`}
             onClick={() => setShowSidebar(!showSidebar)}
           >
             <Menu />
