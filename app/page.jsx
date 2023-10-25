@@ -10,9 +10,14 @@ export default function Home() {
       <main className=" min-h-screen items-center">
         <section
           id="hero"
-          className="min-w-screen md:mx-auto bg-black hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0"
+          className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0"
         >
-          <div className="md:w-1/2 md:flex items-center justify-center hidden">
+          <div className="video brightness-50 absolute">
+            <video autoPlay muted loop>
+              <source src="/videos/cinema.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div className="md:w-1/2 md:flex items-center justify-center hidden z-10">
             <Image
               src="/logos/LogoG500NochesSilueta.svg"
               width={250}
@@ -20,7 +25,7 @@ export default function Home() {
               alt="Grupo 500 Noches"
             />
           </div>
-          <div className="md:w-1/2 flex flex-col items-center justify-center ">
+          <div className="md:w-1/2 flex flex-col items-center justify-center z-10">
             <div className="text-white text-center content-center	justify-center md:px-10 md:pr-20">
               <p className="text-sm md:text-lg ">
                 En cada Rincón, en cada plato
@@ -43,7 +48,7 @@ export default function Home() {
               sectionId={"about-us"}
             />
           </div>
-          <div className="md:hidden flex justify-center ">
+          <div className="md:hidden flex justify-center z-10">
             <Image
               src="/logos/LogoG500NochesSilueta.svg"
               width={150}
@@ -122,7 +127,7 @@ export default function Home() {
         </section>
         <section
           id="directorio"
-          className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2"
+          className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 "
         >
           <h2 className="text-main text-md md:text-xlg font-bold text-center">
             Conoce a la Familia
@@ -134,6 +139,30 @@ export default function Home() {
             repudiandae.
           </p>
           <VisualizadorPDF />
+        </section>
+
+        <section 
+          id="contacto"
+          className="hero"
+        >
+          <div className="gap-0 columns-2">
+            <div className="container h-screen overflow-hidden">
+              <div className="brightness-50">
+                <img src="/galeria/espacio500Noches.png" alt="Imagen de contacto" className="w-full absolute"/>
+              </div>
+              <div className="md:w-1/2 md:flex items-center justify-center absolute h-full z-10">
+                <Image
+                  src="/logos/LogoG500NochesSilueta.svg"
+                  width={250}
+                  height={250}
+                  alt="Grupo 500 Noches"
+                />
+              </div>
+            </div>
+            <div className="container">
+              Hola
+            </div>
+          </div>
         </section>
       </main>
     </>
