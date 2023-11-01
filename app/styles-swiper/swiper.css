@@ -269,4 +269,12 @@
   }
 }
 
+.swiper-slide-active {
+  transition: 0.5s !important;
+}
+
+.swiper-slide-active:hover {
+  transform: scale(1.2) !important;
+}
+
 /* Slide styles end */

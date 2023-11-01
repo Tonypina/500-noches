@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image";
 import Boton from "./components/Boton";
 import SwiperMeet from "./components/SwiperMeet";
 import Gallery from "./components/Gallery";
 import VisualizadorPDF from "./components/VisualizadorPDF";
+import { Formik } from 'formik';
 
 export default function Home() {
   return (
@@ -151,16 +154,103 @@ export default function Home() {
                 <img src="/galeria/espacio500Noches.png" alt="Imagen de contacto" className="w-full absolute"/>
               </div>
               <div className="md:w-1/2 md:flex items-center justify-center absolute h-full z-10">
-                <Image
-                  src="/logos/LogoG500NochesSilueta.svg"
-                  width={250}
-                  height={250}
-                  alt="Grupo 500 Noches"
-                />
+                <div className="">
+                  <Image
+                    src="/logos/LogoG500NochesSilueta.svg"
+                    width={250}
+                    height={250}
+                    alt="Grupo 500 Noches"
+                    className="block"
+                  />
+                  <Image
+                    src="/logos/Grupo500Noches.svg"
+                    width={250}
+                    height={250}
+                    alt="Grupo 500 Noches"
+                    className="mt-10 block"
+                  />
+                </div>
               </div>
             </div>
-            <div className="container">
-              Hola
+            <div className="container justify-center items-center px-20 py-16">
+              <Formik
+                initialValues={{ nombre: '', correo: '' }}
+                validate={values => {
+                  const errors = {};
+                  if (!values.correo) {
+                    errors.correo = 'Required';
+                  } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.correo)
+                  ) {
+                    errors.correo = 'Invalid email address';
+                  }
+                  return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                  setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                  }, 400);
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting,
+                  /* and other goodies */
+                }) => (
+                  <form onSubmit={handleSubmit}>
+                    <div className="space-y-12">
+
+                      <div className="border-b border-gray-900/10 pb-12">
+                        <h1 className="text-base font-semibold text-xl leading-7 text-gray-900">Ponte en contacto con nosotros</h1>
+                        <p className="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+
+                        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                          <div className="sm:col-span-3">
+                            <label htmlFor="nombre" className="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
+                            <div className="mt-2">
+                              <input type="text" name="nombre" id="nombre" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            </div>
+                          </div>
+
+                          <div className="sm:col-span-3">
+                            <label htmlFor="apellido" className="block text-sm font-medium leading-6 text-gray-900">Apellido</label>
+                            <div className="mt-2">
+                              <input type="text" name="apellido" id="apellido" autoComplete="family-name" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            </div>
+                          </div>
+
+                          <div className="col-span-full">
+                            <label htmlFor="correo" className="block text-sm font-medium leading-6 text-gray-900">Correo electrónico</label>
+                            <div className="mt-2">
+                              <input id="correo" name="correo" type="correo" autoComplete="correo" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            </div>
+                          </div>
+
+                          <div className="col-span-full">
+                            <label htmlFor="mensaje" className="block text-sm font-medium leading-6 text-gray-900">Mensaje</label>
+                            <div className="mt-2">
+                              <textarea id="mensaje" name="mensaje" rows="3" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            </div>
+                            <p className="mt-3 text-sm leading-6 text-gray-600">Escríbenos un mensaje.</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div className="mt-6 flex items-center justify-center gap-x-6">
+                      <button type="submit" className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
+                    </div>
+                  </form>
+                )}
+              </Formik>
             </div>
           </div>
         </section>

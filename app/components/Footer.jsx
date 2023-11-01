@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className=" text-white text-xs md:text-xs bg-[url(http://localhost:3000/azul-concreto.png)] p-7 pt-10">
@@ -13,13 +15,43 @@ const Footer = () => {
           />
         </div>
         <div>
-          MAPA DEL SITIO
-          <ul className="mt-3">
-            <li>- Inicio</li>
-            <li>- Sobre Nosotros</li>
-            <li>- Galería</li>
-            <li>- Contacto</li>
-          </ul>
+          <h1 className="mb-4">MAPA DEL SITIO</h1>
+          <div className="columns-2">
+              <ul>
+                <li>
+                  <Link href="#inicio">
+                    Inicio
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#about-us">
+                    Nosotros
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#conoce-la-familia">
+                    Restaurantes
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link href="#galeria">
+                    Galería
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#directorio">
+                    Directorio
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#contacto">
+                    Contacto
+                  </Link>
+                </li>
+              </ul>
+            </div>
         </div>
         <div>
           CONTACTO

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .slide-size {
   width: 50rem !important;
   height: 25rem !important;
@@ -30,4 +34,4 @@
 
 .card-shadow {
   box-shadow: 5px 5px 10px 0px rgb(42, 42, 42, 0.2);
-}
+} 

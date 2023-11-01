@@ -6,6 +6,14 @@ import { useSession, signOut } from "next-auth/react"
 const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
   const { data, status } = useSession()
 
+  const scrollToSection = (sectionId) => {
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {showSidebar ? (
@@ -35,13 +43,25 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
             />
           </div>
           <hr className="border-t border-main my-4 w-full" />
-          <nav className="space-y-4 mt-5">
+          <nav className="mt-5">
             <Link href="/">
-              <div className="text-sm md:text-base">Inicio</div>
+              <div className="py-3 text-sm md:text-base">Inicio</div>
             </Link>
-            <div className="text-sm md:text-base">Nosotros</div>
-            <div className="text-sm md:text-base">Restaurantes</div>
-            <div className="text-sm md:text-base">Contacto</div>
+            <Link href="#about-us">
+              <div className="py-3 text-sm md:text-base">Nosotros</div>
+            </Link>
+            <Link href="#conoce-la-familia">
+              <div className="py-3 text-sm md:text-base">Restaurantes</div>
+            </Link>
+            <Link href="#galeria">
+              <div className="py-3 text-sm md:text-base">Galería</div>
+            </Link>
+            <Link href="#directorio">
+              <div className="py-3 text-sm md:text-base">Directorio</div>
+            </Link>
+            <Link href="#contacto">
+              <div className="py-3 text-sm md:text-base">Contacto</div>
+            </Link>
 
             {status === "authenticated"
               ? 

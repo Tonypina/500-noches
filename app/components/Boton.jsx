@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 
 const Boton = ({ contenido, style, sectionId, type, variante }) => {
   const scrollToSection = (sectionId) => {
-    console.log(sectionId);
+
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
