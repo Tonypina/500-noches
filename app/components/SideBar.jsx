@@ -45,32 +45,32 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
           <hr className="border-t border-main my-4 w-full" />
           <nav className="mt-5">
             <Link href="/">
-              <div className="py-3 text-sm md:text-base">Inicio</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Inicio</div>
             </Link>
             <Link href="#about-us">
-              <div className="py-3 text-sm md:text-base">Nosotros</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Nosotros</div>
             </Link>
             <Link href="#conoce-la-familia">
-              <div className="py-3 text-sm md:text-base">Restaurantes</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Restaurantes</div>
             </Link>
             <Link href="#galeria">
-              <div className="py-3 text-sm md:text-base">Galería</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Galería</div>
             </Link>
             <Link href="#directorio">
-              <div className="py-3 text-sm md:text-base">Directorio</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Directorio</div>
             </Link>
             <Link href="#contacto">
-              <div className="py-3 text-sm md:text-base">Contacto</div>
+              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">Contacto</div>
             </Link>
 
             {status === "authenticated"
               ? 
                 <div>
                   <hr className="border-t border-main my-4" />
-                  <div className="text-sm md:text-base">Administración</div>
+                  <div className="text-sm md:text-base duration-300 hover:scale-110">Administración</div>
                   <hr className="border-t border-main my-4" />
                   <Link href="recursos-humanos">
-                    <div className="text-sm md:text-base">Vacantes</div>
+                    <div className="text-sm md:text-base duration-300 hover:scale-110">Vacantes</div>
                   </Link>
                 </div>
               : null
@@ -78,22 +78,28 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
           </nav>
           <div className="mt-auto">
             <div className="text-sm md:text-base flex justify-around gap-10 mb-6 ">
-              <Facebook size={25} />
-              <Instagram size={25} />
-              <Linkedin size={25} absoluteStrokeWidth={true} />
+              <Link href="https://www.facebook.com/500nochessancristobal">
+                <Facebook size={25} className="duration-300 hover:scale-110"/>
+              </Link>
+              <Link href="https://www.instagram.com/cafebar500noches_/">
+                <Instagram size={25} className="duration-300 hover:scale-110"/>
+              </Link>
+              <Link href="https://mx.linkedin.com/company/grupo-500-noches">
+                <Linkedin size={25} absoluteStrokeWidth={true} className="duration-300 hover:scale-110"/>
+              </Link>
             </div>
             <hr className="border-t border-main my-4 w-full" />
             {status === "authenticated"
               ? 
                 <div className="">
                   <div className="text-sm md:text-base">Hola {data.user.name}</div>
-                  <button className="text-sm md:text-base" onClick={() => signOut()}>
+                  <button className="text-sm md:text-base duration-300 hover:scale-110" onClick={() => signOut()}>
                     Logout
                   </button>
                 </div>
               : 
                 <Link href="recursos-humanos">
-                  <button className="text-sm md:text-base">Login</button>
+                  <button className="text-sm md:text-base duration-300 hover:scale-110">Login</button>
                 </Link>
             }
           </div>
