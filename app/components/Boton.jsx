@@ -1,9 +1,11 @@
 "use client";
 import { Button } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
+import useStore from "./store";
 
 const Boton = ({ contenido, style, sectionId, type, variante, storeId }) => {
   const router = useRouter();
+  const { setSelectedStore } = useStore();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -13,6 +15,7 @@ const Boton = ({ contenido, style, sectionId, type, variante, storeId }) => {
   };
 
   const redirectStore = (storeId) => {
+    setSelectedStore(storeId);
     router.push(`/${storeId}`);
   };
 
