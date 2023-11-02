@@ -41,7 +41,7 @@ const SwiperMeet = () => {
             }
             logo={
               <Image
-                src="/logos/500 NOCHES-01.svg"
+                src="/logos/500Noches.svg"
                 width={100}
                 height={100}
                 alt="Logo 500 noches"
