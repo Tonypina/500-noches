@@ -30,12 +30,13 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow rounded-lg">
           {/* Cafe 500 Noches */}
           <CardContent
+            id={1}
             imagen={
               <Image
                 src={"/restaurantes/500Noches/espacio500Noches.png"}
                 width={270}
                 height={250}
-                alt="logo San Juan Leñero"
+                alt="logo Cafe 500 Noches "
               />
             }
             logo={
@@ -51,6 +52,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/*La Nación del taco */}
           <CardContent
+            id={2}
             imagen={
               <Image
                 src={"/restaurantes/nacionDelTaco/tacos.png"}
@@ -72,6 +74,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Merendero Madero */}
           <CardContent
+            id={3}
             imagen={
               <Image
                 src={"/restaurantes/merendero/espacioMerenderoMadero.png"}
@@ -93,6 +96,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Peruano */}
           <CardContent
+            id={4}
             imagen={
               <Image
                 src={"/restaurantes/Peruano/espacioPeruano.png"}
@@ -114,6 +118,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* San Juan Leñero */}
           <CardContent
+            id={5}
             imagen={
               <Image
                 src={"/restaurantes/sanJuanLeñero/mesa.png"}
@@ -135,6 +140,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Sarajevo */}
           <CardContent
+            id={6}
             imagen={
               <Image
                 src={"/restaurantes/sarajevo/espacioSarajevo.png"}

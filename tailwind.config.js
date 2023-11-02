@@ -23,6 +23,7 @@ module.exports = withMT({
       colors: {
         white: "#F6F7F4",
         main: "#0C4457",
+        second: "#4E687D",
         gold: "#AB9753",
       },
       contianer: {
@@ -30,6 +31,7 @@ module.exports = withMT({
       },
       backgroundImage: {
         "footer-texture": "http://localhost:3000/azul-concreto.png",
+        "textura-prueba": "http://localhost:3000/galeria/texturas/306.jpg",
       },
     },
   },
