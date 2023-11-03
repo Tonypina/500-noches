@@ -15,7 +15,7 @@ import { redirect } from "next";
   export function LoginCard() {
 
     const [ loginValues, setLoginValues ] = useState({
-      user: '',
+      email: '',
       pass: ''
     })
 
@@ -34,7 +34,7 @@ import { redirect } from "next";
         const callbackUrl = '/recursos-humanos'
 
         let res = await signIn("credentials", {
-          username: loginValues.user,
+          email: loginValues.user,
           password: loginValues.pass,
           callbackUrl,
           redirect: false,
@@ -69,15 +69,15 @@ import { redirect } from "next";
 
         <CardBody className="flex flex-col gap-4">
           <div className="h-20">
-            <label class="block text-gray-700 font-bold mb-2" for="user">
-                Username
+            <label class="block text-gray-700 font-bold mb-2" for="email">
+                Correo electrónico
             </label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-              id="username" 
+              id="email" 
               type="text" 
-              placeholder="Username"
-              name="user"
-              value={loginValues.user}
+              placeholder="ejemplo@email.com"
+              name="email"
+              value={loginValues.email}
               onChange={handleOnChange}/>
           </div>
           <div className="h-20">

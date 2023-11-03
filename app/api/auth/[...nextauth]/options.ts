@@ -1,16 +1,19 @@
 import type  { NextAuthOptions } from 'next-auth'
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
 import CredentialsProvider from 'next-auth/providers/credentials'
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 export const options: NextAuthOptions = {
     providers: [
         CredentialsProvider({
             name: "Credentials",
             credentials: {
-                username: {
-                    label: "Usuario:",
+                email: {
+                    label: "Correo:",
                     type: "text",
-                    placeholder: "tu-usuario"
+                    placeholder: "ejemplo@email.com"
                 },
                 password: {
                     label: "Contraseña:",
@@ -20,14 +23,27 @@ export const options: NextAuthOptions = {
             
             async authorize(credentials, req) {
                 // Aquí tengo que traer la información del usuario
-                const user = {
-                    id: "42",
-                    name: "Prueba",
-                    password: "prueba"
-                }
+                const user = await prisma.users.findFirst({
+                    where: {
+                        email: credentials?.email
+                    }
+                });
 
-                if (credentials?.username === user.name && credentials?.password === user.password) {
-                    return user
+                if (user != null) {
+
+                    var bcrypt = require('bcryptjs')
+    
+                    bcrypt.genSalt(10, function(err, salt) {
+                        bcrypt.hash(credentials?.password, salt, function(err, hash) {
+                            
+                            bcrypt.compare(hash, user.password, function(err, res) {
+                                if (res) {                                
+                                    return user
+                                }
+                            })
+    
+                        })
+                    })
                 }
 
                 return null

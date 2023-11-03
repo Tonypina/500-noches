@@ -78,13 +78,13 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
           </nav>
           <div className="mt-auto">
             <div className="text-sm md:text-base flex justify-around gap-10 mb-6 ">
-              <Link href="https://www.facebook.com/500nochessancristobal">
+              <Link href="https://www.facebook.com/500nochessancristobal" target="_blank" rel="noreferrer">
                 <Facebook size={25} className="duration-300 hover:scale-110"/>
               </Link>
-              <Link href="https://www.instagram.com/cafebar500noches_/">
+              <Link href="https://www.instagram.com/cafebar500noches_/" target="_blank" rel="noreferrer">
                 <Instagram size={25} className="duration-300 hover:scale-110"/>
               </Link>
-              <Link href="https://mx.linkedin.com/company/grupo-500-noches">
+              <Link href="https://mx.linkedin.com/company/grupo-500-noches" target="_blank" rel="noreferrer">
                 <Linkedin size={25} absoluteStrokeWidth={true} className="duration-300 hover:scale-110"/>
               </Link>
             </div>
