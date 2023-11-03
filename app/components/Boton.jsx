@@ -7,34 +7,31 @@ const Boton = ({ contenido, style, sectionId, type, variante, storeId }) => {
   const router = useRouter();
   const { setSelectedStore } = useStore();
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  const redirectStore = (storeId) => {
+  const redirectStore = () => {
     setSelectedStore(storeId);
     router.push(`/${storeId}`);
   };
+
+  const handleClick =
+    type === "scroll"
+      ? scrollToSection
+      : type === "tienda"
+      ? redirectStore
+      : () => console.log("---");
 
   return (
     <Button
       variant={variante}
       radius="lg"
       className={`text-xsm md:text-sm ${style} hover:bg-main hover:text-white hover:border-white`}
-      onClick={
-        type == "scroll"
-          ? () => scrollToSection(sectionId)
-          : type == "tienda"
-          ? () => {
-              redirectStore(storeId);
-            }
-          : () => {
-              console.log("---");
-            }
-      }
+      onClick={handleClick}
     >
       {contenido}
     </Button>

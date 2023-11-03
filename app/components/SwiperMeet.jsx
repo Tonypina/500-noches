@@ -2,9 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import CardContent from "./CardContent";
-
 import "../styles-swiper/swiper.css";
-
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Image from "next/image";
@@ -30,7 +28,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow rounded-lg">
           {/* Cafe 500 Noches */}
           <CardContent
-            id={1}
+            id={"cafe-500-noches"}
             imagen={
               <Image
                 src={"/restaurantes/500Noches/espacio500Noches.png"}
@@ -52,7 +50,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/*La Nación del taco */}
           <CardContent
-            id={2}
+            id={"la-nacion-del-taco"}
             imagen={
               <Image
                 src={"/restaurantes/nacionDelTaco/tacos.png"}
@@ -74,7 +72,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Merendero Madero */}
           <CardContent
-            id={3}
+            id={"merendero-madero"}
             imagen={
               <Image
                 src={"/restaurantes/merendero/espacioMerenderoMadero.png"}
@@ -96,7 +94,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Peruano */}
           <CardContent
-            id={4}
+            id={"peruano"}
             imagen={
               <Image
                 src={"/restaurantes/Peruano/espacioPeruano.png"}
@@ -118,7 +116,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* San Juan Leñero */}
           <CardContent
-            id={5}
+            id={"san-juan-leñero"}
             imagen={
               <Image
                 src={"/restaurantes/sanJuanLeñero/mesa.png"}
@@ -140,7 +138,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* Sarajevo */}
           <CardContent
-            id={6}
+            id={"sarajevo"}
             imagen={
               <Image
                 src={"/restaurantes/sarajevo/espacioSarajevo.png"}

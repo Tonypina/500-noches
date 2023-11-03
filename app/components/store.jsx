@@ -1,36 +1,42 @@
-import create from "zustand";
+import { create } from "zustand";
 
 const useStore = create((set) => ({
   storeData: {
-    1: {
+    "cafe-500-noches": {
       name: "Café Bar 500 Noches",
       description: "Descripción de la Tienda 1",
       srcImagen: "logos/500Noches.svg",
+      descripcion: "Descripción",
     },
-    6: {
+    sarajevo: {
       name: "Sarajevo Café Jardín",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/Sarajevo.svg",
+      descripcion: "Descripción",
     },
-    5: {
+    "san-juan-leñero": {
       name: "San Juan Leñero",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/SanJuanLeñero.svg",
+      descripcion: "Descripción",
     },
-    4: {
+    peruano: {
       name: "Peruano Cevichería",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/Peruano.svg",
+      descripcion: "Descripción",
     },
-    2: {
+    "la-nacion-del-taco": {
       name: "La Nación del taco",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
+      descripcion: "Descripción",
     },
-    3: {
+    "merendero-madero": {
       name: "Merendero Madero",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/MerenderoMadero.svg",
+      descripcion: "Descripción",
     },
   },
   selectedStore: null, // Almacenará la tienda seleccionada

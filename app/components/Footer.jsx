@@ -17,41 +17,29 @@ const Footer = () => {
         <div>
           <h1 className="mb-4">MAPA DEL SITIO</h1>
           <div className="columns-2">
-              <ul>
-                <li>
-                  <Link href="#inicio">
-                    Inicio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#about-us">
-                    Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#conoce-la-familia">
-                    Restaurantes
-                  </Link>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <Link href="#galeria">
-                    Galería
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#directorio">
-                    Directorio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contacto">
-                    Contacto
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li>
+                <Link href="#inicio">Inicio</Link>
+              </li>
+              <li>
+                <Link href="#about-us">Nosotros</Link>
+              </li>
+              <li>
+                <Link href="#conoce-la-familia">Restaurantes</Link>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <Link href="#galeria">Galería</Link>
+              </li>
+              <li>
+                <Link href="#directorio">Directorio</Link>
+              </li>
+              <li>
+                <Link href="#contacto">Contacto</Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           CONTACTO
@@ -63,7 +51,9 @@ const Footer = () => {
         <div>
           SUCURSALES
           <ul className="mt-3">
-            <li>- Café Bar 500 Noches</li>
+            <li>
+              <Link href="/1">- Café Bar 500 Noches</Link>
+            </li>
             <li>- Sarajevo Café Jardín</li>
             <li>- San Juan Leñero</li>
             <li>- Peruano Cevichería</li>

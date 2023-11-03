@@ -3,9 +3,20 @@ import Image from "next/image";
 import Eslogan from "../components/Eslogan";
 import AboutUs from "../components/AboutUs";
 import useStore from "../components/store";
+import React, { useEffect } from "react";
+import Loading from "../components/Loading";
 
 const Store = ({ params }) => {
-  const { selectedStore } = useStore();
+  const { selectedStore, setSelectedStore } = useStore();
+  useEffect(() => {
+    if (!selectedStore) {
+      setSelectedStore(params.storeId);
+    }
+  }, [selectedStore, setSelectedStore, params.storeId]);
+
+  if (!selectedStore) {
+    return <Loading />;
+  }
 
   return (
     <main className=" min-h-screen items-center">
