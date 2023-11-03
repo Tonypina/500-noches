@@ -51,9 +51,7 @@ const Footer = () => {
         <div>
           SUCURSALES
           <ul className="mt-3">
-            <li>
-              <Link href="/1">- Café Bar 500 Noches</Link>
-            </li>
+            <li>- Café Bar 500 Noches</li>
             <li>- Sarajevo Café Jardín</li>
             <li>- San Juan Leñero</li>
             <li>- Peruano Cevichería</li>
