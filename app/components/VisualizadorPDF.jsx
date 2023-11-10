@@ -1,5 +1,3 @@
-"use client";
-
 const VisualizadorPDF = () => {
   return (
     <>
