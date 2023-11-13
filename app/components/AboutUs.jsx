@@ -4,10 +4,7 @@ import useStore from "./store";
 const AboutUs = () => {
   const { selectedStore } = useStore();
   return (
-    <section
-      id="about-us"
-      className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap"
-    >
+    <section className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap">
       <div className="md:w-1/2 flex flex-col px-10 ">
         <p className="text-xs md:text-sm text-gold mb-3">Sobre Nosotros</p>
         <h2 className="text-main text-md md:text-xlg font-bold">

@@ -4,7 +4,7 @@ import useStore from "./store";
 
 const Eslogan = () => {
   const { selectedStore } = useStore();
-  console.log(selectedStore);
+  //console.log(selectedStore);
   return (
     <div className="md:w-1/2 flex flex-col items-center justify-center z-10">
       <div className="text-white text-center content-center	justify-center md:px-10 md:pr-20">

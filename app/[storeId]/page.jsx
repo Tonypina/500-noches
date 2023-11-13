@@ -6,6 +6,7 @@ import useStore from "../components/store";
 import React, { useEffect } from "react";
 import Loading from "../components/Loading";
 import PlatillosPrincipales from "../components/PlatillosPrincipales";
+import Sucursales from "../components/Sucursales";
 
 const Store = ({ params }) => {
   const { selectedStore, setSelectedStore } = useStore();
@@ -46,6 +47,7 @@ const Store = ({ params }) => {
       </section>
       <AboutUs />
       <PlatillosPrincipales />
+      <Sucursales />
     </main>
   );
 };
