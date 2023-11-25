@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar";
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);
