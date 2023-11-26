@@ -92,7 +92,7 @@ export default function Home() {
         </section>
         <section
           id="conoce-la-familia"
-          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 bg-[url(http://localhost:3000/azul-concreto.png)]"
+          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 bg-[url(https://rossoft.com.mx/azul-concreto.png)]"
         >
           <h2 className="text-white text-md md:text-xlg font-semibold text-center">
             Conoce a la Familia
