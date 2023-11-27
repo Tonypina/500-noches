@@ -110,7 +110,7 @@ const Sucursales = () => {
               <div className="flex items-center justify-center  px-8">
                 <div className="w-full flex justify-center items-center h-screen ">
                   <embed
-                    src="http://localhost:3000/pdf/G500-Folleto-SucursalesC.pdf"
+                    src="https://rossoft.com.mx/pdf/G500-Folleto-SucursalesC.pdf"
                     type="application/pdf"
                     className="w-full md:w-5/5 h-4/5 "
                   />
