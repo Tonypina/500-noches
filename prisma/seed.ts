@@ -17,9 +17,9 @@ async function main() {
         where: { userId: 1 },
         update: {},
         create: {
-            firstName: 'admin',
-            lastName: 'admin',
-            email: 'admin@rosoft.mx',
+            firstName: 'soporte',
+            lastName: 'soporte',
+            email: 'soporte@rossoft.com.mx',
             password: pass_hash
         }
     })
