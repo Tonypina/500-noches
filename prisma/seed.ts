@@ -13,13 +13,12 @@ async function main() {
         })
     })
 
-    console.log("Hola");
-    
-
     const admin = await prisma.users.create({
-        name: 'soporte',
-        email: 'soporte@rossoft.com.mx',
-        password: pass_hash
+        data: {
+            name: 'soporte',
+            email: 'soporte@rossoft.com.mx',
+            password: pass_hash
+        },
     })
 }
 
