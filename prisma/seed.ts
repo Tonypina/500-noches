@@ -13,7 +13,7 @@ async function main() {
         })
     })
 
-    const admin = await prisma.users.create({
+    const user = await prisma.user.create({
         data: {
             name: 'soporte',
             email: 'soporte@rossoft.com.mx',

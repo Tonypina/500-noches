@@ -23,7 +23,7 @@ export const options: NextAuthOptions = {
             
             async authorize(credentials, req) {
                 // Aquí tengo que traer la información del usuario
-                const user = await prisma.users.findFirst({
+                const user = await prisma.user.findFirst({
                     where: {
                         email: credentials?.email
                     }
