@@ -2,17 +2,16 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
 
-var bcrypt = require('bcryptjs')
-
-var pass_hash
-
-bcrypt.genSalt(10, function(err , salt ) {
-    bcrypt.hash("M4rc0o911/.", salt, function(err , hash ) {
-        pass_hash = hash
-    })
-})
-
 async function main() {
+    var bcrypt = require('bcryptjs')
+
+    var pass_hash
+
+    bcrypt.genSalt(10, function(err , salt ) {
+        bcrypt.hash("S0p0rt3Ross0ft", salt, function(err , hash ) {
+            pass_hash = hash
+        })
+    })
     const admin = await prisma.users.upsert({
         where: { userId: 1 },
         update: {},
