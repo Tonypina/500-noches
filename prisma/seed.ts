@@ -12,15 +12,14 @@ async function main() {
             pass_hash = hash
         })
     })
-    const admin = await prisma.users.upsert({
-        where: { userId: 1 },
-        update: {},
-        create: {
-            firstName: 'soporte',
-            lastName: 'soporte',
-            email: 'soporte@rossoft.com.mx',
-            password: pass_hash
-        }
+
+    console.log("Hola");
+    
+
+    const admin = await prisma.users.create({
+        name: 'soporte',
+        email: 'soporte@rossoft.com.mx',
+        password: pass_hash
     })
 }
 

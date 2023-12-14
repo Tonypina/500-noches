@@ -8,12 +8,13 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model users {
-  userId        Int         @id @default(autoincrement())
-  registeredAt  DateTime    @default(now())
-  firstName     String      @db.VarChar(250)
-  lastName      String      @db.VarChar(250)
+model User {
+  id            Int         @id @default(autoincrement())
+  name          String      @db.VarChar(250)
   email         String      @db.VarChar(250)
   password      String      @db.VarChar(250)
   isActive      String      @default("1") @db.Char(1)
+  createdAt     DateTime    @default(now())
+
+  @@map("users")
 }
