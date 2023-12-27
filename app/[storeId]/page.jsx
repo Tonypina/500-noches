@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import Loading from "../components/Loading";
 import PlatillosPrincipales from "../components/PlatillosPrincipales";
 import Sucursales from "../components/Sucursales";
+import ReviewCard from "../components/ReviewCard";
 
 const Store = ({ params }) => {
   const { selectedStore, setSelectedStore } = useStore();
@@ -48,6 +49,37 @@ const Store = ({ params }) => {
       <AboutUs />
       <PlatillosPrincipales />
       <Sucursales />
+      <div className="mt-5">
+        <p className="text-center text-xs md:text-sm text-gold ">Reseñas</p>
+        <h2 className="text-main text-md md:text-xlg font-semibold text-center">
+          ¿Qué dicen las personas sobre nosotros?
+        </h2>
+        <p className="text-main text-xs md:text-sm mt-4 text-center px-10">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia
+          ullam iste numquam error voluptatem labore debitis aut hic
+          perspiciatis,
+        </p>
+        <div className="flex flex-wrap justify-center">
+          <ReviewCard
+            tienda={selectedStore.name}
+            opinion={selectedStore.comentarios[0].comentario}
+            name={selectedStore.comentarios[0].nombrePersona}
+            ciudad={selectedStore.comentarios[0].tienda}
+          />
+          <ReviewCard
+            tienda={selectedStore.name}
+            opinion={selectedStore.comentarios[1].comentario}
+            name={selectedStore.comentarios[1].nombrePersona}
+            ciudad={selectedStore.comentarios[1].tienda}
+          />
+          <ReviewCard
+            tienda={selectedStore.name}
+            opinion={selectedStore.comentarios[2].comentario}
+            name={selectedStore.comentarios[2].nombrePersona}
+            ciudad={selectedStore.comentarios[2].tienda}
+          />
+        </div>
+      </div>
     </main>
   );
 };

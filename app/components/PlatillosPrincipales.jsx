@@ -18,10 +18,11 @@ const PlatillosPrincipales = () => {
           repudiandae.
         </p>
       </div>
-      <div className="flex items-center justify-center mt-8">
+      <div className="flex items-center justify-center mt-8 contenedor-slides ">
         <Swiper
+          effect={"coverflow"}
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={10}
           pagination={{
             clickable: true,
           }}

@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import useStore from "./store";
-import Image from "next/image";
+import Boton from "./Boton";
+import backImageReserv from "../../public/texturas/reservarFondo.png";
+import ReviewCard from "./ReviewCard";
 
 const Sucursales = () => {
   const { selectedStore } = useStore();
@@ -15,7 +17,7 @@ const Sucursales = () => {
 
   return (
     <>
-      <section className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap flex-col">
+      <section className="container mx-auto px-4 md:px-8 min-h-3/4 flex items-center py-10 md:py-20 flex-wrap flex-col contenedor-slides">
         <div>
           <p className="text-center text-xs md:text-sm text-gold mb-3">
             Sucursales
@@ -26,7 +28,7 @@ const Sucursales = () => {
         </div>
         <div className="mb-4 border p-3 border-second   rounded-lg w-full bg-gray-50">
           <ul
-            className="flex justify-start w-full text-xs md:text-sm text-center "
+            className="flex justify-start w-full text-xs md:text-sm text-center overflow-x-scroll md:overflow-x-hidden"
             id="default-tab"
             data-tabs-toggle="#default-tab-content"
             role="tablist"
@@ -53,9 +55,10 @@ const Sucursales = () => {
             ))}
           </ul>
         </div>
-        <div id="default-tab-content">
+        <div className="mb-4" id="default-tab-content">
           {selectedStore.tabs.map((tab) => (
             // Mapa
+
             <div
               key={tab.id}
               className={`${
@@ -95,9 +98,7 @@ const Sucursales = () => {
                   </div>
                 </div>
               </div>
-
               {/* Menú */}
-
               <div>
                 <h2 className="text-main text-md md:text-xlg font-semibold text-center">
                   Conoce Nuestro Menú
@@ -111,10 +112,62 @@ const Sucursales = () => {
                 <div className="w-full flex justify-center items-center h-screen ">
                   <embed
                     src="https://rossoft.com.mx/pdf/G500-Folleto-SucursalesC.pdf"
+                    //src={selectedStore.menu}
                     type="application/pdf"
                     className="w-full md:w-5/5 h-4/5 "
                   />
                 </div>
+              </div>
+              {/* Reservar */}
+
+              <div
+                style={{
+                  // use the src property of the image object
+                  backgroundImage: `url(${backImageReserv.src})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative",
+                }}
+                className="relative"
+              >
+                <div
+                  className="m-5 p-5   "
+                  style={{
+                    width: "35%",
+                    height: "35%",
+                    background: "#ffffff",
+                    opacity: "0.8",
+                    borderRadius: "10px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <h2 className="text-main text-md md:text-xlg font-semibold text-center">
+                    Reservar Mesa
+                  </h2>
+                  <p className="text-main text-xs md:text-sm mt-4 text-center px-10">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam nam repellendus ducimus, corporis officiis rerum qui
+                    sapiente assumenda minima explicabo!
+                  </p>
+
+                  <Boton
+                    variante={"solid"}
+                    contenido={"Reservar"}
+                    style={"mt-10 bg-main text-white"}
+                    type="scroll"
+                    sectionId={"about-us"}
+                  />
+                </div>
+                <div className="w-0 md:w-1/2"></div>
               </div>
             </div>
           ))}

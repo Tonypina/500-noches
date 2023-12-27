@@ -30,6 +30,8 @@ module.exports = withMT({
         "8rem": "8rem",
       },
       backgroundImage: {
+        heroRestaurant:
+          "http://localhost:3000/restaurantes/500Noches/espacio500Noches.png",
         "footer-texture": "http://localhost:3000/azul-concreto.png",
         "textura-prueba": "http://localhost:3000/galeria/texturas/306.jpg",
       },
