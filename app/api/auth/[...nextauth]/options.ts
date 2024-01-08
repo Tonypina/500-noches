@@ -35,6 +35,7 @@ export const options: NextAuthOptions = {
     
                     bcrypt.genSalt(10, function(err, salt) {
                         bcrypt.hash(credentials?.password, salt, function(err, hash) {
+                            console.log(hash);
                             
                             bcrypt.compare(hash, user.password, function(err, res) {
                                 if (res) {                                
