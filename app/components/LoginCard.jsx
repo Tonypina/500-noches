@@ -33,19 +33,20 @@ import { redirect } from "next";
       try {
         const callbackUrl = '/recursos-humanos'
 
-        let res = await signIn("credentials", {
+        await signIn("username-login", "credentials", {
           email: loginValues.user,
           password: loginValues.pass,
           callbackUrl,
-          redirect: false,
-        })
-
-        if (res.error) {
-          setCredentialsError(true)
+          redirect: false
         
-        } else {
-          redirect('/recursos-humanos')
-        }
+        }).then(res => {
+
+          if (res.error) {
+            setCredentialsError(true)
+          } else {
+            redirect(callbackUrl)
+          }
+        })  
 
       } catch (e) {
         console.log(e);
