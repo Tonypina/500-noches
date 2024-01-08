@@ -36,7 +36,6 @@ import { redirect } from "next";
         await signIn("username-login", "credentials", {
           email: loginValues.user,
           password: loginValues.pass,
-          callbackUrl,
           redirect: false
         
         }).then(res => {
