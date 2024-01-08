@@ -44,7 +44,7 @@ import { redirect } from "next";
           if (res.error) {
             setCredentialsError(true)
           } else {
-            redirect(callbackUrl)
+            // redirect(callbackUrl)
           }
         })  
 
