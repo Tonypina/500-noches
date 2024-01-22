@@ -70,12 +70,13 @@ export default function Home() {
               Sobre Nosotros <br /> Grupo 500 Noches
             </h2>
             <p className="text-main text-xs md:text-sm mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              mollitia ullam iste numquam error voluptatem labore debitis aut
-              hic perspiciatis, qui similique in sunt facere voluptates
-              laboriosam cum repellendus pariatur dicta modi doloremque.
-              Pariatur alias minima officiis tempora veritatis, quo ipsa aut sit
-              suscipit inventore nisi animi quisquam dolores at.
+              Nacimos en el 2011 con el único objetivo de tocar tus sentidos a
+              través de nuestros espacios; desde la luz de las velas, el libro
+              que evoca los mejores versos y las canciones que recuerdan
+              momentos especiales, sabores traídos desde el Mediterráneo,
+              jardines que le declaran la paz a la guerra diaria y espacios
+              llenos de detalles para que nos lleves siempre a donde quiera que
+              vayas.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
@@ -98,37 +99,34 @@ export default function Home() {
             Conoce a la Familia
           </h2>
           <p className="text-white text-xs md:text-sm mt-4 text-center px-10">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-            repudiandae. Qui tempore, cum in assumenda eius laboriosam? Tempore
-            suscipit, dicta, error laborum iure in nobis ullam ipsa quaerat odio
-            repudiandae.
+            En Grupo 500 Noches somos más que solo restaurantes, somos el
+            pretexto bien cuidado para hacer de tus momentos algo digno de
+            recordar y volver a vivir en cada visita.
           </p>
 
           <SwiperMeet />
         </section>
         <section
           id="galeria"
-          className="contianer s md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2"
+          className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap px-2"
         >
           <div>
-            <div className="md:w-1/2 flex flex-col px-10">
+            <div className=" flex flex-col px-10">
               <p className="text-xs md:text-sm text-gold mb-3">Galería</p>
               <h2 className="text-main text-md md:text-xlg font-bold">
                 Nuestra Galería Especial
               </h2>
             </div>
             <p className="text-main text-xs md:text-sm mt-4 px-10 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-              repudiandae. Qui tempore, cum in assumenda eius laboriosam?
-              Tempore suscipit, dicta, error laborum iure in nobis ullam ipsa
-              quaerat odio repudiandae.
+              Escucha, brinda, deléitate, observa, encuentra la experiencia que
+              estás buscando en nuestros espacios
             </p>
           </div>
           <div className="flex justify-center pt-5 px-10">
             <Gallery />
           </div>
         </section>
-        <section
+        {/* <section
           id="directorio"
           className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 "
         >
@@ -142,38 +140,47 @@ export default function Home() {
             repudiandae.
           </p>
           <VisualizadorPDF />
-        </section>
+        </section> */}
 
         <section id="contacto" className="hero">
-          <div className="gap-0 columns-2">
-            <div className="container h-screen overflow-hidden">
-              <div className="brightness-50">
-                <img
-                  src="/galeria/espacio500Noches.png"
-                  alt="Imagen de contacto"
-                  className="w-full absolute"
-                />
-              </div>
-              <div className="md:w-1/2 md:flex items-center justify-center absolute h-full z-10">
-                <div className="">
+          <div className="gap-0 sm:columns-2">
+            <div className="container">
+              <div className="relative sm:h-screen overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 bottom-0 z-0">
                   <Image
-                    src="/logos/LogoG500NochesSilueta.svg"
-                    width={250}
-                    height={250}
-                    alt="Grupo 500 Noches"
-                    className="block"
+                    src="/galeria/espacio500Noches.png"
+                    alt="Imagen de contacto"
+                    layout="fill"
+                    objectFit="cover"
                   />
-                  <Image
-                    src="/logos/Grupo500Noches.svg"
-                    width={250}
-                    height={250}
-                    alt="Grupo 500 Noches"
-                    className="mt-10 block"
-                  />
+                </div>
+
+                {/* Contenedor del logo */}
+                <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center">
+                  <div className="w-full flex flex-col items-center justify-center px-4 sm:px-0">
+                    <div className="w-32 h-32 md:w-64 md:h-64">
+                      <Image
+                        src="/logos/LogoG500NochesSilueta.svg"
+                        alt="Grupo 500 Noches"
+                        layout="responsive"
+                        width={250} // Estos valores se utilizan para calcular el aspecto de la imagen
+                        height={250}
+                      />
+                    </div>
+                    <div className="w-32 h-32 md:w-64 md:h-64 mt-10">
+                      <Image
+                        src="/logos/Grupo500Noches.svg"
+                        alt="Grupo 500 Noches"
+                        layout="responsive"
+                        width={250}
+                        height={250}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="container justify-center items-center px-20 py-16">
+            <div className="container justify-center items-center px-20 py-8">
               <Formik
                 initialValues={{ nombre: "", correo: "" }}
                 validate={(values) => {
@@ -209,9 +216,9 @@ export default function Home() {
                   <form onSubmit={handleSubmit}>
                     <div className="space-y-12">
                       <div className="border-b border-gray-900/10 pb-12">
-                        <h1 className="font-semibold text-xl leading-7 text-main">
+                        <h2 className="text-main text-md md:text-xlg font-semibold ">
                           Ponte en contacto con nosotros
-                        </h1>
+                        </h2>
                         <p className="mt-1 text-xs md:text-sm leading-6 text-second">
                           Utilice una dirección permanente donde pueda recibir
                           correo.

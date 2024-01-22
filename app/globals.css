@@ -44,3 +44,22 @@ html {
 .card-shadow {
   box-shadow: 5px 5px 10px 0px rgb(42, 42, 42, 0.2);
 }
+
+.mySwiper .swiper-pagination-bullets {
+  position: absolute;
+  bottom: -40px;
+  /* Ajusta este valor según sea necesario para mover la paginación hacia abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Centra la paginación horizontalmente */
+}
+
+.mySwiper .swiper-pagination-bullets {
+  position: absolute;
+  bottom: -40px;
+  /* Ajusta este valor para colocar la paginación más abajo si es necesario */
+  left: 50% !important;
+  /* Posición inicial desde el lado izquierdo */
+  transform: translateX(-50%) !important;
+  /* Desplaza la paginación a la mitad hacia atrás para centrarla */
+}

@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" text-white text-xs md:text-xs bg-[url(https://rossoft.com.mx/azul-concreto.png)] p-7 pt-10">
-      <div className="flex justify-around md:gap-5  md:flex-nowrap">
-        <div>
+    <footer className="text-white text-xs bg-[url(https://rossoft.com.mx/azul-concreto.png)] p-4 md:p-7 pt-10">
+      <div className="flex flex-col md:flex-row justify-around gap-5">
+        <div className="mb-4 md:mb-0">
           <Image
             src="/logos/Grupo500Noches.svg"
             width={170}
@@ -14,9 +14,9 @@ const Footer = () => {
             alt="Logo Grupo 500 Noches"
           />
         </div>
-        <div>
+        <div className="mb-4 md:mb-0">
           <h1 className="mb-4">MAPA DEL SITIO</h1>
-          <div className="columns-2">
+          <div className="grid grid-cols-2 gap-2">
             <ul>
               <li>
                 <Link href="#inicio">Inicio</Link>
@@ -33,45 +33,38 @@ const Footer = () => {
                 <Link href="#galeria">Galería</Link>
               </li>
               <li>
-                <Link href="#directorio">Directorio</Link>
-              </li>
-              <li>
                 <Link href="#contacto">Contacto</Link>
               </li>
             </ul>
           </div>
         </div>
-        <div>
-          CONTACTO
+        <div className="mb-4 md:mb-0">
+          <h1>CONTACTO</h1>
           <ul className="mt-3">
             <li>contacto@contacto.com</li>
             <li>+52 55 5555 5555</li>
           </ul>
         </div>
-        <div>
-          SUCURSALES
+        <div className="mb-4 md:mb-0">
+          <h1>CONCEPTOS</h1>
           <ul className="mt-3">
             <li>- Café Bar 500 Noches</li>
             <li>- Sarajevo Café Jardín</li>
             <li>- San Juan Leñero</li>
             <li>- Peruano Cevichería</li>
-            <li>- La Nación del taco</li>
+            <li>- Búho Café</li>
+            <li>- Cinema Stereo</li>
+            <li>- Histórico Café Tostador</li>
             <li>- Merendero Madero</li>
           </ul>
         </div>
       </div>
-      <div className="flex justify-center ">
-        <hr className="border-t border-white my-4 w-full" />
-      </div>
-      <div className="flex justify-between">
+      <hr className="border-t border-white my-4" />
+      <div className="flex flex-col md:flex-row justify-between items-center">
         <div>@2023, Grupo 500 Noches</div>
-        <div className="flex">
-          Siguenos:
-          <div className="flex gap-2">
-            <Facebook size={20} />
-            <Instagram size={20} />
-            <Linkedin size={20} />
-          </div>
+        <div className="flex gap-2">
+          <span>Siguenos:</span>
+          <Linkedin size={20} />
         </div>
       </div>
     </footer>
