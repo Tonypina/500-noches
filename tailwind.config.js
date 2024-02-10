@@ -37,6 +37,8 @@ module.exports = withMT({
       },
     },
   },
+  
   variants: {},
+  darkmode: "class",
   plugins: [nextui()],
 });

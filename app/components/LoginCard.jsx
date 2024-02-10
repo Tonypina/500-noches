@@ -10,9 +10,13 @@ import {
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
-import { redirect } from "next";
+// import redirect from "next";
+import { useRouter } from 'next/navigation'
+
 
   export function LoginCard() {
+
+    const router = useRouter()
 
     const [ loginValues, setLoginValues ] = useState({
       email: '',
@@ -44,7 +48,8 @@ import { redirect } from "next";
           setCredentialsError(true)
         
         } else {
-          redirect('/recursos-humanos')
+          console.log(res);
+          router.push(callbackUrl)
         }
 
       } catch (e) {

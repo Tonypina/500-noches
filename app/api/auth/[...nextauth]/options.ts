@@ -1,9 +1,7 @@
 import type  { NextAuthOptions } from 'next-auth'
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import prisma from "../../../../lib/prisma";
 
 export const options: NextAuthOptions = {
     providers: [
@@ -22,7 +20,8 @@ export const options: NextAuthOptions = {
             },
             
             async authorize(credentials, req) {
-                // Aquí tengo que traer la información del usuario
+                // Aquí tengo que traer la información del usuario                
+
                 const user = await prisma.user.findFirst({
                     where: {
                         email: credentials?.email
