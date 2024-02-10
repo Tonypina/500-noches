@@ -1,4 +1,4 @@
-<Modal className="p-6" isOpen={isOpen} onOpenChange={onOpenChange} title="Nueva Vacante">
+{/* <Modal className="p-6" isOpen={isOpen} onOpenChange={onOpenChange} title="Nueva Vacante">
  
   <ModalContent>
   {(onClose) => (
@@ -59,4 +59,4 @@
     </>
   )}
   </ModalContent>
-</Modal>
+</Modal> */}
