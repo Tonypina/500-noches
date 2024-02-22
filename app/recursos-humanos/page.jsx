@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Table,
   TableHeader,
@@ -25,6 +25,7 @@ import {
   ModalFooter,
 } from "@nextui-org/react";
 
+
 import {PlusIcon} from "../icons/PlusIcon";
 import {VerticalDotsIcon} from "../icons/VerticalDotsIcon";
 import {SearchIcon} from "../icons/SearchIcon";
@@ -47,8 +48,22 @@ export default function RecursosHumanos() {
     direction: "ascending",
   });
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const [isFilled, setIsFilled] = useState(false);
 
-  const { vacants, loading, error } = useVacants();
+  const { 
+    vacants,
+    singleVacant,
+    setSingleVacant,
+    loading, 
+    singleLoading, 
+    error, 
+    handleAddNewVacant, 
+    handleDropVacant, 
+    handleReadVacant, 
+    handleUpdateVacant 
+  } = useVacants();
+
+  const [type, setType] = useState("new");
 
   const [newVacant, setNewVacant] = React.useState({
     position: '',
@@ -153,9 +168,17 @@ export default function RecursosHumanos() {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu>
-                <DropdownItem>Ver</DropdownItem>
-                <DropdownItem>Editar</DropdownItem>
-                <DropdownItem>Eliminar</DropdownItem>
+                <DropdownItem onClick={async () => {
+                  setType("read");
+                  await handleReadVacant(position.id)
+                  onOpen()
+                }}>Ver</DropdownItem>
+                <DropdownItem onClick={async () => {
+                  setType("update");
+                  await handleReadVacant(position.id)
+                  onOpen()
+                }}>Editar</DropdownItem>
+                <DropdownItem onClick={() => handleDropVacant(position.id)}>Eliminar</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </div>
@@ -170,7 +193,6 @@ export default function RecursosHumanos() {
     setPage(1);
   }, []);
 
-
   const onSearchChange = React.useCallback((value) => {
     if (value) {
       setFilterValue(value);
@@ -179,7 +201,6 @@ export default function RecursosHumanos() {
       setFilterValue("");
     }
   }, []);
-
 
   const topContent = React.useMemo(() => {
     return (
@@ -200,7 +221,7 @@ export default function RecursosHumanos() {
             onValueChange={onSearchChange}
           />
           <div className="flex gap-3">
-            <Dropdown>
+            {/* <Dropdown>
               <DropdownTrigger className="hidden sm:flex">
                 <Button
                   endContent={<ChevronDownIcon className="text-small" />}
@@ -249,7 +270,7 @@ export default function RecursosHumanos() {
                   </DropdownItem>
                 ))}
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
             <Dropdown>
               <DropdownTrigger className="hidden sm:flex">
                 <Button
@@ -279,7 +300,10 @@ export default function RecursosHumanos() {
               className="bg-foreground text-background"
               endContent={<PlusIcon />}
               size="sm"
-              onClick={onOpen}
+              onClick={() => {
+                setType("new")
+                onOpen()
+              }}
             >
               Agregar nuevo
             </Button>
@@ -353,100 +377,112 @@ export default function RecursosHumanos() {
       ],
     }),
     [],
-  );
+    );  
 
-  const handleAddNewVacant = async () => {
+    const handleInputValue = (index) => {
+      if (type === "new")
+        return newVacant[index]
 
-    fetch('/api/vacants', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        position: newVacant.position,
-        location: newVacant.location,
-        restaurant: newVacant.restaurant,
-        description: newVacant.description,
-      }),
-    })
-      .then(response => {
-        console.log(response);
+      return singleVacant[index]
+    }
 
-        setNewVacant({
-          position: '',
-          location: '',
-          restaurant: '',
-          description: ''
-        });
-      })
-  };
+    const handleInputOnChange = (e, index) => {
+      if (type === "new")
+        setNewVacant({...newVacant, [index]: e.target.value})
+      else 
+        setSingleVacant({...singleVacant, [index]: e.target.value})  
+    }
 
-  return (
-    <main className=" p-20">
+    const handleSubmit = () => {
+      if (type === "new")
+        handleAddNewVacant(newVacant, setNewVacant)
 
-        <Modal className="p-6" isOpen={isOpen} onOpenChange={onOpenChange} title="Nueva Vacante">
-          
-          <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalHeader className="flex flex-col gap-1">
-                Agregar Nueva Vacante
-              </ModalHeader>
-              
-              <Input
-              className="mb-4"
-                autoFocus
-                variant="bordered"
-                label="Posición"
-                placeholder="Ingrese la posición"
-                value={newVacant.position}
-                onChange={(e) => setNewVacant({...newVacant, position: e.target.value})}
-              />
-              <Input
-              className="mb-4"
-                autoFocus
-                variant="bordered"
-                label="Ubicación"
-                placeholder="Ingrese la ubicación"
-                value={newVacant.location}
-                onChange={(e) => setNewVacant({...newVacant, location: e.target.value})}
-              />
-              <Input
-              className="mb-4"
-                autoFocus
-                variant="bordered"
-                label="Restaurante"
-                placeholder="Ingrese el nombre del restaurante"
-                value={newVacant.restaurant}
-                onChange={(e) => setNewVacant({...newVacant, restaurant: e.target.value})}
-              />
-              <Textarea
-              className="mb-4"
-                autoFocus
-                variant="bordered"
-                label="Descripción"
-                placeholder="Ingrese la descripción de la vacante"
-                value={newVacant.description}
-                onChange={(e) => setNewVacant({...newVacant, description: e.target.value})}
-              />
+      if (type === "update")
+        handleUpdateVacant(singleVacant)
+    } 
 
-              <ModalFooter>
-                <Button color="danger" onClick={() => {
-                  setNewVacant({
-                    position: '',
-                    location: '',
-                    restaurant: '',
-                    description: ''
-                  });
+    return (
+      <main className=" p-20">
+
+          <Modal className="p-6" isOpen={isOpen} onOpenChange={onOpenChange} title="Nueva Vacante">
+            { !singleLoading && (
+              <ModalContent>
+              {(onClose) => (
+                <>
+                  <ModalHeader className="flex flex-col gap-1">
+                    {type === "new" && (
+                      <>Agregar Nueva Vacante</>
+                    )}
+                    {type === "read" && (
+                      <>Detalles De La Vacante</>
+                    )}
+                    {type === "update" && (
+                      <>Editar Vacante</>
+                    )}
+                  </ModalHeader>
                   
-                  onClose()
-                }}>Cancelar</Button>
-                <Button onClick={handleAddNewVacant}>Guardar Vacante</Button>
-              </ModalFooter>
-            </>
-          )}
-          </ModalContent>
-        </Modal>
+                  <Input
+                  className="mb-4"
+                    disabled={type === "read"}
+                    autoFocus
+                    variant="bordered"
+                    label="Posición"
+                    placeholder="Ingrese la posición"
+                    value={handleInputValue("position")}
+                    onChange={(e) => handleInputOnChange(e, "position")}
+                  />
+                  <Input
+                  className="mb-4"
+                    disabled={type === "read"}
+                    autoFocus
+                    variant="bordered"
+                    label="Ubicación"
+                    placeholder="Ingrese la ubicación"
+                    value={handleInputValue("location")}
+                    onChange={(e) => handleInputOnChange(e, "location")}
+                  />
+                  <Input
+                  className="mb-4"
+                    disabled={type === "read"}
+                    autoFocus
+                    variant="bordered"
+                    label="Restaurante"
+                    placeholder="Ingrese el nombre del restaurante"
+                    value={handleInputValue("restaurant")}
+                    onChange={(e) => handleInputOnChange(e, "restaurant")}
+                  />
+                  <Textarea
+                  className="mb-4"
+                    disabled={type === "read"}
+                    autoFocus
+                    variant="bordered"
+                    label="Descripción"
+                    placeholder="Ingrese la descripción de la vacante"
+                    value={handleInputValue("description")}
+                    onChange={(e) => handleInputOnChange(e, "description")}
+                  />
+
+                  <ModalFooter>
+                    <Button color="danger" onClick={() => {
+                      setNewVacant({
+                        position: '',
+                        location: '',
+                        restaurant: '',
+                        description: ''
+                      });
+                      
+                      onClose()
+                    }}>Cancelar</Button>
+                    <Button disabled={type === "read"} onClick={() => {
+                      handleSubmit()
+                      onClose()
+                    }}>Guardar Vacante</Button>
+                  </ModalFooter>
+                </>
+              )}
+              </ModalContent>
+            )}
+          </Modal>
 
         { !loading && (
           <Table

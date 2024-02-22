@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import prisma from "../../../../lib/prisma"
 
 export async function GET( req: Request, {params} ) {
-    const id = params.id
+    const id = parseInt(params.id, 10)
 
     const uniquePrismaVacant = await prisma.vacant.findUnique({
         where: {
@@ -21,7 +21,8 @@ export async function GET( req: Request, {params} ) {
 }
 
 export async function DELETE( req: Request, {params} ) {
-    const id = params.id
+    
+    const id = parseInt(params.id, 10)
 
     const deletedPrismaVacant = await prisma.vacant.delete({
         where: {
@@ -33,7 +34,7 @@ export async function DELETE( req: Request, {params} ) {
 }
 
 export async function PUT( req: Request, {params} ) {
-    const id = params.id
+    const id = parseInt(params.id, 10)
     const updatedVacant = await req.json()
 
     const updatedPrismaVacant = await prisma.vacant.update({

@@ -4,16 +4,7 @@ const columns = [
   {name: "POSICIÓN", uid: "position", sortable: true},
   {name: "UBICACIÓN", uid: "location", sortable: true},
   {name: "RESTAURANTE", uid: "restaurant", sortable: true},
-  {name: "ACTIONS", uid: "actions"},
-];
-
-const positions = [
-  {
-    id: 1,
-    position: "Pinche de Chef",
-    location: "Chiapas",
-    restaurant: "500 Noches Café"
-  },
+  {name: "ACCIONES", uid: "actions"},
 ];
 
 const restaurantOptions = [
@@ -28,4 +19,4 @@ const locationOptions = [
   {name: "Vacation", uid: "vacation"},
 ];
 
-export {columns, positions, restaurantOptions, locationOptions};
+export {columns, restaurantOptions, locationOptions};
