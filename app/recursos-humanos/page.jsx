@@ -1,6 +1,10 @@
 "use client"
 
 import React, { useEffect, useState } from "react";
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 import {
   Table,
   TableHeader,
@@ -451,16 +455,30 @@ export default function RecursosHumanos() {
                     value={handleInputValue("restaurant")}
                     onChange={(e) => handleInputOnChange(e, "restaurant")}
                   />
-                  <Textarea
-                  className="mb-4"
-                    disabled={type === "read"}
-                    autoFocus
-                    variant="bordered"
-                    label="Descripción"
-                    placeholder="Ingrese la descripción de la vacante"
-                    value={handleInputValue("description")}
-                    onChange={(e) => handleInputOnChange(e, "description")}
-                  />
+
+                  {type === "read" ? (
+                    <Textarea
+                      className="mb-4"
+                      disabled={type === "read"}
+                      autoFocus
+                      variant="bordered"
+                      label="Descripción"
+                      placeholder="Ingrese la descripción de la vacante"
+                      value={handleInputValue("description")}
+                      onChange={(e) => handleInputOnChange(e, "description")}
+                    />
+                  ) : (
+                    <div>
+                      <label className="pl-4 text-[12px] " htmlFor="description">Descripción</label>
+                      <ReactQuill className="pt-1" id="description" theme="snow" onChange={(e) => {
+                        if (type === "new")
+                          setNewVacant({...newVacant, description: e})
+
+                        if (type === "update")
+                          setSingleVacant({...singleVacant, description: e}) 
+                      }}/>
+                    </div>
+                  )}
 
                   <ModalFooter>
                     <Button color="danger" onClick={() => {

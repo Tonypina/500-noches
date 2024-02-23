@@ -1,4 +1,6 @@
 import "./globals.css";
+import 'react-quill/dist/quill.snow.css'
+
 import { PT_Serif } from "next/font/google";
 import Navbar from "./components/navbar";
 
