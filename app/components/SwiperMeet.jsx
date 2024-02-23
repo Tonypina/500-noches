@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import CardContent from "./CardContent";
@@ -8,21 +9,41 @@ import "swiper/css/pagination";
 import Image from "next/image";
 
 const SwiperMeet = () => {
+  const [slidesPerView, setSlidesPerView] = useState(3);
+  const [paginationEnabled, setPaginationEnabled] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesPerView(1);
+        setPaginationEnabled(true);
+      } else {
+        setSlidesPerView(3);
+        setPaginationEnabled(false);
+      }
+    };
+
+    handleResize(); // Llama a la función al montar el componente
+    window.addEventListener("resize", handleResize); // Añade el evento al redimensionar
+
+    return () => window.removeEventListener("resize", handleResize); // Limpia el evento al desmontar el componente
+  }, []);
+
   return (
     <div className="contenedor-slides mx-auto mt-10 ">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 80,
           modifier: 1,
         }}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination]} // Habilitar la navegación
+        pagination={{ clickable: true, enabled: paginationEnabled }}
+        modules={[EffectCoverflow, Pagination]}
         className="mySwiper slide-size contenedor-slides"
       >
         <SwiperSlide className="card-shadow rounded-lg">
