@@ -80,12 +80,10 @@ export default function Home() {
               Sobre Nosotros <br /> Grupo 500 Noches
             </h2>
             <p className="text-main text-xs md:text-sm mt-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              mollitia ullam iste numquam error voluptatem labore debitis aut
-              hic perspiciatis, qui similique in sunt facere voluptates
-              laboriosam cum repellendus pariatur dicta modi doloremque.
-              Pariatur alias minima officiis tempora veritatis, quo ipsa aut sit
-              suscipit inventore nisi animi quisquam dolores at.
+              Nacimos en el 2011 con el único objetivo de tocar tus sentidos a través de nuestros espacios; 
+              desde la luz de las velas, el libro que evoca los mejores versos y las canciones que recuerdan 
+              momentos especiales, sabores traídos desde el Mediterráneo, jardines que le declaran la paz a la 
+              guerra diaria y espacios llenos de detalles para que nos lleves siempre a donde quiera que vayas.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
@@ -108,10 +106,8 @@ export default function Home() {
             Conoce a la Familia
           </h2>
           <p className="text-white text-xs md:text-sm mt-4 text-center px-10">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-            repudiandae. Qui tempore, cum in assumenda eius laboriosam? Tempore
-            suscipit, dicta, error laborum iure in nobis ullam ipsa quaerat odio
-            repudiandae.
+            En Grupo 500 Noches somos más que solo restaurantes, somos el pretexto bien cuidado para 
+            hacer de tus momentos algo digno de recordar y volver a vivir en cada visita.
           </p>
 
           <SwiperMeet />
@@ -128,17 +124,14 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-main text-xs md:text-sm mt-4 px-10 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-              repudiandae. Qui tempore, cum in assumenda eius laboriosam?
-              Tempore suscipit, dicta, error laborum iure in nobis ullam ipsa
-              quaerat odio repudiandae.
+              Escucha, brinda, deléitate, observa, encuentra la experiencia que estás buscando en nuestros espacios.
             </p>
           </div>
           <div className="flex justify-center pt-5 px-10">
             <Gallery />
           </div>
         </section>
-        <section
+        {/* <section
           id="directorio"
           className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 "
         >
@@ -152,7 +145,7 @@ export default function Home() {
             repudiandae.
           </p>
           <VisualizadorPDF />
-        </section>
+        </section> */}
 
         <section id="contacto" className="hero">
           <div className="gap-0 columns-2">

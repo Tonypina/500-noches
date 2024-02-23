@@ -49,14 +49,16 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          SUCURSALES
+          CONCEPTOS
           <ul className="mt-3">
             <li>- Café Bar 500 Noches</li>
             <li>- Sarajevo Café Jardín</li>
             <li>- San Juan Leñero</li>
             <li>- Peruano Cevichería</li>
-            <li>- La Nación del taco</li>
             <li>- Merendero Madero</li>
+            <li>- Búho Café</li>
+            <li>- Cinema Stereo</li>
+            <li>- Histórico Café Tostador</li>
           </ul>
         </div>
       </div>
@@ -68,8 +70,6 @@ const Footer = () => {
         <div className="flex">
           Siguenos:
           <div className="flex gap-2">
-            <Facebook size={20} />
-            <Instagram size={20} />
             <Linkedin size={20} />
           </div>
         </div>
