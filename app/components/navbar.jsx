@@ -117,6 +117,11 @@ const Navbar = () => {
               Galería
             </div>
           </Link>
+          <Link href="#opportunities" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Carreras
+            </div>
+          </Link>
           <Link href="#contacto" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Contacto
