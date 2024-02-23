@@ -55,17 +55,12 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
             </Link>
             <Link href="#conoce-la-familia">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                Restaurantes
+                Conceptos
               </div>
             </Link>
             <Link href="#galeria">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                 Galería
-              </div>
-            </Link>
-            <Link href="#conoce-la-familia">
-              <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                Directorio
               </div>
             </Link>
             <Link href="#contacto">

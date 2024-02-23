@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Sidebar from "./SideBar";
+import Link from "next/link";
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full pt-2 px-10 ${
+      className={`fixed top-0 left-0 w-full py-1 px-10 ${
         navbarSticky ? " shadow-md bg-white" : "bg-transparent "
       } transition-all duration-300 ease-in-out z-50`}
     >
@@ -74,6 +75,35 @@ const Navbar = () => {
               alt="Grupo 500 Noches"
             />
           }
+        </div>
+        <div className={`flex text-main font-semibold tracking-wide ${
+          navbarSticky ? "text-blue-950" : "text-white"
+        }`}>
+          <Link href="/" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Inicio
+            </div>
+          </Link>
+          <Link href="#about-us" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Nosotros
+            </div>
+          </Link>
+          <Link href="#conoce-la-familia" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Conceptos
+            </div>
+          </Link>
+          <Link href="#galeria" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Galería
+            </div>
+          </Link>
+          <Link href="#contacto" className="mr-5">
+            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
+              Contacto
+            </div>
+          </Link>
         </div>
         <div>
           <button
