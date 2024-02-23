@@ -61,19 +61,37 @@ const Navbar = () => {
       <div className="container mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center">
           { !navbarSticky ? 
-            <Image
-              src="/logos/Grupo500Noches.svg"
-              width={150}
-              height={150}
-              alt="Grupo 500 Noches"
-            />
+            <>
+              <Image
+                className="mr-5"
+                src="/logos/LogoG500NochesSilueta.svg"
+                width={30}
+                height={30}
+                alt="Grupo 500 Noches"
+              />
+              <Image
+                src="/logos/Grupo500Noches.svg"
+                width={150}
+                height={150}
+                alt="Grupo 500 Noches"
+              />
+            </>
             :
-            <Image
-              src="/logos/Grupo500NochesOscuro.svg"
-              width={150}
-              height={150}
-              alt="Grupo 500 Noches"
-            />
+            <>
+              <Image
+                className="mr-5"
+                src="/logos/LogoG500NochesSilueta.svg"
+                width={30}
+                height={30}
+                alt="Grupo 500 Noches"
+              />
+              <Image
+                src="/logos/Grupo500NochesOscuro.svg"
+                width={150}
+                height={150}
+                alt="Grupo 500 Noches"
+              />
+            </>
           }
         </div>
         <div className={`hidden sm:flex text-main font-semibold tracking-wide ${
