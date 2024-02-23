@@ -48,28 +48,6 @@ const SwiperMeet = () => {
           />
         </SwiperSlide>
         <SwiperSlide className="card-shadow">
-          {/*La Nación del taco */}
-          <CardContent
-            id={"la-nacion-del-taco"}
-            imagen={
-              <Image
-                src={"/restaurantes/nacionDelTaco/tacos.png"}
-                width={270}
-                height={250}
-                alt="logo San Juan Leñero"
-              />
-            }
-            logo={
-              <Image
-                src="/logos/LaNacionDelTaco.svg"
-                width={100}
-                height={100}
-                alt="logo la nación del taco"
-              />
-            }
-          />
-        </SwiperSlide>
-        <SwiperSlide className="card-shadow">
           {/* Merendero Madero */}
           <CardContent
             id={"merendero-madero"}
