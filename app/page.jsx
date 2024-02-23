@@ -5,6 +5,7 @@ import Boton from "./components/Boton";
 import SwiperMeet from "./components/SwiperMeet";
 import Gallery from "./components/Gallery";
 import VisualizadorPDF from "./components/VisualizadorPDF";
+import Link from "next/link";
 import { Formik } from "formik";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       <main className=" min-h-screen items-center">
         <section
           id="hero"
-          className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0"
+          className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0 bg-black"
         >
           <div className="video brightness-50 absolute">
             <video autoPlay muted loop>
@@ -134,6 +135,41 @@ export default function Home() {
           </div>
           <div className="flex justify-center pt-5 px-10">
             <Gallery />
+          </div>
+        </section>
+        <section
+          id="opportunities"
+          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap"
+        >
+          <div className="md:w-1/2 flex flex-col px-10 ">
+            <p className="text-xs md:text-sm text-gold mb-3">Oportunidades</p>
+            <h2 className="text-main text-md md:text-xlg font-bold">
+              Únete a nuestro equipo
+            </h2>
+            <p className="text-main text-xs md:text-sm mt-4">
+            En <span className="text-gold">Grupo 500 Noches</span>, creemos firmemente en la fuerza y el potencial de cada individuo.
+             Valoramos la diversidad, la creatividad y el compromiso con la excelencia en todo lo que hacemos. 
+             Si compartes nuestra pasión por la innovación y la colaboración, te invitamos a formar parte de nuestro equipo.
+            </p>
+            <Link href="/jobs">
+              <Boton
+                variante={"solid"}
+                contenido={"Unirme al equipo"}
+                style={"mt-10 bg-main text-white w-2/5"}
+                type="scroll"
+              />
+            </Link>
+          </div>
+          <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
+            <div className="text-main text-center">
+              <Image
+                src="/galeria/G500/oportunidades.jpg"
+                width={800}
+                height={450}
+                alt="Grupo 500 Noches"
+                className="rounded-lg w-full"
+              />
+            </div>
           </div>
         </section>
         {/* <section

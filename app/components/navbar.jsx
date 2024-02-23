@@ -76,7 +76,7 @@ const Navbar = () => {
             />
           }
         </div>
-        <div className={`flex text-main font-semibold tracking-wide ${
+        <div className={`hidden sm:flex text-main font-semibold tracking-wide ${
           navbarSticky ? "text-blue-950" : "text-white"
         }`}>
           <Link href="/" className="mr-5">
