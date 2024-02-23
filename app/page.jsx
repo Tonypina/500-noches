@@ -17,7 +17,7 @@ export default function Home() {
         >
           <div className="video brightness-50 absolute">
             <video autoPlay muted loop>
-              <source src="/videos/aeropuerto.mp4" type="video/mp4" />
+              <source src="/videos/cinema.mp4" type="video/mp4" />
             </video>
           </div>
             <div className="md:w-1/2 md:flex items-center justify-center hidden flex-col z-10">
