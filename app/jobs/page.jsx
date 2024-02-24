@@ -30,6 +30,12 @@ export default function Jobs() {
     cv: ""
   })
 
+  const [applicationPosition, setApplicationPosition] = useState({
+    position: '',
+    location: '',
+    restaurant: '',
+  }) 
+
   const {isOpen, onOpen, onOpenChange} = useDisclosure()
 
   const AccordionTitle = (vacant) => {
@@ -56,6 +62,22 @@ export default function Jobs() {
 
   const onSubmit = () => {
 
+    const formData = new FormData()
+    
+    formData.append('name', application.name)
+    formData.append('contact', application.contact)
+    formData.append('email', application.email)
+    formData.append('cv', application.cv)
+    formData.append('position', applicationPosition.position)
+    formData.append('location', applicationPosition.location)
+    formData.append('restaurant', applicationPosition.restaurant)
+
+    
+    fetch('api/application', {
+      method: 'POST',
+      body: formData
+    }).then(res => console.log(res))
+      .catch(e => console.log(e))
   }
 
   return (
@@ -98,7 +120,9 @@ export default function Jobs() {
             />
             <div className="flex flex-col pl-4 py-2 border-2 border-stone-500	rounded-xl">
               <label className="text-[12px]" htmlFor="cv">CV</label>
-              <input className="mt-1 text-small" id="cv" type="file" onChange={(e) => handleInputOnChange(e, "cv")}/>
+              <input className="mt-1 text-small" id="cv" type="file" onChange={(e) => {
+                handleInputOnChange(e, "cv")
+              }}/>
             </div>
             <ModalFooter>
               <Button color="danger" onClick={() => {
@@ -142,7 +166,14 @@ export default function Jobs() {
                 }>
                   {parse(vacant.description)}
 
-                  <Button color="primary" className="font-semibold" onClick={onOpen}>Aplicar ahora!</Button>
+                  <Button color="primary" className="font-semibold" onClick={() => {
+                    setApplicationPosition({
+                      position: vacant.position,
+                      location: vacant.location,
+                      restaurant: vacant.restaurant,
+                    })
+                    onOpen()
+                  }}>Aplicar ahora!</Button>
               </AccordionItem>
             ))}
           </Accordion>
