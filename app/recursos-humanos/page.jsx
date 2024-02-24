@@ -108,7 +108,7 @@ export default function RecursosHumanos() {
     }
 
     return filteredvacants;
-  }, [vacants, filterValue, restaurantFilter, locationFilter]);
+  }, [vacants, filterValue, restaurantFilter, locationFilter, hasSearchFilter]);
 
   const items = React.useMemo(() => {
     const start = (page - 1) * rowsPerPage;
@@ -190,7 +190,7 @@ export default function RecursosHumanos() {
       default:
         return cellValue;
     }
-  }, []);
+  }, [handleDropVacant, handleReadVacant, onOpen]);
 
   const onRowsPerPageChange = React.useCallback((e) => {
     setRowsPerPage(Number(e.target.value));
@@ -331,13 +331,11 @@ export default function RecursosHumanos() {
     );
   }, [
     filterValue,
-    restaurantFilter,
-    locationFilter,
     visibleColumns,
     onSearchChange,
     onRowsPerPageChange,
     vacants.length,
-    hasSearchFilter,
+    onOpen
   ]);
 
   const bottomContent = React.useMemo(() => {
