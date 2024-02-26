@@ -5,12 +5,19 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="text-white text-xs bg-[url(https://rossoft.com.mx/azul-concreto.png)] p-4 md:p-7 pt-10">
-      <div className="flex flex-col md:flex-row justify-around gap-5">
-        <div className="mb-4 md:mb-0">
+      <div className="flex justify-center flex-col md:flex-row justify-around gap-5">
+        <div className="flex flex-col justify-center items-center mb-4 md:mb-0">
           <Image
-            src="/logos/Grupo500Noches.svg"
+            src="/logos/LogoG500NochesSilueta.svg"
             width={170}
             height={170}
+            alt="Logo Grupo 500 Noches"
+          />
+          <Image
+            className="mt-1"
+            src="/logos/Grupo500Noches.svg"
+            width={130}
+            height={130}
             alt="Logo Grupo 500 Noches"
           />
         </div>

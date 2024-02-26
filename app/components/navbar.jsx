@@ -80,7 +80,7 @@ const Navbar = () => {
             <>
               <Image
                 className="mr-5"
-                src="/logos/LogoG500NochesSilueta.svg"
+                src="/logos/LogoEscafandra-azul.svg"
                 width={30}
                 height={30}
                 alt="Grupo 500 Noches"

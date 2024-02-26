@@ -203,7 +203,7 @@ export default function Home() {
 
                 {/* Contenedor del logo */}
                 <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center">
-                  <div className="w-full flex flex-col items-center justify-center px-4 sm:px-0">
+                  <div className="w-full flex flex-col items-center justify-center px-4 sm:mt-36 sm:px-0">
                     <div className="w-32 h-32 md:w-64 md:h-64">
                       <Image
                         src="/logos/LogoG500NochesSilueta.svg"
