@@ -4,6 +4,8 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Sidebar from "./SideBar";
 import Link from "next/link";
+import {ChevronDownIcon} from "../icons/ChevronDownIcon";
+
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);
@@ -52,9 +54,33 @@ const Navbar = () => {
     };
   }, []);
 
+  // Cambiar cuando se realice el catálogo
+  const restaurants = [
+    {
+      name: "Café Bar 500 Noches",
+      link: "/cafe-500-noches"
+    },
+    {
+      name: "Sarajevo Café Jardín",
+      link: "/sarajevo"
+    },
+    {
+      name: "San Juan Leñero",
+      link: "/san-juan-leñero"
+    },
+    {
+      name: "Peruano Cevichería",
+      link: "/peruano"
+    },
+    {
+      name: "Merendero Madero",
+      link: "/merendero-madero"
+    },
+  ]
+
   return (
     <header
-      className={`fixed top-0 left-0 w-full py-1 px-10 ${
+      className={`fixed top-0 left-0 w-full py-1 px-10 z-10 ${
         navbarSticky ? " shadow-md bg-white" : "bg-transparent "
       } transition-all duration-300 ease-in-out z-50`}
     >
@@ -107,11 +133,28 @@ const Navbar = () => {
               Nosotros
             </div>
           </Link>
-          <Link href="#conoce-la-familia" className="mr-5">
-            <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
-              Conceptos
+          <div>
+            <div className="pr-10 mr-5 peer duration-300 hover:scale-110">
+              <Link href="#conoce-la-familia" className="flex items-center mr-5">
+                <p className="mr-2">Conceptos</p>
+                <ChevronDownIcon className="text-small" />
+              </Link>
             </div>
-          </Link>
+            <div className={`hidden absolute peer-hover:flex hover:flex
+              w-[210px]
+              flex-col drop-shadow-lg
+              pt-4
+              pl-5
+              rounded-md
+              z-0
+              ${
+                navbarSticky ? "text-blue-950 bg-white" : "text-white"
+              }`}>
+              {restaurants.map((restaurant, index) => (
+                <a key={index} className="pr-5 py-3 duration-300 hover:scale-110" href={restaurant.link}>{restaurant.name}</a>
+              ))}
+            </div>
+          </div>
           <Link href="#galeria" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Galería
