@@ -151,34 +151,36 @@ export default function Jobs() {
         </ModalContent>
       </Modal>
 
-      <h2 className="text-main text-md md:text-lg font-bold">
-        Explora las <span className="text-gold">oportunidades</span> de trabajo que ofrecemos...
-      </h2>
+      <div className="flex mt-10">
+        <h2 className="flex-col text-main text-md md:text-lg font-bold">
+          Explora las <span className="text-gold">oportunidades</span> de trabajo que ofrecemos...
+        </h2>
 
-      {!loading && (
-        <div className="mt-10 px-10">
-          <Accordion variant="splitted">
-            {vacants.map((vacant, index) => (
-              <AccordionItem key={index}
-                aria-label={`Accordion ${index + 1}`}
-                title={
-                  <AccordionTitle position={vacant.position} location={vacant.location} restaurant={vacant.restaurant}/>
-                }>
-                  {parse(vacant.description)}
+        {!loading && (
+          <div className="flex-col px-10">
+            <Accordion variant="splitted">
+              {vacants.map((vacant, index) => (
+                <AccordionItem key={index}
+                  aria-label={`Accordion ${index + 1}`}
+                  title={
+                    <AccordionTitle position={vacant.position} location={vacant.location} restaurant={vacant.restaurant}/>
+                  }>
+                    {parse(vacant.description)}
 
-                  <Button color="primary" className="font-semibold" onClick={() => {
-                    setApplicationPosition({
-                      position: vacant.position,
-                      location: vacant.location,
-                      restaurant: vacant.restaurant,
-                    })
-                    onOpen()
-                  }}>Aplicar ahora!</Button>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      )}
+                    <Button color="primary" className="font-semibold" onClick={() => {
+                      setApplicationPosition({
+                        position: vacant.position,
+                        location: vacant.location,
+                        restaurant: vacant.restaurant,
+                      })
+                      onOpen()
+                    }}>Aplicar ahora!</Button>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        )}
+      </div>
 
     </main>
   )

@@ -4,17 +4,19 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import Sidebar from "./SideBar";
 import Link from "next/link";
-import {ChevronDownIcon} from "../icons/ChevronDownIcon";
-
+import { ChevronDownIcon } from "../icons/ChevronDownIcon";
+import { usePathname } from "next/navigation";
+import path from "path";
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);
-  const [navbarWhite, setNavbarWhite] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
   //Referencia para el Sidebar
   const sidebarRef = useRef(null);
 
+  const pathname = usePathname();
+  
   useEffect(() => {
     const handleBodyClick = (e) => {
       // Comprueba si el clic ocurrió fuera del sidebar
@@ -36,6 +38,8 @@ const Navbar = () => {
   }, [showSidebar, setShowSidebar, sidebarRef]);
 
   useEffect(() => {
+    const stickyPaths = ['/jobs', '/recursos-humanos'];
+
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setNavbarSticky(true);
@@ -48,11 +52,20 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    if ( !stickyPaths.includes(pathname) ) {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      setNavbarSticky(true)
+    }
+    
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if ( !stickyPaths.includes(pathname) ) {
+        window.addEventListener("scroll", handleScroll);
+      } else {
+        setNavbarSticky(true)
+      }
     };
-  }, []);
+  }, [pathname]);
 
   // Cambiar cuando se realice el catálogo
   const restaurants = [
@@ -75,6 +88,18 @@ const Navbar = () => {
     {
       name: "Merendero Madero",
       link: "/merendero-madero"
+    },
+    {
+      name: "Buho Café",
+      link: "#"
+    },
+    {
+      name: "Cinema Stereo",
+      link: "#"
+    },
+    {
+      name: "Histórico Café Tostador",
+      link: "https://www.facebook.com/eltostadorcafe/"
     },
   ]
 
