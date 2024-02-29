@@ -3,6 +3,16 @@ import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react"
 import CredentialsProvider from 'next-auth/providers/credentials'
 import prisma from "../../../../lib/prisma";
 
+interface User {
+    id: any;
+    name: string;
+    email: string;
+    password: string;
+    isActive: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
 export const options: NextAuthOptions = {
     providers: [
         CredentialsProvider({
@@ -19,6 +29,7 @@ export const options: NextAuthOptions = {
                 }
             },
             
+            
             async authorize(credentials, req) {
                 // Aquí tengo que traer la información del usuario                
 
@@ -32,11 +43,10 @@ export const options: NextAuthOptions = {
 
                     var bcrypt = require('bcryptjs')
 
-                    if (bcrypt.compare(credentials?.password, user.password).then(() => {
-                            return true
-                        })
-                    )
-                        return true
+                    const passMatch = await bcrypt.compare(credentials?.password, user.password)
+
+                    if (passMatch)
+                        return user as User
                 }
 
                 return null
