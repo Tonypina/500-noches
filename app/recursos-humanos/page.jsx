@@ -405,7 +405,7 @@ export default function RecursosHumanos() {
     } 
 
     return (
-      <main className=" p-20">
+      <main className="p-20">
 
           <Modal className="p-6" isOpen={isOpen} onOpenChange={onOpenChange} title="Nueva Vacante">
             { !singleLoading && (
@@ -500,6 +500,10 @@ export default function RecursosHumanos() {
               </ModalContent>
             )}
           </Modal>
+
+        <h2 className="flex-col text-main text-md md:text-lg font-bold mb-3 pt-5">
+          Administración de <span className="text-gold">vacantes</span>
+        </h2>
 
         { !loading && (
           <Table

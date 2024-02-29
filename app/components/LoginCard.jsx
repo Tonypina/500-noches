@@ -38,7 +38,7 @@ import { useRouter } from 'next/navigation'
         const callbackUrl = '/recursos-humanos'
 
         let res = await signIn("credentials", {
-          email: loginValues.user,
+          email: loginValues.email,
           password: loginValues.pass,
           callbackUrl,
           redirect: false,

@@ -31,19 +31,12 @@ export const options: NextAuthOptions = {
                 if (user != null) {
 
                     var bcrypt = require('bcryptjs')
-    
-                    bcrypt.genSalt(10, function(err, salt) {
-                        bcrypt.hash(credentials?.password, salt, function(err, hash) {
-                            console.log(hash);
-                            
-                            bcrypt.compare(hash, user.password, function(err, res) {
-                                if (res) {                                
-                                    return user
-                                }
-                            })
-    
+
+                    if (bcrypt.compare(credentials?.password, user.password).then(() => {
+                            return true
                         })
-                    })
+                    )
+                        return true
                 }
 
                 return null

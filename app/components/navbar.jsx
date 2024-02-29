@@ -38,7 +38,7 @@ const Navbar = () => {
   }, [showSidebar, setShowSidebar, sidebarRef]);
 
   useEffect(() => {
-    const stickyPaths = ['/jobs', '/recursos-humanos'];
+    const stickyPaths = ['/jobs', '/recursos-humanos', '/admin'];
 
     const handleScroll = () => {
       if (window.scrollY > 0) {
