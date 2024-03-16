@@ -1,9 +1,17 @@
 import type  { NextAuthOptions } from 'next-auth'
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { PrismaClient } from '@prisma/client'
+import prisma from "../../../../lib/prisma";
 
-const prisma = new PrismaClient()
+interface User {
+    id: any;
+    name: string;
+    email: string;
+    password: string;
+    isActive: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
 
 export const options: NextAuthOptions = {
     providers: [
@@ -21,8 +29,10 @@ export const options: NextAuthOptions = {
                 }
             },
             
+            
             async authorize(credentials, req) {
-                // Aquí tengo que traer la información del usuario
+                // Aquí tengo que traer la información del usuario                
+
                 const user = await prisma.user.findFirst({
                     where: {
                         email: credentials?.email
@@ -32,19 +42,11 @@ export const options: NextAuthOptions = {
                 if (user != null) {
 
                     var bcrypt = require('bcryptjs')
-    
-                    bcrypt.genSalt(10, function(err, salt) {
-                        bcrypt.hash(credentials?.password, salt, function(err, hash) {
-                            console.log(hash);
-                            
-                            bcrypt.compare(hash, user.password, function(err, res) {
-                                if (res) {                                
-                                    return user
-                                }
-                            })
-    
-                        })
-                    })
+
+                    const passMatch = await bcrypt.compare(credentials?.password, user.password)
+
+                    if (passMatch)
+                        return user as User
                 }
 
                 return null

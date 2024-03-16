@@ -55,7 +55,7 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
             </Link>
             <Link href="#conoce-la-familia">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                Restaurantes
+                Conceptos
               </div>
             </Link>
             <Link href="#galeria">
@@ -63,9 +63,9 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 Galería
               </div>
             </Link>
-            <Link href="#conoce-la-familia">
+            <Link href="/jobs">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                Directorio
+                Carreras
               </div>
             </Link>
             <Link href="#contacto">
@@ -76,13 +76,18 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
 
             {status === "authenticated" ? (
               <div>
-                <hr className="border-t border-main my-4" />
-                <div className="text-sm md:text-base duration-300 hover:scale-110">
+                <hr className="border-t border-main my-2" />
+                <div className="text-sm md:text-base">
                   Administración
                 </div>
-                <hr className="border-t border-main my-4" />
+                <hr className="border-t border-main my-2" />
+                <Link href="admin">
+                  <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
+                    Usuarios
+                  </div>
+                </Link>
                 <Link href="recursos-humanos">
-                  <div className="text-sm md:text-base duration-300 hover:scale-110">
+                  <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                     Vacantes
                   </div>
                 </Link>
@@ -96,14 +101,14 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Facebook size={25} className="duration-300 hover:scale-110" />
+                <Facebook size={20} className="duration-300 hover:scale-110" />
               </Link>
               <Link
                 href="https://www.instagram.com/cafebar500noches_/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <Instagram size={25} className="duration-300 hover:scale-110" />
+                <Instagram size={20} className="duration-300 hover:scale-110" />
               </Link>
               <Link
                 href="https://mx.linkedin.com/company/grupo-500-noches"
@@ -111,7 +116,7 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 rel="noreferrer"
               >
                 <Linkedin
-                  size={25}
+                  size={20}
                   absoluteStrokeWidth={true}
                   className="duration-300 hover:scale-110"
                 />

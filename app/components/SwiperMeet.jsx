@@ -69,6 +69,7 @@ const SwiperMeet = () => {
           />
         </SwiperSlide>
         <SwiperSlide className="card-shadow">
+<<<<<<< HEAD
           {/*La Nación del taco */}
           <CardContent
             id={"cinema-stereo"}
@@ -135,6 +136,8 @@ const SwiperMeet = () => {
           />
         </SwiperSlide>
         <SwiperSlide className="card-shadow">
+=======
+>>>>>>> 7f657b85907f590242581dc6e661050416b0e649
           {/* Merendero Madero */}
           <CardContent
             id={"merendero-madero"}

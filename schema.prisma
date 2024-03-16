@@ -15,6 +15,31 @@ model User {
   password      String      @db.VarChar(250)
   isActive      String      @default("1") @db.Char(1)
   createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt @default(now())
 
   @@map("users")
+}
+
+model Vacant {
+  id            Int         @id @default(autoincrement())
+  position      String      @db.Char(100)
+  location      String      @db.Char(100)
+  restaurant    String      @db.Char(100)
+  description   String      @db.Char(10000)
+  isActive      String      @default("1") @db.Char(1)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt @default(now())
+
+  @@map("vacants")
+}
+
+model Menu {
+  id            Int         @id @default(autoincrement())
+  restaurant    String      @db.Char(100)
+  dir           String      @db.Char(250)
+  isActive      String      @default("1") @db.Char(1)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt @default(now())
+
+  @@map("menus")
 }

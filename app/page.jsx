@@ -5,6 +5,7 @@ import Boton from "./components/Boton";
 import SwiperMeet from "./components/SwiperMeet";
 import Gallery from "./components/Gallery";
 import VisualizadorPDF from "./components/VisualizadorPDF";
+import Link from "next/link";
 import { Formik } from "formik";
 
 export default function Home() {
@@ -13,21 +14,31 @@ export default function Home() {
       <main className=" min-h-screen items-center">
         <section
           id="hero"
-          className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0"
+          className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0 bg-black"
         >
           <div className="video brightness-50 absolute">
             <video autoPlay muted loop>
               <source src="/videos/cinema.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="md:w-1/2 md:flex items-center justify-center hidden z-10">
-            <Image
-              src="/logos/LogoG500NochesSilueta.svg"
-              width={250}
-              height={250}
-              alt="Grupo 500 Noches"
-            />
-          </div>
+            <div className="md:w-1/2 md:flex items-center justify-center hidden flex-col z-10">
+              <div className="mb-2">
+                <Image
+                  src="/logos/LogoG500NochesSilueta.svg"
+                  width={250}
+                  height={250}
+                  alt="Grupo 500 Noches"
+                />
+              </div>
+              <div className="">
+                <Image className="inline-block"
+                  src="/logos/Grupo500Noches.svg"
+                  width={210}
+                  height={210}
+                  alt="Grupo 500 Noches"
+                />
+              </div>
+            </div>
           <div className="md:w-1/2 flex flex-col items-center justify-center z-10">
             <div className="text-white text-center content-center	justify-center md:px-10 md:pr-20">
               <p className="text-sm md:text-lg ">
@@ -126,6 +137,41 @@ export default function Home() {
             <Gallery />
           </div>
         </section>
+        <section
+          id="opportunities"
+          className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap"
+        >
+          <div className="md:w-1/2 flex flex-col px-10 ">
+            <p className="text-xs md:text-sm text-gold mb-3">Oportunidades</p>
+            <h2 className="text-main text-md md:text-xlg font-bold">
+              Únete a nuestro equipo
+            </h2>
+            <p className="text-main text-xs md:text-sm mt-4">
+            En <span className="text-gold">Grupo 500 Noches</span>, creemos firmemente en la fuerza y el potencial de cada individuo.
+             Valoramos la diversidad, la creatividad y el compromiso con la excelencia en todo lo que hacemos. 
+             Si compartes nuestra pasión por la innovación y la colaboración, te invitamos a formar parte de nuestro equipo.
+            </p>
+            <Link href="/jobs">
+              <Boton
+                variante={"solid"}
+                contenido={"Unirme al equipo"}
+                style={"mt-10 bg-main text-white w-2/5"}
+                type="scroll"
+              />
+            </Link>
+          </div>
+          <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
+            <div className="text-main text-center">
+              <Image
+                src="/galeria/G500/oportunidades.jpg"
+                width={800}
+                height={450}
+                alt="Grupo 500 Noches"
+                className="rounded-lg w-full"
+              />
+            </div>
+          </div>
+        </section>
         {/* <section
           id="directorio"
           className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 "
@@ -157,7 +203,7 @@ export default function Home() {
 
                 {/* Contenedor del logo */}
                 <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex justify-center items-center">
-                  <div className="w-full flex flex-col items-center justify-center px-4 sm:px-0">
+                  <div className="w-full flex flex-col items-center justify-center px-4 sm:mt-36 sm:px-0">
                     <div className="w-32 h-32 md:w-64 md:h-64">
                       <Image
                         src="/logos/LogoG500NochesSilueta.svg"

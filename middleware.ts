@@ -1,3 +1,6 @@
 export { default } from 'next-auth/middleware'
 
-export const config = { matcher: ["/recursos-humanos"] }
+export const config = { matcher: [
+    "/recursos-humanos",
+    "/admin",
+] }
