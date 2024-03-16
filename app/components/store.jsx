@@ -185,8 +185,76 @@ const useStore = create((set) => ({
         },
       ],
     },
-    "la-nacion-del-taco": {
-      name: "La Nación del taco",
+    "cinema-stereo": {
+      name: "Cinema Stereo",
+      description: "Descripción de la Tienda 2",
+      srcImagen: "logos/LaNacionDelTaco.svg",
+      descripcion: "Descripción",
+      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      tabs: [
+        {
+          id: "-",
+          label: "-",
+          content: "Contenido de la pestaña -",
+        },
+      ],
+      comentarios: [
+        {
+          nombrePersona: "Andrés",
+          comentario:
+            "Lugar muy bueno para un buen corte, la carne en su punto!...la Heineken bien fría!...buen ambiente, Staff super atento, baños impecables!!..valet parking...ke más puedes pedir?...si te gustan los cortes...este es el lugar!!...felicidades!!",
+          tienda: "Mazatlán",
+        },
+        {
+          nombrePersona: "Emilio Gonzalez Fernandez",
+          comentario:
+            "El lugar está increible, muy buena el ambiente y decoración. La comida de 100... Pidan la crema de tomate asados está espectacular. Tienen una ludoteca super completa para los que tienen niños. Te permite comer tranquilo y que los niños de diviertan. 200% recomendado.",
+          tienda: "Mazatlán",
+        },
+        {
+          nombrePersona: "Vic GraDe",
+          comentario:
+            "Los cortes no tienen madre, exquisitos. No te los puedes perder!! Su mixologia muy buena sin llegar a excelente. La atencion del staff de lo mejor, ambiente y decoración de 10.",
+          tienda: "Mazatlán",
+        },
+      ],
+    },
+    "buho-cafe": {
+      name: "Búho Café",
+      description: "Descripción de la Tienda 2",
+      srcImagen: "logos/LaNacionDelTaco.svg",
+      descripcion: "Descripción",
+      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      tabs: [
+        {
+          id: "-",
+          label: "-",
+          content: "Contenido de la pestaña -",
+        },
+      ],
+      comentarios: [
+        {
+          nombrePersona: "Andrés",
+          comentario:
+            "Lugar muy bueno para un buen corte, la carne en su punto!...la Heineken bien fría!...buen ambiente, Staff super atento, baños impecables!!..valet parking...ke más puedes pedir?...si te gustan los cortes...este es el lugar!!...felicidades!!",
+          tienda: "Mazatlán",
+        },
+        {
+          nombrePersona: "Emilio Gonzalez Fernandez",
+          comentario:
+            "El lugar está increible, muy buena el ambiente y decoración. La comida de 100... Pidan la crema de tomate asados está espectacular. Tienen una ludoteca super completa para los que tienen niños. Te permite comer tranquilo y que los niños de diviertan. 200% recomendado.",
+          tienda: "Mazatlán",
+        },
+        {
+          nombrePersona: "Vic GraDe",
+          comentario:
+            "Los cortes no tienen madre, exquisitos. No te los puedes perder!! Su mixologia muy buena sin llegar a excelente. La atencion del staff de lo mejor, ambiente y decoración de 10.",
+          tienda: "Mazatlán",
+        },
+      ],
+    },
+    "historico-cafe-tostador": {
+      name: "Histórico Café Tostador",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion: "Descripción",

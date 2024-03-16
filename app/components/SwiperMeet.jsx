@@ -71,7 +71,51 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/*La Nación del taco */}
           <CardContent
-            id={"la-nacion-del-taco"}
+            id={"cinema-stereo"}
+            imagen={
+              <Image
+                src={"/restaurantes/nacionDelTaco/tacos.png"}
+                width={270}
+                height={250}
+                alt="logo San Juan Leñero"
+              />
+            }
+            logo={
+              <Image
+                src="/logos/LaNacionDelTaco.svg"
+                width={100}
+                height={100}
+                alt="logo la nación del taco"
+              />
+            }
+          />
+        </SwiperSlide>
+        <SwiperSlide className="card-shadow">
+          {/*La Nación del taco */}
+          <CardContent
+            id={"buho-cafe"}
+            imagen={
+              <Image
+                src={"/restaurantes/nacionDelTaco/tacos.png"}
+                width={270}
+                height={250}
+                alt="logo San Juan Leñero"
+              />
+            }
+            logo={
+              <Image
+                src="/logos/LaNacionDelTaco.svg"
+                width={100}
+                height={100}
+                alt="logo la nación del taco"
+              />
+            }
+          />
+        </SwiperSlide>
+        <SwiperSlide className="card-shadow">
+          {/*La Nación del taco */}
+          <CardContent
+            id={"historico-cafe-tostador"}
             imagen={
               <Image
                 src={"/restaurantes/nacionDelTaco/tacos.png"}
