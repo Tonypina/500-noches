@@ -6,7 +6,8 @@ const useStore = create((set) => ({
       name: "Café Bar 500 Noches",
       description: "Descripción de la Tienda 1",
       srcImagen: "logos/500Noches.svg",
-      descripcion: "Descripción",
+      descripcion:
+        "Un lugar dedicado a los encuentros, al tiempo y a la platica. Un lugar que a través del la música en vivo, la decoración, la gastronomía, el café, el vino y el ambiente, creamos momentos contigo, Café Bar 500 Noches está dedicado para ti.",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       comentarios: [
         {
@@ -78,7 +79,8 @@ const useStore = create((set) => ({
       name: "Sarajevo Café Jardín",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/Sarajevo.svg",
-      descripcion: "Descripción",
+      descripcion:
+        "A unas cuadras del centro, Sarajevo es un lugar alejado del bullicio que brinda tranquilidad en un ambiente relajado. Nuestros menús internacionales y veganos dan opción a todo tipo de estilos de vida.",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       comentarios: [
         {
@@ -113,7 +115,8 @@ const useStore = create((set) => ({
       name: "San Juan Leñero",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/SanJuanLeñero.svg",
-      descripcion: "Descripción",
+      descripcion:
+        "Somos un restaurante cuya especialidad es ser un asador de cortes internacionales con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y ambiente agradable.",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {
@@ -223,7 +226,8 @@ const useStore = create((set) => ({
       name: "Búho Café",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
-      descripcion: "Descripción",
+      descripcion:
+        "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {

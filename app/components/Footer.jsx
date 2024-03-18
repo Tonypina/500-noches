@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = ({ params }) => {
   return (
     <footer className="text-white text-xs bg-[url(https://rossoft.com.mx/azul-concreto.png)] p-4 md:p-7 pt-10">
       <div className="flex justify-center flex-col md:flex-row justify-around gap-5">
@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
       <hr className="border-t border-white my-4" />
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <div>@2023, Grupo 500 Noches</div>
+        <div>@2024, Grupo 500 Noches</div>
         <div className="flex gap-2">
           <span>Siguenos:</span>
           <Linkedin size={20} />

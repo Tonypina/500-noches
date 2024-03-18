@@ -7,6 +7,7 @@ import Gallery from "./components/Gallery";
 import VisualizadorPDF from "./components/VisualizadorPDF";
 import Link from "next/link";
 import { Formik } from "formik";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -21,24 +22,25 @@ export default function Home() {
               <source src="/videos/cinema.mp4" type="video/mp4" />
             </video>
           </div>
-            <div className="md:w-1/2 md:flex items-center justify-center hidden flex-col z-10">
-              <div className="mb-2">
-                <Image
-                  src="/logos/LogoG500NochesSilueta.svg"
-                  width={250}
-                  height={250}
-                  alt="Grupo 500 Noches"
-                />
-              </div>
-              <div className="">
-                <Image className="inline-block"
-                  src="/logos/Grupo500Noches.svg"
-                  width={210}
-                  height={210}
-                  alt="Grupo 500 Noches"
-                />
-              </div>
+          <div className="md:w-1/2 md:flex items-center justify-center hidden flex-col z-10">
+            <div className="mb-2">
+              <Image
+                src="/logos/LogoG500NochesSilueta.svg"
+                width={250}
+                height={250}
+                alt="Grupo 500 Noches"
+              />
             </div>
+            <div className="">
+              <Image
+                className="inline-block"
+                src="/logos/Grupo500Noches.svg"
+                width={210}
+                height={210}
+                alt="Grupo 500 Noches"
+              />
+            </div>
+          </div>
           <div className="md:w-1/2 flex flex-col items-center justify-center z-10">
             <div className="text-white text-center content-center	justify-center md:px-10 md:pr-20">
               <p className="text-sm md:text-lg ">
@@ -147,9 +149,12 @@ export default function Home() {
               Únete a nuestro equipo
             </h2>
             <p className="text-main text-xs md:text-sm mt-4">
-            En <span className="text-gold">Grupo 500 Noches</span>, creemos firmemente en la fuerza y el potencial de cada individuo.
-             Valoramos la diversidad, la creatividad y el compromiso con la excelencia en todo lo que hacemos. 
-             Si compartes nuestra pasión por la innovación y la colaboración, te invitamos a formar parte de nuestro equipo.
+              En <span className="text-gold">Grupo 500 Noches</span>, creemos
+              firmemente en la fuerza y el potencial de cada individuo.
+              Valoramos la diversidad, la creatividad y el compromiso con la
+              excelencia en todo lo que hacemos. Si compartes nuestra pasión por
+              la innovación y la colaboración, te invitamos a formar parte de
+              nuestro equipo.
             </p>
             <Link href="/jobs">
               <Boton
@@ -363,6 +368,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
