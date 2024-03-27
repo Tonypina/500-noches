@@ -35,8 +35,8 @@ const PlatillosPrincipales = () => {
             spaceBetween={10}
             className="mySwiper mt-8 mb-0 slide-size contenedor-slides"
           >
-            {selectedStore.platillos.map((platillo) => (
-              <SwiperSlide>
+            {selectedStore.platillos.map((platillo, index) => (
+              <SwiperSlide key={index}>
                 <div className="p-4 border rounded shadow bg-gray-50">
                   <Image
                     src={platillo.image}
