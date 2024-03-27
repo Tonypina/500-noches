@@ -2,13 +2,53 @@ import { create } from "zustand";
 
 const useStore = create((set) => ({
   storeData: {
-    "cafe-500-noches": {
-      name: "Café Bar 500 Noches",
-      description: "Descripción de la Tienda 1",
+    "cafe-500-noches": {  
+      titleFont: "font-georgia",
+      textFont: "font-montserrat",
+      name: <p className="">CAFE BAR <span className="text-red">500</span> NOCHES</p>,
+      eslogan: <p>Un lugar para el <span className="italic text-red">arte</span> de <span className="text-gold">ser y compartir</span></p>,
+      colors: {
+        1: "text-black",
+        2: "text-red",
+        3: "text-gold",
+      },
       srcImagen: "logos/500Noches.svg",
       descripcion:
-        "Un lugar dedicado a los encuentros, al tiempo y a la platica. Un lugar que a través del la música en vivo, la decoración, la gastronomía, el café, el vino y el ambiente, creamos momentos contigo, Café Bar 500 Noches está dedicado para ti.",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+        <p>Un lugar dedicado a los encuentros, al tiempo y a la platica. Un lugar que a través del la música en vivo, la decoración, la gastronomía, el café, el vino y el ambiente, creamos momentos contigo, <span className="text-gold">Café Bar 500 Noches</span> está dedicado para ti.</p>,
+      hero_image: "/restaurantes/500Noches/hero.jpg",
+      galeria1: "/restaurantes/500Noches/galeria1.JPG",
+      galeria2: "/restaurantes/500Noches/galeria2.JPG",
+      galeria3: "/restaurantes/500Noches/galeria3.JPG",
+      galeria4: "/restaurantes/500Noches/galeria4.JPG",
+      platillos: [
+        {
+          image: "/restaurantes/500Noches/platillo1.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/500Noches/platillo2.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/500Noches/platillo3.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/500Noches/platillo4.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/500Noches/platillo5.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+      ],
+      platillos_image: "/texturas/papel.jpg",
+      border_img: "/texturas/ruptura.png", 
       comentarios: [
         {
           nombrePersona: "Viridiana Gallehos Hdez",
@@ -29,6 +69,11 @@ const useStore = create((set) => ({
           tienda: "San Cristóbal",
         },
       ],
+      tabs_style: {
+        tabs_border: "border-b-solid border-b-2 border-b-gold",
+        active_tab: "bg-gold rounded text-white",
+        map_border: "border-solid border-3 border-gold"
+      },
       tabs: [
         {
           id: "celaya",
@@ -76,11 +121,14 @@ const useStore = create((set) => ({
       ],
     },
     sarajevo: {
+      titleFont: "font-adam",
+      textFont: "font-montserrat",
       name: "Sarajevo Café Jardín",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/Sarajevo.svg",
       descripcion:
         "A unas cuadras del centro, Sarajevo es un lugar alejado del bullicio que brinda tranquilidad en un ambiente relajado. Nuestros menús internacionales y veganos dan opción a todo tipo de estilos de vida.",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       comentarios: [
         {
@@ -112,11 +160,14 @@ const useStore = create((set) => ({
       ],
     },
     "san-juan-leñero": {
+      titleFont: "font-georgia",
+      textFont: "font-raleway",
       name: "San Juan Leñero",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/SanJuanLeñero.svg",
       descripcion:
         "Somos un restaurante cuya especialidad es ser un asador de cortes internacionales con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y ambiente agradable.",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {
@@ -153,46 +204,14 @@ const useStore = create((set) => ({
         },
       ],
     },
-    peruano: {
-      name: "Peruano Cevichería",
-      description: "Descripción de la Tienda 2",
-      srcImagen: "logos/Peruano.svg",
-      descripcion: "Descripción",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
-      comentarios: [
-        {
-          nombrePersona: "Naomi López",
-          comentario:
-            "Excelente servicio. Un ambiente muy cálido y tranquilo, y la comida ni hablar. Aquí encontrarás el mejor ceviche de la ciudad! Súper recomendado",
-          tienda: "San Cristóbal de las Casas",
-        },
-        {
-          nombrePersona: "Claudio Luna",
-          comentario:
-            "Lugar excepcional. Agradable con muchos detalles. Ambiente cálido y acogedor. La comida deliciosa, de calidad con excelente presentación y lo mejor el breve tiempo de espera.",
-          tienda: "San Cristóbal de las Casas",
-        },
-        {
-          nombrePersona: "Rigoberto Altamirano",
-          comentario:
-            "Platillos exquisitos, sabor muy fresco en los mariscos. Muy buen servicio por parte del personal, el lugar increíble. Totalmente recomendable",
-          tienda: "San Cristóbal de las Casas",
-        },
-      ],
-      tabs: [
-        {
-          id: "cevicheria",
-          label: "Peruano Cevichería",
-          content: "Contenido de la pestaña cevichería",
-          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.4542073947155!2d-92.6398101008495!3d16.735692584044585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed453e0f735afb%3A0x84bfc035d61a26ce!2sPeruano%20Cevicheria%20y%20Cocina%20peruana!5e0!3m2!1ses-419!2smx!4v1699636244065!5m2!1ses-419!2smx",
-        },
-      ],
-    },
     "cinema-stereo": {
+      titleFont: "font-montserrat",
+      textFont: "font-news-goth",
       name: "Cinema Stereo",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion: "Descripción",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {
@@ -223,11 +242,14 @@ const useStore = create((set) => ({
       ],
     },
     "buho-cafe": {
+      titleFont: "font-black-coffee",
+      textFont: "font-roboto",
       name: "Búho Café",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {
@@ -258,10 +280,13 @@ const useStore = create((set) => ({
       ],
     },
     "historico-cafe-tostador": {
+      titleFont: "",
+      textFont: "",
       name: "Histórico Café Tostador",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion: "Descripción",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {
@@ -292,10 +317,13 @@ const useStore = create((set) => ({
       ],
     },
     "merendero-madero": {
+      titleFont: "font-black-burger",
+      textFont: "font-helvetica",
       name: "Merendero Madero",
       description: "Descripción de la Tienda 2",
       srcImagen: "logos/MerenderoMadero.svg",
       descripcion: "Descripción",
+      hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
       tabs: [
         {

@@ -20,11 +20,23 @@ module.exports = withMT({
         xlg: "2.5rem",
       },
 
+      fontFamily: {
+        adam: ['var(--font-adam)'],
+        black_burger: ['var(--font-black-burger)'],
+        black_coffee: ['var(--font-black-coffee)'],
+        georgia: ['var(--font-georgia)'],
+        montserrat: ['var(--font-montserrat)'],
+        news_goth: ['var(--font-news-goth)'],
+        raleway: ['var(--font-raleway)'],
+        roboto: ['var(--font-roboto)'],
+      },
+
       colors: {
         white: "#F6F7F4",
         main: "#0C4457",
         second: "#4E687D",
         gold: "#AB9753",
+        red: "#830002",
       },
       contianer: {
         "8rem": "8rem",

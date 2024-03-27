@@ -3,7 +3,7 @@ import Image from "next/image";
 import Eslogan from "../components/Eslogan";
 import AboutUs from "../components/AboutUs";
 import useStore from "../components/store";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import PlatillosPrincipales from "../components/PlatillosPrincipales";
 import Sucursales from "../components/Sucursales";
@@ -24,11 +24,15 @@ const Store = ({ params }) => {
 
   return (
     <>
-      <main className="min-h-screen items-center ">
+      <main className={`min-h-screen ${selectedStore.colors[1]} items-center ${selectedStore.textFont}`}>
         <section
           id="hero"
-          className="bg-footer-texture min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0 bg-main"
+          className={`min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0`}
         >
+          <div className="h-full content-bottom absolute overflow-hidden">
+            <div className="h-full w-full bg-black opacity-70 absolute z-10"></div>
+            <img className="-translate-y-60" src={selectedStore.hero_image} alt="Imagen" />
+          </div>
           <div className="md:w-1/2 md:flex items-center justify-center hidden z-10">
             <Image
               src={selectedStore.srcImagen}
@@ -48,15 +52,15 @@ const Store = ({ params }) => {
             />
           </div>
         </section>
-        <AboutUs />
+        <AboutUs id="about-us" />
         <PlatillosPrincipales />
         <Sucursales />
         <div className="mt-5">
           <p className="text-center text-xs md:text-sm text-gold ">Reseñas</p>
-          <h2 className="text-main text-md md:text-xlg font-semibold text-center">
+          <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
             ¿Qué dicen las personas sobre nosotros?
           </h2>
-          <p className="text-main text-xs md:text-sm mt-4 text-center px-10">
+          <p className=" text-xs md:text-sm mt-4 text-center px-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia
             ullam iste numquam error voluptatem labore debitis aut hic
             perspiciatis,

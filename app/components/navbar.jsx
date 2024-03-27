@@ -82,20 +82,16 @@ const Navbar = () => {
       link: "/san-juan-leñero"
     },
     {
-      name: "Peruano Cevichería",
-      link: "/peruano"
-    },
-    {
       name: "Merendero Madero",
       link: "/merendero-madero"
     },
     {
       name: "Buho Café",
-      link: "#"
+      link: "/buho-cafe"
     },
     {
       name: "Cinema Stereo",
-      link: "#"
+      link: "/cinema-stereo"
     },
     {
       name: "Histórico Café Tostador",
