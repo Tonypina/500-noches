@@ -11,7 +11,7 @@ const PlatillosPrincipales = () => {
     <>
       <section className="contianer md:px-[8rem] h-screen flex items-center flex-wrap flex-col m-0">
         <div className="h-full absolute overflow-hidden">
-          <img className="w-full" src={selectedStore.platillos_image} alt="Textura" />
+          <img className="w-screen" src={selectedStore.platillos_image} alt="Textura" />
         </div>
 
         {selectedStore.border_img && (
@@ -20,9 +20,9 @@ const PlatillosPrincipales = () => {
           </div>
         )}
         
-        <div className="z-10 mt-20 pt-14">
-          <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-            Descubre Nuestros <span className={selectedStore.colors[2]}>Platillos</span> Principales
+        <div className={`z-10 mt-20 pt-14 ${selectedStore.platillos_image === '/texturas/bg_charcoal.jpg' ? 'text-white' : 'text-black'}`}>
+          <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center ${selectedStore.platillos_image === '/texturas/bg_charcoal.jpg' ? 'text-gold' : ''}`}>
+            DESCUBRE NUESTROS <span className={selectedStore.colors[2]}>PLATILLOS</span> PRINCIPALES
           </h2>
           <p className="text-xs md:text-sm mt-4 text-center px-10">
             Delicias que hacen brillar nuestras noches.

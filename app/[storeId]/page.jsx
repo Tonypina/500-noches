@@ -52,13 +52,18 @@ const Store = ({ params }) => {
             />
           </div>
         </section>
+        {selectedStore.border_img && (
+          <div className="z-30 w-full absolute -translate-y-20 rotate-180">
+            <img className="w-full h-28" src={selectedStore.border_img} alt="" />
+          </div>
+        )}
         <AboutUs id="about-us" />
         <PlatillosPrincipales />
         <Sucursales />
-        <div className="mt-5">
+        <div className="mt-5 mb-24">
           <p className="text-center text-xs md:text-sm text-gold ">Reseñas</p>
           <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-            ¿Qué dicen las personas sobre nosotros?
+            ¿QUE DICEN LAS <span className={`${selectedStore.colors[2]}`}>PERSONAS</span> SOBRE <span className={`${selectedStore.colors[3]}`}>NOSOTROS</span>?
           </h2>
           <p className=" text-xs md:text-sm mt-4 text-center px-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia
@@ -71,18 +76,21 @@ const Store = ({ params }) => {
               opinion={selectedStore.comentarios[0].comentario}
               name={selectedStore.comentarios[0].nombrePersona}
               ciudad={selectedStore.comentarios[0].tienda}
+              selectedStore={selectedStore}
             />
             <ReviewCard
               tienda={selectedStore.name}
               opinion={selectedStore.comentarios[1].comentario}
               name={selectedStore.comentarios[1].nombrePersona}
               ciudad={selectedStore.comentarios[1].tienda}
+              selectedStore={selectedStore}
             />
             <ReviewCard
               tienda={selectedStore.name}
               opinion={selectedStore.comentarios[2].comentario}
               name={selectedStore.comentarios[2].nombrePersona}
               ciudad={selectedStore.comentarios[2].tienda}
+              selectedStore={selectedStore}
             />
           </div>
         </div>

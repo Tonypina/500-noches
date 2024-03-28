@@ -47,7 +47,7 @@ const useStore = create((set) => ({
           description: "Descripción"
         },
       ],
-      platillos_image: "/texturas/papel.jpg",
+      platillos_image: '/texturas/papel.jpg',
       border_img: "/texturas/ruptura.png", 
       comentarios: [
         {
@@ -123,13 +123,55 @@ const useStore = create((set) => ({
     sarajevo: {
       titleFont: "font-adam",
       textFont: "font-montserrat",
-      name: "Sarajevo Café Jardín",
-      description: "Descripción de la Tienda 2",
-      srcImagen: "logos/Sarajevo.svg",
+      name: <p className="tracking-widest">SARAJEVO CAFE JARDIN</p>,
+      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      colors: {
+        1: "text-black",
+        2: "text-[#D45D52]",
+        3: "text-[#849072]",
+      },
+      srcImagen: "logos/Sarajevo_blanco.svg",
       descripcion:
         "A unas cuadras del centro, Sarajevo es un lugar alejado del bullicio que brinda tranquilidad en un ambiente relajado. Nuestros menús internacionales y veganos dan opción a todo tipo de estilos de vida.",
-      hero_image: "/restaurantes/500Noches/hero.jpg",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      hero_image: "/restaurantes/sarajevo/hero.jpg",
+      galeria1: "/restaurantes/sarajevo/galeria1.jpg",
+      galeria2: "/restaurantes/sarajevo/galeria2.jpg",
+      galeria3: "/restaurantes/sarajevo/galeria3.jpg",
+      galeria4: "/restaurantes/sarajevo/galeria4.jpg",
+      platillos: [
+        {
+          image: "/restaurantes/sarajevo/platillo1.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sarajevo/platillo2.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sarajevo/platillo3.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sarajevo/platillo4.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sarajevo/platillo5.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sarajevo/platillo6.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+      ],
+      platillos_image: '/texturas/textura_verde.png',
+      // border_img: "/texturas/ruptura.png",
       comentarios: [
         {
           nombrePersona: "Mario Cabañas",
@@ -150,6 +192,11 @@ const useStore = create((set) => ({
           tienda: "Café Jardin",
         },
       ],
+      tabs_style: {
+        tabs_border: "border-b-solid border-b-2 border-b-gold",
+        active_tab: "bg-gold rounded text-white",
+        map_border: "border-solid border-3 border-gold"
+      },
       tabs: [
         {
           id: "jardín",
@@ -159,16 +206,62 @@ const useStore = create((set) => ({
         },
       ],
     },
-    "san-juan-leñero": {
+    "san-juan-lenero": {
       titleFont: "font-georgia",
       textFont: "font-raleway",
-      name: "San Juan Leñero",
-      description: "Descripción de la Tienda 2",
-      srcImagen: "logos/SanJuanLeñero.svg",
+      name: <p className="font-bridge">San Juan Leñero</p>,
+      eslogan: <p className="font-georgia">Palabras que <span className="text-gold text-xlg">abrazan</span> y sabores que <span className="text-gold text-xlg">recuerdan</span></p>,
+      colors: {
+        1: "text-black",
+        2: "text-red",
+        3: "text-gold",
+      },
+      srcImagen: "logos/SanJuanLeñeroBlanco.svg",
       descripcion:
-        "Somos un restaurante cuya especialidad es ser un asador de cortes internacionales con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y ambiente agradable.",
-      hero_image: "/restaurantes/500Noches/hero.jpg",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+        <p>Somos un restaurante cuya <span className="text-red">especialidad</span> es ser un asador de <span className="text-red">cortes internacionales</span> con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y <span className="text-red">ambiente agradable</span>.</p>,
+      hero_image: "/restaurantes/sanJuanLenero/hero.jpg",
+      galeria1: "/restaurantes/sanJuanLenero/galeria1.jpg",
+      galeria2: "/restaurantes/sanJuanLenero/galeria2.jpg",
+      galeria3: "/restaurantes/sanJuanLenero/galeria3.jpg",
+      galeria4: "/restaurantes/sanJuanLenero/galeria4.jpg",
+      platillos_image: "/texturas/bg_charcoal.jpg",
+      platillos: [
+        {
+          image: "/restaurantes/sanJuanLenero/platillo1.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sanJuanLenero/platillo2.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sanJuanLenero/platillo3.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sanJuanLenero/platillo4.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sanJuanLenero/platillo5.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/sanJuanLenero/platillo6.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+      ],
+      tabs_style: {
+        tabs_border: "border-b-solid border-b-2 border-b-gold",
+        active_tab: "bg-gold rounded text-white",
+        map_border: "border-solid border-3 border-gold"
+      },
       tabs: [
         {
           id: "tuxtla",
@@ -204,7 +297,7 @@ const useStore = create((set) => ({
         },
       ],
     },
-    "cinema-stereo": {
+    "cinema-stere": {
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: "Cinema Stereo",
@@ -245,56 +338,66 @@ const useStore = create((set) => ({
       titleFont: "font-black-coffee",
       textFont: "font-roboto",
       name: "Búho Café",
-      description: "Descripción de la Tienda 2",
+      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      colors: {
+        1: "text-black",
+        2: "text-[#D45D52]",
+        3: "text-[#849072]",
+      },
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
-      hero_image: "/restaurantes/500Noches/hero.jpg",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      hero_image: "/restaurantes/buho-cafe/hero.jpg",
+      galeria1: "/restaurantes/buho-cafe/galeria1.jpg",
+      galeria2: "/restaurantes/buho-cafe/galeria2.jpg",
+      galeria3: "/restaurantes/buho-cafe/galeria3.jpg",
+      galeria4: "/restaurantes/buho-cafe/galeria4.jpg",
+      platillos_image: '/texturas/textura_verde.png',
+      platillos: [
+        {
+          image: "/restaurantes/buho-cafe/platillo1.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/buho-cafe/platillo2.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/buho-cafe/platillo3.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/buho-cafe/platillo4.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/buho-cafe/platillo5.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/buho-cafe/platillo6.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+      ],
       tabs: [
         {
-          id: "-",
-          label: "-",
-          content: "Contenido de la pestaña -",
+          id: "san-cristobal",
+          label: "San Cristobal",
+          content: "Contenido de la pestaña san cristobal",
+          map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.8345465859634!2d-92.64992012484971!3d16.735105284045108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed456f9e165f59%3A0x80abd43d8bdbc66e!2zQsO6aG8gQ2Fmw6k!5e0!3m2!1ses-419!2smx!4v1711592307036!5m2!1ses-419!2smx",
         },
       ],
-      comentarios: [
-        {
-          nombrePersona: "Andrés",
-          comentario:
-            "Lugar muy bueno para un buen corte, la carne en su punto!...la Heineken bien fría!...buen ambiente, Staff super atento, baños impecables!!..valet parking...ke más puedes pedir?...si te gustan los cortes...este es el lugar!!...felicidades!!",
-          tienda: "Mazatlán",
-        },
-        {
-          nombrePersona: "Emilio Gonzalez Fernandez",
-          comentario:
-            "El lugar está increible, muy buena el ambiente y decoración. La comida de 100... Pidan la crema de tomate asados está espectacular. Tienen una ludoteca super completa para los que tienen niños. Te permite comer tranquilo y que los niños de diviertan. 200% recomendado.",
-          tienda: "Mazatlán",
-        },
-        {
-          nombrePersona: "Vic GraDe",
-          comentario:
-            "Los cortes no tienen madre, exquisitos. No te los puedes perder!! Su mixologia muy buena sin llegar a excelente. La atencion del staff de lo mejor, ambiente y decoración de 10.",
-          tienda: "Mazatlán",
-        },
-      ],
-    },
-    "historico-cafe-tostador": {
-      titleFont: "",
-      textFont: "",
-      name: "Histórico Café Tostador",
-      description: "Descripción de la Tienda 2",
-      srcImagen: "logos/LaNacionDelTaco.svg",
-      descripcion: "Descripción",
-      hero_image: "/restaurantes/500Noches/hero.jpg",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
-      tabs: [
-        {
-          id: "-",
-          label: "-",
-          content: "Contenido de la pestaña -",
-        },
-      ],
+      tabs_style: {
+        tabs_border: "border-b-solid border-b-2 border-b-gold",
+        active_tab: "bg-gold rounded text-white",
+        map_border: "border-solid border-3 border-gold"
+      },
       comentarios: [
         {
           nombrePersona: "Andrés",
@@ -320,11 +423,52 @@ const useStore = create((set) => ({
       titleFont: "font-black-burger",
       textFont: "font-helvetica",
       name: "Merendero Madero",
-      description: "Descripción de la Tienda 2",
+      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      colors: {
+        1: "text-black",
+        2: "text-[#D45D52]",
+        3: "text-[#849072]",
+      },
       srcImagen: "logos/MerenderoMadero.svg",
       descripcion: "Descripción",
-      hero_image: "/restaurantes/500Noches/hero.jpg",
-      platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      hero_image: "/restaurantes/merendero/hero.jpg",
+      galeria1: "/restaurantes/merendero/galeria1.jpg",
+      galeria2: "/restaurantes/merendero/galeria2.jpg",
+      galeria3: "/restaurantes/merendero/galeria3.jpg",
+      galeria4: "/restaurantes/merendero/galeria4.jpg",
+      platillos: [
+        {
+          image: "/restaurantes/merendero/platillo1.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/merendero/platillo2.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/merendero/platillo3.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/merendero/platillo4.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/merendero/platillo5.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+        {
+          image: "/restaurantes/merendero/platillo6.JPG",
+          name: "Nombre",
+          description: "Descripción"
+        },
+      ],
+      platillos_image: '/texturas/papel.jpg',
       tabs: [
         {
           id: "madero",
@@ -333,6 +477,11 @@ const useStore = create((set) => ({
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.830712869926!2d-101.67562202499109!3d21.119314280552764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf08799576fd%3A0x8ff78940798e8315!2sMerendero%20Madero!5e0!3m2!1ses-419!2smx!4v1699636372831!5m2!1ses-419!2smx",
         },
       ],
+      tabs_style: {
+        tabs_border: "border-b-solid border-b-2 border-b-gold",
+        active_tab: "bg-gold rounded text-white",
+        map_border: "border-solid border-3 border-gold"
+      },
       comentarios: [
         {
           nombrePersona: "Cecilia Garcia",

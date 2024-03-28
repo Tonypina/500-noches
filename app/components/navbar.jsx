@@ -79,7 +79,7 @@ const Navbar = () => {
     },
     {
       name: "San Juan Leñero",
-      link: "/san-juan-leñero"
+      link: "/san-juan-lenero"
     },
     {
       name: "Merendero Madero",

@@ -18,6 +18,16 @@ export const metadata = {
     "Empresa chiapaneca con 7 marcas en el mercado y presencia en 7 ciudades de la República Mexicana",
 };
 
+const bridge = localFont({
+  src: [
+    {
+      path: '../public/fonts/bridge/bridge.ttf',
+      weight: '400'
+    }
+  ],
+  variable: '--font-bridge'
+})
+
 const adam = localFont({
   src: [
     {
@@ -139,6 +149,7 @@ export default async function RootLayout({ children }) {
       ${news_goth.variable}
       ${raleway.variable}
       ${roboto.variable}
+      ${bridge.variable}
     `}>
       <head></head>
       <body className={ptSerif.className}>

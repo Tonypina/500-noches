@@ -29,6 +29,7 @@ module.exports = withMT({
         news_goth: ['var(--font-news-goth)'],
         raleway: ['var(--font-raleway)'],
         roboto: ['var(--font-roboto)'],
+        bridge: ['var(--font-bridge)'],
       },
 
       colors: {
@@ -37,6 +38,7 @@ module.exports = withMT({
         second: "#4E687D",
         gold: "#AB9753",
         red: "#830002",
+        coffee: "#48271A",
       },
       contianer: {
         "8rem": "8rem",

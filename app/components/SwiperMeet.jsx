@@ -93,7 +93,7 @@ const SwiperMeet = () => {
         <SwiperSlide className="card-shadow">
           {/* San Juan Leñero */}
           <CardContent
-            id={"san-juan-leñero"}
+            id={"san-juan-lenero"}
             imagen={
               <Image
                 src={"/restaurantes/sanJuanLeñero/mesa.png"}

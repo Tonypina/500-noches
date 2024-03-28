@@ -26,12 +26,12 @@ const Sucursales = () => {
             Sucursales
           </p>
           <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-            Descubre Nuestras <span className={`${selectedStore.colors[2]}`}>Sucursales</span>
+            DESCUBRE NUESTRAS <span className={`${selectedStore.colors[2]}`}>SUCURSALES</span>
           </h2>
         </div>
-        <div className={`mb-4 p-3 w-full bg-gray-50`}>
+        <div className={`mb-4 p-3 w-full bg-white`}>
           <ul
-            className="flex flex-wrap justify-start w-full text-xs md:text-sm text-center md:overflow-x-hidden"
+            className="flex flex-wrap justify-center w-full text-xs md:text-sm text-center md:overflow-x-hidden"
             id="default-tab"
             data-tabs-toggle="#default-tab-content"
             role="tablist"
@@ -58,7 +58,7 @@ const Sucursales = () => {
             ))}
           </ul>
         </div>
-        <div className="mb-4" id="default-tab-content">
+        <div className="mb-4 bg-white" id="default-tab-content">
           {selectedStore.tabs.map((tab) => (
             // Mapa
 
@@ -66,7 +66,7 @@ const Sucursales = () => {
               key={tab.id}
               className={`${
                 activeTab === tab.id ? "" : "hidden"
-              }  rounded-lg bg-gray-50 dark:bg-gray-800 ${selectedStore.tabs_style.map_border}`}
+              } rounded-lg bg-gray-50 dark:bg-gray-800 ${selectedStore.tabs_style.map_border}`}
               id={tab.id}
               role="tabpanel"
               aria-labelledby={`${tab.id}-tab`}
@@ -75,7 +75,7 @@ const Sucursales = () => {
               <div className={`md:px-[2rem] min-h-3/4 flex flex-col md:flex-row items-center py-10`}>
                 <div className="w-full md:flex md:flex-col bg-gray-50 px-5">
                   <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-bold`}>
-                    ¿<span className={`${selectedStore.colors[2]}`}>Dónde</span> nos Ubicamos?
+                    ¿<span className={`${selectedStore.colors[2]}`}>DONDE</span> NOS UBICAMOS?
                   </h2>
                   <p className="text-xs md:text-sm mt-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
@@ -104,7 +104,7 @@ const Sucursales = () => {
               {/* Menú */}
               <div>
                 <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-                  Conoce Nuestro <span className={`${selectedStore.colors[2]}`}>Menú</span>
+                  CONOCE NUESTRO <span className={`${selectedStore.colors[2]}`}>MENU</span>
                 </h2>
                 <p className="text-xs md:text-sm mt-4 text-center px-10">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -139,7 +139,7 @@ const Sucursales = () => {
                   }}
                 >
                   <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-                    <span className={`${selectedStore.colors[2]}`}>Reserva</span> Mesa
+                    <span className={`${selectedStore.colors[2]}`}>RESERVA</span> AHORA
                   </h2>
                   <p className=" text-xs md:text-sm mt-4 text-center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
