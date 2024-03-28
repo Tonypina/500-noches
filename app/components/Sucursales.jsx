@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useStore from "./store";
 import Boton from "./Boton";
 import backImageReserv from "../../public/texturas/reservarFondo.png";
-import ReviewCard from "./ReviewCard";
+import Menu from "./Menu";
 
 const Sucursales = () => {
   const { selectedStore } = useStore();
@@ -19,7 +19,7 @@ const Sucursales = () => {
     <>
       <section
         id="#sucursales"
-        className="container mx-auto px-4 md:px-8 w-full pb-10 md:pb-20 flex-wrap flex-col"
+        className="container mx-auto px-4 mt-20 md:px-8 w-full pb-10 md:pb-20 flex-wrap flex-col"
       >
         <div>
           <p className="text-center text-xs md:text-sm text-gold mb-3">
@@ -112,14 +112,7 @@ const Sucursales = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center  px-8">
-                <div className="w-full flex justify-center items-center h-screen ">
-                  <embed
-                    src="https://rossoft.com.mx/pdf/G500-Folleto-SucursalesC.pdf"
-                    //src={selectedStore.menu}
-                    type="application/pdf"
-                    className="w-full md:w-5/5 h-4/5 "
-                  />
-                </div>
+                <Menu folderPath={selectedStore.menuSrc + "/" + tab.id}/>
               </div>
               {/* Reservar */}
 

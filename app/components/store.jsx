@@ -49,6 +49,7 @@ const useStore = create((set) => ({
       ],
       platillos_image: '/texturas/papel.jpg',
       border_img: "/texturas/ruptura.png", 
+      comentarios_image: "/texturas/papel_2.jpg",
       comentarios: [
         {
           nombrePersona: "Viridiana Gallehos Hdez",
@@ -74,6 +75,7 @@ const useStore = create((set) => ({
         active_tab: "bg-gold rounded text-white",
         map_border: "border-solid border-3 border-gold"
       },
+      menuSrc: "/restaurantes/500Noches/menus",
       tabs: [
         {
           id: "celaya",
@@ -89,7 +91,7 @@ const useStore = create((set) => ({
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.396797025032!2d-101.69124984555559!3d21.152992532059997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf48e9da755b%3A0xfa0f08b074a974b9!2sCaf%C3%A9%20Bar%20500%20Noches%20Le%C3%B3n!5e0!3m2!1ses-419!2smx!4v1699635276698!5m2!1ses-419!2smx",
         },
         {
-          id: "san-luis-potosí",
+          id: "san-luis-potosi",
           label: "San Luis Potosí",
           content: "Contenido de la pestaña San Luis Potos",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2113.9719670915806!2d-101.02140308051855!3d22.145449056782407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a995868e26757%3A0x9fa51e738790307!2sCaf%C3%A9%20Bar%20500%20Noches%20San%20Luis!5e0!3m2!1ses-419!2smx!4v1699635327178!5m2!1ses-419!2smx",
@@ -172,6 +174,7 @@ const useStore = create((set) => ({
       ],
       platillos_image: '/texturas/textura_verde.png',
       // border_img: "/texturas/ruptura.png",
+      comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
           nombrePersona: "Mario Cabañas",
@@ -197,9 +200,10 @@ const useStore = create((set) => ({
         active_tab: "bg-gold rounded text-white",
         map_border: "border-solid border-3 border-gold"
       },
+      menuSrc: "/restaurantes/sarajevo/menus",
       tabs: [
         {
-          id: "jardín",
+          id: "jardin",
           label: "Café Jardín",
           content: "Contenido de la pestaña jardín",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.752863787192!2d-92.63577262510644!3d16.739178484041627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed45acbb7c6a41%3A0x10c6b24b0b114b27!2sSarajevo%20Caf%C3%A9%20Jardin!5e0!3m2!1ses-419!2smx!4v1699635971935!5m2!1ses-419!2smx",
@@ -262,6 +266,7 @@ const useStore = create((set) => ({
         active_tab: "bg-gold rounded text-white",
         map_border: "border-solid border-3 border-gold"
       },
+      menuSrc: "/restaurantes/sanJuanLenero/menus",
       tabs: [
         {
           id: "tuxtla",
@@ -276,6 +281,7 @@ const useStore = create((set) => ({
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.0022932674383!2d-106.44894362492475!3d23.27936637899467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8698ab3c39b43b03%3A0xd4f2acde59c95b72!2sSan%20Juan%20Le%C3%B1ero%20Asador!5e0!3m2!1ses-419!2smx!4v1699636177582!5m2!1ses-419!2smx",
         },
       ],
+      comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
           nombrePersona: "Andrés",
@@ -301,11 +307,17 @@ const useStore = create((set) => ({
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: "Cinema Stereo",
-      description: "Descripción de la Tienda 2",
+      eslogan: <p className="font-georgia">Palabras que <span className="text-gold text-xlg">abrazan</span> y sabores que <span className="text-gold text-xlg">recuerdan</span></p>,
+      colors: {
+        1: "text-black",
+        2: "text-red",
+        3: "text-gold",
+      },
       srcImagen: "logos/LaNacionDelTaco.svg",
       descripcion: "Descripción",
       hero_image: "/restaurantes/500Noches/hero.jpg",
       platillo1: "/restaurantes/nacionDelTaco/tacos1.png",
+      menuSrc: "/restaurantes/cinemaStereo/menus",
       tabs: [
         {
           id: "-",
@@ -313,6 +325,7 @@ const useStore = create((set) => ({
           content: "Contenido de la pestaña -",
         },
       ],
+      comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
           nombrePersona: "Andrés",
@@ -385,6 +398,7 @@ const useStore = create((set) => ({
           description: "Descripción"
         },
       ],
+      menuSrc: "/restaurantes/buho-cafe/menus",
       tabs: [
         {
           id: "san-cristobal",
@@ -398,6 +412,7 @@ const useStore = create((set) => ({
         active_tab: "bg-gold rounded text-white",
         map_border: "border-solid border-3 border-gold"
       },
+      comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
           nombrePersona: "Andrés",
@@ -469,6 +484,7 @@ const useStore = create((set) => ({
         },
       ],
       platillos_image: '/texturas/papel.jpg',
+      menuSrc: "/restaurantes/merendero/menus",
       tabs: [
         {
           id: "madero",
@@ -482,6 +498,7 @@ const useStore = create((set) => ({
         active_tab: "bg-gold rounded text-white",
         map_border: "border-solid border-3 border-gold"
       },
+      comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
           nombrePersona: "Cecilia Garcia",
