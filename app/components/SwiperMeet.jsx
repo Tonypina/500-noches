@@ -96,7 +96,7 @@ const SwiperMeet = () => {
             id={"san-juan-lenero"}
             imagen={
               <Image
-                src={"/restaurantes/sanJuanLeñero/mesa.png"}
+                src={"/restaurantes/sanJuanLenero/mesa.png"}
                 width={270}
                 height={250}
                 alt="logo San Juan Leñero"
@@ -104,7 +104,7 @@ const SwiperMeet = () => {
             }
             logo={
               <Image
-                src="/logos/SanJuanLeñero.svg"
+                src="/logos/SanJuanLenero.svg"
                 width={100}
                 height={100}
                 alt="logo San Juan Leñero"
@@ -118,10 +118,10 @@ const SwiperMeet = () => {
             id={"cinema-stereo"}
             imagen={
               <Image
-                src={"/restaurantes/nacionDelTaco/tacos.png"}
+                src={"/restaurantes/sanJuanLenero/mesa.png"}
                 width={270}
                 height={250}
-                alt="logo San Juan Leñero"
+                alt="logo Cinema Stereo"
               />
             }
             logo={
@@ -140,7 +140,7 @@ const SwiperMeet = () => {
             id={"historico-cafe-tostador"}
             imagen={
               <Image
-                src={"/restaurantes/nacionDelTaco/tacos.png"}
+                src={"/restaurantes/sanJuanLenero/mesa.png"}
                 width={270}
                 height={250}
                 alt="logo San Juan Leñero"
@@ -162,7 +162,7 @@ const SwiperMeet = () => {
             id={"buho-cafe"}
             imagen={
               <Image
-                src={"/restaurantes/nacionDelTaco/tacos.png"}
+                src={"/restaurantes/sanJuanLenero/mesa.png"}
                 width={270}
                 height={250}
                 alt="logo San Juan Leñero"
@@ -197,28 +197,6 @@ const SwiperMeet = () => {
                 width={100}
                 height={100}
                 alt="Logo merendero Madero"
-              />
-            }
-          />
-        </SwiperSlide>
-        <SwiperSlide className="card-shadow">
-          {/* Peruano */}
-          <CardContent
-            id={"peruano"}
-            imagen={
-              <Image
-                src={"/restaurantes/Peruano/espacioPeruano.png"}
-                width={270}
-                height={250}
-                alt="logo San Juan Leñero"
-              />
-            }
-            logo={
-              <Image
-                src="/logos/Peruano.svg"
-                width={100}
-                height={100}
-                alt="logo Peruano"
               />
             }
           />
