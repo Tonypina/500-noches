@@ -224,10 +224,10 @@ const useStore = create((set) => ({
       descripcion:
         <p>Somos un restaurante cuya <span className="text-red">especialidad</span> es ser un asador de <span className="text-red">cortes internacionales</span> con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y <span className="text-red">ambiente agradable</span>.</p>,
       hero_image: "/restaurantes/sanJuanLenero/hero.jpg",
-      galeria1: "/restaurantes/sanJuanLenero/galeria1.jpg",
-      galeria2: "/restaurantes/sanJuanLenero/galeria2.jpg",
-      galeria3: "/restaurantes/sanJuanLenero/galeria3.jpg",
-      galeria4: "/restaurantes/sanJuanLenero/galeria4.jpg",
+      galeria1: "/restaurantes/sanJuanLenero/galeria1.JPG",
+      galeria2: "/restaurantes/sanJuanLenero/galeria2.JPG",
+      galeria3: "/restaurantes/sanJuanLenero/galeria3.JPG",
+      galeria4: "/restaurantes/sanJuanLenero/galeria4.JPG",
       platillos_image: "/texturas/bg_charcoal.jpg",
       platillos: [
         {
