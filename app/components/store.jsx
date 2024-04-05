@@ -220,7 +220,7 @@ const useStore = create((set) => ({
         2: "text-red",
         3: "text-gold",
       },
-      srcImagen: "logos/SanJuanLeñeroBlanco.svg",
+      srcImagen: "logos/SanJuanLeneroBlanco.svg",
       descripcion:
         <p>Somos un restaurante cuya <span className="text-red">especialidad</span> es ser un asador de <span className="text-red">cortes internacionales</span> con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y <span className="text-red">ambiente agradable</span>.</p>,
       hero_image: "/restaurantes/sanJuanLenero/hero.jpg",

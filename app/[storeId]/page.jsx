@@ -31,7 +31,7 @@ const Store = ({ params }) => {
         >
           <div className="h-full content-bottom absolute overflow-hidden">
             <div className="h-full w-full bg-black opacity-70 absolute z-10"></div>
-            <img className="-translate-y-60" src={selectedStore.hero_image} alt="Imagen" />
+            <img className="-translate-y-60 w-screen" src={selectedStore.hero_image} alt="Imagen" />
           </div>
           <div className="md:w-1/2 md:flex items-center justify-center hidden z-10">
             <Image
