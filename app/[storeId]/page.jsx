@@ -24,7 +24,7 @@ const Store = ({ params }) => {
 
   return (
     <>
-      <main className={`min-h-screen ${selectedStore.colors[1]} items-center ${selectedStore.textFont}`}>
+      <main className={`min-h-screen ${selectedStore.colors[1]} bg-[#F0F0F0] items-center ${selectedStore.textFont}`}>
         <section
           id="hero"
           className={`min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0`}
