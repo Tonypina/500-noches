@@ -48,17 +48,17 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 Inicio
               </div>
             </Link>
-            <Link href="#about-us">
+            <Link href="/#about-us">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                 Nosotros
               </div>
             </Link>
-            <Link href="#conoce-la-familia">
+            <Link href="/#conoce-la-familia">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                 Conceptos
               </div>
             </Link>
-            <Link href="#galeria">
+            <Link href="/#galeria">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                 Galería
               </div>
@@ -68,7 +68,7 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 Carreras
               </div>
             </Link>
-            <Link href="#contacto">
+            <Link href="/#contacto">
               <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
                 Contacto
               </div>
