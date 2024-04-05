@@ -30,7 +30,7 @@ const SwiperMeet = () => {
   }, []);
 
   return (
-    <div className="contenedor-slides mx-auto mt-10 ">
+    <div className="contenedor-slides mx-auto mt-10">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -44,7 +44,7 @@ const SwiperMeet = () => {
         }}
         pagination={{ clickable: true, enabled: paginationEnabled }}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper slide-size contenedor-slides"
+        className="mySwiper slide-size contenedor-slides "
       >
         <SwiperSlide className="card-shadow rounded-lg">
           {/* Cafe 500 Noches */}
@@ -61,7 +61,7 @@ const SwiperMeet = () => {
             logo={
               <Image
                 src="/logos/500Noches.svg"
-                width={100}
+                width={150}
                 height={100}
                 alt="Logo 500 noches"
               />
@@ -105,7 +105,7 @@ const SwiperMeet = () => {
             logo={
               <Image
                 src="/logos/SanJuanLenero.svg"
-                width={100}
+                width={180}
                 height={100}
                 alt="logo San Juan Leñero"
               />
@@ -118,18 +118,18 @@ const SwiperMeet = () => {
             id={"cinema-stereo"}
             imagen={
               <Image
-                src={"/restaurantes/sanJuanLenero/mesa.png"}
+                src={"/restaurantes/cinema-stereo/foto.png"}
                 width={270}
                 height={250}
-                alt="logo Cinema Stereo"
+                alt="Imagen Cinema Stereo"
               />
             }
             logo={
               <Image
-                src="/logos/LaNacionDelTaco.svg"
-                width={100}
-                height={100}
-                alt="logo la nación del taco"
+                src="/logos/CinemaStereo.svg"
+                width={80}
+                height={80}
+                alt="Logo Cinema Stereo"
               />
             }
           />
@@ -140,18 +140,18 @@ const SwiperMeet = () => {
             id={"historico-cafe-tostador"}
             imagen={
               <Image
-                src={"/restaurantes/sanJuanLenero/mesa.png"}
+                src={"/restaurantes/historico/foto.png"}
                 width={270}
                 height={250}
-                alt="logo San Juan Leñero"
+                alt="Imagen Histórico Tostador"
               />
             }
             logo={
               <Image
-                src="/logos/LaNacionDelTaco.svg"
+                src="/logos/HistoricoTostador.svg"
                 width={100}
                 height={100}
-                alt="logo la nación del taco"
+                alt="Logo Historico Tostador"
               />
             }
           />
@@ -162,7 +162,7 @@ const SwiperMeet = () => {
             id={"buho-cafe"}
             imagen={
               <Image
-                src={"/restaurantes/sanJuanLenero/mesa.png"}
+                src={"/restaurantes/buho-cafe/galeria2.JPG"}
                 width={270}
                 height={250}
                 alt="logo San Juan Leñero"
@@ -170,8 +170,8 @@ const SwiperMeet = () => {
             }
             logo={
               <Image
-                src="/logos/LaNacionDelTaco.svg"
-                width={100}
+                src="/logos/BuhoCafe.svg"
+                width={150}
                 height={100}
                 alt="logo la nación del taco"
               />

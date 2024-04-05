@@ -81,20 +81,20 @@ const Navbar = () => {
       link: "/san-juan-lenero"
     },
     {
-      name: "Merendero Madero",
-      link: "/merendero-madero"
-    },
-    {
-      name: "Buho Café",
-      link: "/buho-cafe"
-    },
-    {
       name: "Cinema Stereo",
       link: "/cinema-stereo"
     },
     {
       name: "Histórico Café Tostador",
       link: "https://www.facebook.com/eltostadorcafe/"
+    },
+    {
+      name: "Buho Café",
+      link: "/buho-cafe"
+    },
+    {
+      name: "Merendero Madero",
+      link: "/merendero-madero"
     },
   ]
 

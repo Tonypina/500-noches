@@ -12,6 +12,7 @@ html {
 }
 
 .contenedor-slides {
+  overflow-y: visible !important;
   max-width: 100%;
 }
 
