@@ -156,7 +156,7 @@ export default function Home() {
               la innovación y la colaboración, te invitamos a formar parte de
               nuestro equipo.
             </p>
-            <Link href="/jobs">
+            <Link href="https://bolsadetrabajo.grupo500noches.com/empleos" target="_blank">
               <Boton
                 variante={"solid"}
                 contenido={"Unirme al equipo"}
@@ -177,21 +177,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <section
-          id="directorio"
-          className="contianer md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 "
-        >
-          <h2 className="text-main text-md md:text-xlg font-semibold text-center">
-            Conoce a la Familia
-          </h2>
-          <p className="text-main text-xs md:text-sm mt-4 text-center px-10">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-            repudiandae. Qui tempore, cum in assumenda eius laboriosam? Tempore
-            suscipit, dicta, error laborum iure in nobis ullam ipsa quaerat odio
-            repudiandae.
-          </p>
-          <VisualizadorPDF />
-        </section> */}
 
         <section id="contacto" className="hero">
           <div className="gap-0 sm:columns-2">
@@ -262,7 +247,6 @@ export default function Home() {
                   handleBlur,
                   handleSubmit,
                   isSubmitting,
-                  /* and other goodies */
                 }) => (
                   <form onSubmit={handleSubmit}>
                     <div className="space-y-12">

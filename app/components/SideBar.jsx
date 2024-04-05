@@ -1,10 +1,8 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSession, signOut } from "next-auth/react";
 
 const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
-  const { data, status } = useSession();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -73,28 +71,9 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 Contacto
               </div>
             </Link>
-
-            {status === "authenticated" ? (
-              <div>
-                <hr className="border-t border-main my-2" />
-                <div className="text-sm md:text-base">
-                  Administración
-                </div>
-                <hr className="border-t border-main my-2" />
-                <Link href="admin">
-                  <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                    Usuarios
-                  </div>
-                </Link>
-                <Link href="recursos-humanos">
-                  <div className="py-3 text-sm md:text-base duration-300 hover:scale-110">
-                    Vacantes
-                  </div>
-                </Link>
-              </div>
-            ) : null}
           </nav>
           <div className="mt-auto">
+            <hr className="border-t border-main my-4 w-full" />
             <div className="text-sm md:text-base flex justify-around gap-10 mb-6 ">
               <Link
                 href="https://www.facebook.com/500nochessancristobal"
@@ -122,26 +101,6 @@ const Sidebar = ({ showSidebar, setShowSidebar, sidebarRef }) => {
                 />
               </Link>
             </div>
-            <hr className="border-t border-main my-4 w-full" />
-            {status === "authenticated" ? (
-              <div className="">
-                <div className="text-sm md:text-base">
-                  Hola {data.user.name}
-                </div>
-                <button
-                  className="text-sm md:text-base duration-300 hover:scale-110"
-                  onClick={() => signOut()}
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <Link href="recursos-humanos">
-                <button className="text-sm md:text-base duration-300 hover:scale-110">
-                  Login
-                </button>
-              </Link>
-            )}
           </div>
         </div>
       </div>

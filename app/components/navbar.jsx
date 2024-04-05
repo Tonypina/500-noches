@@ -6,7 +6,6 @@ import Sidebar from "./SideBar";
 import Link from "next/link";
 import { ChevronDownIcon } from "../icons/ChevronDownIcon";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 const Navbar = () => {
   const [navbarSticky, setNavbarSticky] = useState(false);

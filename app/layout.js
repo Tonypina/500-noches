@@ -5,7 +5,6 @@ import { PT_Serif } from "next/font/google";
 import Navbar from "./components/navbar";
 
 import { headers } from "next/headers";
-import AuthProvider from "./context/AuthProvider";
 import Footer from "./components/Footer";
 import { Providers } from "./providers";
 import localFont from 'next/font/local'
@@ -121,24 +120,8 @@ const roboto = localFont({
   variable: '--font-roboto'
 })
 
-async function getSession(cookie) {
-  const response = await fetch(
-    `${process.env.LOCAL_AUTH_URL}/api/auth/session`,
-    {
-      headers: {
-        cookie,
-      },
-    }
-  );
-
-  const session = await response.json();
-
-  return Object.keys(session).length > 0 ? session : null;
-}
-
 export default async function RootLayout({ children }) {
-  const session = await getSession(headers().get("cookie") ?? "");
-
+  
   return (
     <html lang="es" className={`
       ${adam.variable}
@@ -154,10 +137,10 @@ export default async function RootLayout({ children }) {
       <head></head>
       <body className={ptSerif.className}>
         <Providers>
-          <AuthProvider session={session}>
+          {/* <AuthProvider session={session}> */}
             <Navbar />
             {children}
-          </AuthProvider>
+          {/* </AuthProvider> */}
         </Providers>
       </body>
     </html>
