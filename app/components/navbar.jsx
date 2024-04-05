@@ -149,14 +149,14 @@ const Navbar = () => {
               Inicio
             </div>
           </Link>
-          <Link href="#about-us" className="mr-5">
+          <Link href="/#about-us" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Nosotros
             </div>
           </Link>
           <div>
             <div className="pr-10 mr-5 peer duration-300 hover:scale-110">
-              <Link href="#conoce-la-familia" className="flex items-center mr-5">
+              <Link href="/#conoce-la-familia" className="flex items-center mr-5">
                 <p className="mr-2">Conceptos</p>
                 <ChevronDownIcon className="text-small" />
               </Link>
@@ -176,17 +176,17 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <Link href="#galeria" className="mr-5">
+          <Link href="/#galeria" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Galería
             </div>
           </Link>
-          <Link href="#opportunities" className="mr-5">
+          <Link href="/#opportunities" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Carreras
             </div>
           </Link>
-          <Link href="#contacto" className="mr-5">
+          <Link href="/#contacto" className="mr-5">
             <div className="pr-10 mr-5 md:text-base duration-300 hover:scale-110">
               Contacto
             </div>
