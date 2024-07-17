@@ -32,8 +32,8 @@ const PlatillosPrincipales = () => {
           <Swiper
             effect={"coverflow"}
             slidesPerView={3}
-            spaceBetween={10}
-            className="mySwiper mt-8 mb-0 slide-size contenedor-slides"
+            spaceBetween={25}
+            className="platillosEspecialesSwiper mt-8 mb-0 slide-size contenedor-slides"
           >
             {selectedStore.platillos.map((platillo, index) => (
               <SwiperSlide key={index}>

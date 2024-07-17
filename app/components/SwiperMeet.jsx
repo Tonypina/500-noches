@@ -32,19 +32,20 @@ const SwiperMeet = () => {
   return (
     <div className="contenedor-slides mx-auto mt-10">
       <Swiper
-        effect={"coverflow"}
+        effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={slidesPerView}
+        slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
-          depth: 80,
+          depth: 100,
           modifier: 1,
+          slideShadows: true,
         }}
-        pagination={{ clickable: true, enabled: paginationEnabled }}
+        pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper slide-size contenedor-slides "
+        className="mySwiper contenedor-slides"
       >
         <SwiperSlide className="card-shadow rounded-lg">
           {/* Cafe 500 Noches */}

@@ -79,7 +79,7 @@
 
 .swiper-slide {
   flex-shrink: 0;
-  width: 10rem;
+  width: 15vw;
   height: 22rem;
   position: relative;
   transition-property: transform;
@@ -218,8 +218,17 @@
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
+.swiper-slide-prev:hover .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) !important;
+}
+
+
 .swiper-3d .swiper-slide-shadow-right {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.swiper-slide-next:hover .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) !important;
 }
 
 .swiper-3d .swiper-slide-shadow-top {
@@ -269,11 +278,11 @@
   }
 }
 
-.swiper-slide-active {
+.swiper-slide {
   transition: 0.5s !important;
 }
 
-.swiper-slide-active:hover {
+.swiper-slide:hover {
   transform: scale(1.2) !important;
 }
 

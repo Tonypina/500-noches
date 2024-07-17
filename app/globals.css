@@ -7,7 +7,7 @@ html {
 }
 
 .slide-size {
-  width: 50rem !important;
+  /* width: 50rem !important; */
   /* height: 25rem !important; */
 }
 
@@ -27,7 +27,7 @@ html {
 
 @media (max-width: 767px) {
   .slide-size {
-    width: 50rem !important;
+    /* width: 50rem !important; */
     /* height: 25rem !important; */
   }
 
@@ -63,4 +63,14 @@ html {
   /* Posición inicial desde el lado izquierdo */
   transform: translateX(-50%) !important;
   /* Desplaza la paginación a la mitad hacia atrás para centrarla */
+}
+
+.platillosEspecialesSwiper {
+  width: 50vw;
+  height: 30vh;
+  padding-inline: 25px !important;
+}
+
+.mySwiper {
+  padding-inline: 14vw !important;
 }
