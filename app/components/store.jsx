@@ -273,12 +273,14 @@ const useStore = create((set) => ({
           label: "Tuxtla",
           content: "Contenido de la pestaña tuxtla",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.14966585488!2d-93.14002415433066!3d16.753844997300053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd933c4a0fe89%3A0xb3d46713f03b7acc!2sSan%20Juan%20Le%C3%B1ero%20Asador!5e0!3m2!1ses-419!2smx!4v1699636137304!5m2!1ses-419!2smx",
+          openTableSrc: "//www.opentable.com.mx/widget/reservation/loader?rid=1197784&type=standard&theme=wide&color=6&dark=false&iframe=true&domain=commx&lang=es-MX&newtab=false&ot_source=Restaurant%20website&cfe=true",
         },
         {
           id: "mazatlan",
           label: "Mazatlán",
           content: "Contenido de la pestaña tuxtla",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.0022932674383!2d-106.44894362492475!3d23.27936637899467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8698ab3c39b43b03%3A0xd4f2acde59c95b72!2sSan%20Juan%20Le%C3%B1ero%20Asador!5e0!3m2!1ses-419!2smx!4v1699636177582!5m2!1ses-419!2smx",
+          openTableSrc: "//www.opentable.com.mx/widget/reservation/loader?rid=1268224&type=standard&theme=wide&color=6&dark=false&iframe=true&domain=commx&lang=es-MX&newtab=false&ot_source=Restaurant%20website&cfe=true",
         },
       ],
       comentarios_image: "/texturas/195.jpg",
@@ -303,7 +305,7 @@ const useStore = create((set) => ({
         },
       ],
     },
-    "cinema-stere": {
+    "cinema-stereo": {
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: "Cinema Stereo",

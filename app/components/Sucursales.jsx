@@ -1,9 +1,8 @@
-"use client";
 import React, { useState } from "react";
 import useStore from "./store";
-import Boton from "./Boton";
 import backImageReserv from "../../public/texturas/reservarFondo.png";
 import Menu from "./Menu";
+import OpenTableWidget from "./OpenTableWidget"
 
 const Sucursales = () => {
   const { selectedStore } = useStore();
@@ -139,16 +138,12 @@ const Sucursales = () => {
                     Aperiam nam repellendus ducimus, corporis officiis rerum qui
                     sapiente assumenda minima explicabo!
                   </p>
-
-                  <Boton
-                    variante={"solid"}
-                    contenido={"Reservar"}
-                    style={"mt-10 bg-main text-white"}
-                    type="scroll"
-                    sectionId={"about-us"}
-                  />
                 </div>
-                {/* Esta div actúa como un contenedor de relleno en pantallas más grandes para empujar el recuadro a la izquierda */}
+                {tab.openTableSrc ? (
+                  <div>
+                    <OpenTableWidget tabId={tab.id} openTableSrc={tab.openTableSrc}/>
+                  </div>
+                ) : null}
                 <div className="flex-grow"></div>
               </div>
             </div>
