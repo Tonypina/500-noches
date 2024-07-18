@@ -29,7 +29,7 @@ const OpenTableWidget = ({ tabId, openTableSrc }) => {
     };
   }, [tabId]);
 
-  return <div id={`opentable-widget-container-${tabId}`} className=' translate-y-1/4'/>;
+  return <div id={`opentable-widget-container-${tabId}`} className=''/>;
 };
 
 export default OpenTableWidget;

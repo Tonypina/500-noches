@@ -3,6 +3,9 @@ import useStore from "./store";
 import backImageReserv from "../../public/texturas/reservarFondo.png";
 import Menu from "./Menu";
 import OpenTableWidget from "./OpenTableWidget"
+import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import Link from "next/link";
+
 
 const Sucursales = () => {
   const { selectedStore } = useStore();
@@ -122,25 +125,68 @@ const Sucursales = () => {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
-                className="relative flex md:flex-row items-center w-full"
+                className="relative flex flex-wrap md:flex-nowrap md:flex-row items-center justify-center w-full"
               >
+                <div className="absolute w-full h-full bg-black bg-opacity-40"></div>
                 <div
-                  className="bg-white bg-opacity-80 rounded-lg flex flex-col items-center p-5 m-5 w-full md:w-auto md:max-w-md"
+                  className="bg-white bg-opacity-80 rounded-lg flex flex-col justify-center items-center p-5 m-5 w-full md:w-auto md:max-w-md"
                   style={{
                     opacity: "0.8",
                   }}
                 >
                   <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-                    <span className={`${selectedStore.colors[2]}`}>RESERVA</span> AHORA
+                    <span className={`${selectedStore.colors[2]}`}>PONTE EN</span> CONTACTO
                   </h2>
-                  <p className=" text-xs md:text-sm mt-4 text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aperiam nam repellendus ducimus, corporis officiis rerum qui
-                    sapiente assumenda minima explicabo!
-                  </p>
+                  <div className="flex">
+                    <MapPin className="flex-col" size={18} />
+                    <p className="flex-col ml-2">{tab.direction}</p>
+                  </div>
+                  <div className="flex">
+                    <Mail className="flex-col" size={18} />
+                    <p className="flex-col ml-2">{tab.mail}</p>
+                  </div>
+                  <div className="flex">
+                    <Phone className="flex-col" size={18} />
+                    <p className="flex-col ml-2">{tab.phone}</p>
+                  </div>
+                  <hr className="border-t border-gold my-4 w-full" />
+                  <div className="text-sm md:text-base flex justify-around gap-10 mb-6 ">
+                    <Link
+                      href={`${tab.facebook}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Facebook size={24} className="duration-300 hover:scale-110" />
+                    </Link>
+                    <Link
+                      href={`${tab.instagram}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <Instagram size={24} className="duration-300 hover:scale-110" />
+                    </Link>
+                    {tab.tiktok !== "" ? (
+                      <>
+                        <Link
+                          href={`${tab.tiktok}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Linkedin
+                            size={24}
+                            absoluteStrokeWidth={true}
+                            className="duration-300 hover:scale-110"
+                          />
+                        </Link>
+                      </>
+                    ) : null}
+                  </div>
                 </div>
                 {tab.openTableSrc ? (
-                  <div>
+                  <div className="z-20 flex flex-col items-center w-full h-full md:translate-y-20">
+                    <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
+                      <span className={`${selectedStore.colors[3]}`}>RESERVA</span> AHORA
+                    </h2>
                     <OpenTableWidget tabId={tab.id} openTableSrc={tab.openTableSrc}/>
                   </div>
                 ) : null}

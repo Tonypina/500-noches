@@ -171,7 +171,7 @@ const Navbar = () => {
                 navbarSticky ? "text-blue-950 bg-white" : "text-white"
               }`}>
               {restaurants.map((restaurant, index) => (
-                <a key={index} className="pr-5 py-3 duration-300 hover:scale-110" href={restaurant.link}>{restaurant.name}</a>
+                <a key={index} className="pr-5 py-3 duration-300 hover:scale-110" href={restaurant.link} target={restaurant.name === "Histórico Café Tostador" ? "_blank" : ""}>{restaurant.name}</a>
               ))}
             </div>
           </div>

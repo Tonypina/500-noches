@@ -74,3 +74,11 @@ html {
 .mySwiper {
   padding-inline: 14vw !important;
 }
+
+footer a {
+  transition: 0.25s;
+}
+
+footer a:hover {
+  color: #AB9753;
+}

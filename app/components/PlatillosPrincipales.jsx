@@ -21,7 +21,7 @@ const PlatillosPrincipales = () => {
         )}
         
         <div className={`z-10 mt-20 pt-14 ${selectedStore.platillos_image === '/texturas/bg_charcoal.jpg' ? 'text-white' : 'text-black'}`}>
-          <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center ${selectedStore.platillos_image === '/texturas/bg_charcoal.jpg' ? 'text-gold' : ''}`}>
+          <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center ${selectedStore.platillos_image === '/texturas/bg_charcoal.jpg' || selectedStore.platillos_image === '/texturas/brown.jpg' ? 'text-gold' : ''}`}>
             DESCUBRE NUESTROS <span className={selectedStore.colors[2]}>PLATILLOS</span> PRINCIPALES
           </h2>
           <p className="text-xs md:text-sm mt-4 text-center px-10">

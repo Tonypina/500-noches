@@ -22,48 +22,51 @@ const Footer = ({ params }) => {
           />
         </div>
         <div className="mb-4 md:mb-0">
-          <h1 className="mb-4">MAPA DEL SITIO</h1>
+          <h1 className="mb-4 text-gold">MAPA DEL SITIO</h1>
           <div className="grid grid-cols-2 gap-2">
             <ul>
-              <li>
+              <li className="mt-1">
                 <Link href="#inicio">Inicio</Link>
               </li>
-              <li>
+              <li className="mt-1">
                 <Link href="#about-us">Nosotros</Link>
               </li>
-              <li>
+              <li className="mt-1">
                 <Link href="#conoce-la-familia">Restaurantes</Link>
               </li>
             </ul>
             <ul>
-              <li>
+              <li className="mt-1">
                 <Link href="#galeria">Galería</Link>
               </li>
-              <li>
+              <li className="mt-1">
                 <Link href="#contacto">Contacto</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="mb-4 md:mb-0">
-          <h1>CONTACTO</h1>
+          <h1 className="text-gold">CONTACTO</h1>
           <ul className="mt-3">
-            <li>contacto@contacto.com</li>
-            <li>+52 55 5555 5555</li>
+            <li className="mt-1">contacto@contacto.com</li>
+            <li className="mt-1">+52 55 5555 5555</li>
           </ul>
         </div>
         <div className="mb-4 md:mb-0">
-          <h1>CONCEPTOS</h1>
-          <ul className="mt-3">
-            <li>- Café Bar 500 Noches</li>
-            <li>- Sarajevo Café Jardín</li>
-            <li>- San Juan Leñero</li>
-            <li>- Peruano Cevichería</li>
-            <li>- Merendero Madero</li>
-            <li>- Búho Café</li>
-            <li>- Cinema Stereo</li>
-            <li>- Histórico Café Tostador</li>
-          </ul>
+          <h1 className="text-gold">CONCEPTOS</h1>
+          <div className="grid grid-cols-2 gap-2 mt-3">
+            <ul>
+              <li className="mt-1"><a href="/cafe-500-noches">Café Bar 500 Noches</a></li>
+              <li className="mt-1"><a href="/sarajevo">Sarajevo Café Jardín</a></li>
+              <li className="mt-1"><a href="/san-juan-lenero">San Juan Leñero</a></li>
+              <li className="mt-1"><a href="/cinema-stereo">Cinema Stereo</a></li>
+            </ul>
+            <ul>
+              <li className="mt-1"><a href="https://www.facebook.com/eltostadorcafe/" target="_blank">Histórico Café Tostador</a></li>
+              <li className="mt-1"><a href="/buho-cafe">Búho Café</a></li>
+              <li className="mt-1"><a href="/merendero-madero">Merendero Madero</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <hr className="border-t border-white my-4" />
