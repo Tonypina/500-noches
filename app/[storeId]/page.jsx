@@ -57,7 +57,7 @@ const Store = ({ params }) => {
             <img className="w-full h-28" src={selectedStore.border_img} alt="" />
           </div>
         )}
-        <AboutUs id="about-us" />
+        <AboutUs id="about-us"/>
         <PlatillosPrincipales />
         <Sucursales />
         <div className="mt-5 h-fit relative">

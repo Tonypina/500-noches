@@ -181,6 +181,10 @@ const useStore = create((set) => ({
       galeria2: "/restaurantes/sarajevo/galeria2.jpg",
       galeria3: "/restaurantes/sarajevo/galeria3.jpg",
       galeria4: "/restaurantes/sarajevo/galeria4.jpg",
+      plants: [
+        "/texturas/planta1.png",
+        "/texturas/planta2.png",
+      ],
       platillos: [
         {
           image: "/restaurantes/sarajevo/platillo1.JPG",
@@ -214,7 +218,6 @@ const useStore = create((set) => ({
         },
       ],
       platillos_image: '/texturas/textura_verde.png',
-      // border_img: "/texturas/ruptura.png",
       comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
@@ -368,7 +371,7 @@ const useStore = create((set) => ({
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: <p className="font-montserrat">Cinema Stereo</p>,
-      eslogan: <p className="font-georgia">Palabras que <span className="text-gold text-xlg">abrazan</span> y sabores que <span className="text-gold text-xlg">recuerdan</span></p>,
+      eslogan: <p className="font-georgia">La <span className="text-[#ff0080] text-xlg">magia</span> del sonido comienza <span className="text-[#ff0080] text-xlg">aquí</span></p>,
       colors: {
         1: "text-black",
         2: "text-gold",
@@ -376,7 +379,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "logos/CinemaStereo.svg",
       descripcion:
-        <p>Faltante</p>,
+        <p>Somos un <span className="text-[#ff0080]">Resto-Bar</span> que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
       hero_image: "/restaurantes/cinemaStereo/hero.jpg",
       galeria1: "/restaurantes/cinemaStereo/galeria1.JPG",
       galeria2: "/restaurantes/cinemaStereo/galeria2.JPG",
