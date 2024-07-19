@@ -217,7 +217,7 @@ const useStore = create((set) => ({
           description: "Descripción"
         },
       ],
-      platillos_image: '/texturas/textura_verde.png',
+      platillos_image: '/texturas/tablones.jpg',
       comentarios_image: "/texturas/195.jpg",
       comentarios: [
         {
@@ -469,48 +469,48 @@ const useStore = create((set) => ({
         2: "text-[#D45D52]",
         3: "text-[#849072]",
       },
-      srcImagen: "logos/LaNacionDelTaco.svg",
+      srcImagen: "logos/BuhoCafe.svg",
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
-      hero_image: "/restaurantes/buho-cafe/hero.jpg",
-      galeria1: "/restaurantes/buho-cafe/galeria1.jpg",
-      galeria2: "/restaurantes/buho-cafe/galeria2.jpg",
-      galeria3: "/restaurantes/buho-cafe/galeria3.jpg",
-      galeria4: "/restaurantes/buho-cafe/galeria4.jpg",
+      hero_image: "/restaurantes/buhoCafe/hero.jpg",
+      galeria1: "/restaurantes/buhoCafe/galeria1.jpg",
+      galeria2: "/restaurantes/buhoCafe/galeria2.jpg",
+      galeria3: "/restaurantes/buhoCafe/galeria3.jpg",
+      galeria4: "/restaurantes/buhoCafe/galeria4.jpg",
       platillos_image: '/texturas/textura_verde.png',
       platillos: [
         {
-          image: "/restaurantes/buho-cafe/platillo1.JPG",
+          image: "/restaurantes/buhoCafe/platillo1.JPG",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/buho-cafe/platillo2.JPG",
+          image: "/restaurantes/buhoCafe/platillo2.JPG",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/buho-cafe/platillo3.JPG",
+          image: "/restaurantes/buhoCafe/platillo3.JPG",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/buho-cafe/platillo4.JPG",
+          image: "/restaurantes/buhoCafe/platillo4.JPG",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/buho-cafe/platillo5.JPG",
+          image: "/restaurantes/buhoCafe/platillo5.JPG",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/buho-cafe/platillo6.JPG",
+          image: "/restaurantes/buhoCafe/platillo6.JPG",
           name: "Nombre",
           description: "Descripción"
         },
       ],
-      menuSrc: "/restaurantes/buho-cafe/menus",
+      menuSrc: "/restaurantes/buhoCafe/menus",
       tabs: [
         {
           id: "san-cristobal",
