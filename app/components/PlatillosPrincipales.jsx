@@ -39,7 +39,7 @@ const PlatillosPrincipales = () => {
           >
             {selectedStore.platillos.map((platillo, index) => (
               <SwiperSlide key={index}>
-                <div className={`${selectedStore.platillos_image === "/texturas/bg_charcoal.jpg" ? "bg-[#484848] text-white" : "bg-white"} p-4 rounded shadow bg-gray-50`}>
+                <div className={`${selectedStore.platillos_image === "/texturas/bg_charcoal.jpg" ? "bg-[#484848]" : "bg-white"} p-4 rounded shadow bg-gray-50`}>
                   <Image
                     src={platillo.image}
                     width={400}

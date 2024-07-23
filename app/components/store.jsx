@@ -83,7 +83,7 @@ const useStore = create((set) => ({
           content: "Contenido de la pestaña Celaya",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.6655368508445!2d-100.83445202500843!3d20.519932781005146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cbaf73079ce95%3A0xe718806dd592f9ce!2sCaf%C3%A9%20Bar%20500%20Noches%20Celaya!5e0!3m2!1ses-419!2smx!4v1699634615003!5m2!1ses-419!2smx",
           direction: "Alberto Durero #100 Col. Renacimiento",
-          mail: "500noches.celaya11@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "461-173-0818",
           facebook: "https://facebook.com/500nochescelaya",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -91,11 +91,11 @@ const useStore = create((set) => ({
         },
         {
           id: "noches-leon",
-          label: "Noches León",
+          label: "León",
           content: "Contenido de la pestaña Noches León",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.396797025032!2d-101.69124984555559!3d21.152992532059997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf48e9da755b%3A0xfa0f08b074a974b9!2sCaf%C3%A9%20Bar%20500%20Noches%20Le%C3%B3n!5e0!3m2!1ses-419!2smx!4v1699635276698!5m2!1ses-419!2smx",
           direction: "Av. Paseo del Juncal #215, Villas del Juncal León, Gto. C.P. 37180",
-          mail: "facturasleon500@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "477-405-5807",
           facebook: "https://facebook.com/500nochesleon",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -107,7 +107,7 @@ const useStore = create((set) => ({
           content: "Contenido de la pestaña San Luis Potos",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2113.9719670915806!2d-101.02140308051855!3d22.145449056782407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a995868e26757%3A0x9fa51e738790307!2sCaf%C3%A9%20Bar%20500%20Noches%20San%20Luis!5e0!3m2!1ses-419!2smx!4v1699635327178!5m2!1ses-419!2smx",
           direction: "C. Huasteca 300, Lomas de San Luis 1ra Sección",
-          mail: "500nochesslp@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "444-445-3049",
           facebook: "https://facebook.com/500nochessanluis",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -119,7 +119,7 @@ const useStore = create((set) => ({
           content: "Contenido de la pestaña Mazatlán",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.0091982415115!2d-106.44901362492487!3d23.27911547899491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8698abc7f87db0d5%3A0x3b84e0bf42f08466!2sCaf%C3%A9%20Bar%20500%20Noches%20Mazatl%C3%A1n!5e0!3m2!1ses-419!2smx!4v1699635548954!5m2!1ses-419!2smx",
           direction: "Av. de la Marina 6107, Marina Mazatlán",
-          mail: "500nochesmazatlan@gmail.Com",
+          mail: "info@grupo500noches.com.mx",
           phone: "669-441-2146",
           facebook: "https://facebook.com/500nochesmazatlan",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -131,7 +131,7 @@ const useStore = create((set) => ({
           content: "Contenido de la pestaña Mérida",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.61340446515!2d-89.61184282499431!3d21.00812848063601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f56773fbf9d9aeb%3A0x44a2ef9489835c83!2sCaf%C3%A9%20Bar%20500%20Noches%20M%C3%A9rida!5e0!3m2!1ses-419!2smx!4v1699635578463!5m2!1ses-419!2smx",
           direction: "Av. Líbano 54, México Nte",
-          mail: "500 Mérida cafebar500norte@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "999-369-0282",
           facebook: "https://facebook.com/500nochesmerida",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -139,11 +139,11 @@ const useStore = create((set) => ({
         },
         {
           id: "tuxtla",
-          label: "Tuxtla",
+          label: "Tuxtla Gutiérrez",
           content: "Contenido de la pestaña Mérida",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.4469253195816!2d-93.1418357251061!3d16.754425884028826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd902474cb5d5%3A0x49943b4ba6667eea!2sCaf%C3%A9%20Bar%20500%20Noches%20Tuxtla!5e0!3m2!1ses-419!2smx!4v1699635626851!5m2!1ses-419!2smx",
           direction: "Plaza Dorada, Blvd. Belisario Dominguez 1057 Santa Elena, 29060, Tuxtla Gutiérrez, Chiapas",
-          mail: "",
+          mail: "info@grupo500noches.com.mx",
           phone: "",
           facebook: "https://facebook.com/500nochestuxtla",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -151,11 +151,11 @@ const useStore = create((set) => ({
         },
         {
           id: "san-cristobal",
-          label: "San Cristóbal",
+          label: "San Cristóbalde las Casas",
           content: "Contenido de la pestaña San Cristobal",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.823999416794!2d-92.64064922510654!3d16.73563128404464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed453e0f6924ab%3A0x50da7bd0198ab1dc!2sCaf%C3%A9%20Bar%20500%20Noches!5e0!3m2!1ses-419!2smx!4v1699635663638!5m2!1ses-419!2smx",
           direction: "Andador Miguel Hidalgo 6D, Zona Centro, 29200. San Cristóbal de las Casas, Chiapas",
-          mail: "facturacion500sc@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "967-141-1426",
           facebook: "https://facebook.com/500nochessancristobal",
           instagram: "https://instagram.com/cafebar500noches_",
@@ -175,7 +175,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "logos/Sarajevo_blanco.svg",
       descripcion:
-        "A unas cuadras del centro, Sarajevo es un lugar alejado del bullicio que brinda tranquilidad en un ambiente relajado. Nuestros menús internacionales y veganos dan opción a todo tipo de estilos de vida.",
+        "Sarajevo nace con la idea de crear un espacio de tranquilidad, un lugar pensado para disfrutar de un ambiente relajado, alejándose un poco del centro y del bullicio, busca crear una atmósfera que, entre su vegetación, la luminosidad y los espacios, te puedas transportar a otro rincón.",
       hero_image: "/restaurantes/sarajevo/hero.jpg",
       galeria1: "/restaurantes/sarajevo/galeria1.JPG",
       galeria2: "/restaurantes/sarajevo/galeria2.JPG",
@@ -188,18 +188,18 @@ const useStore = create((set) => ({
       platillos: [
         {
           image: "/restaurantes/sarajevo/platillo1.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tosta de Tomates Cherry",
+          description: "Avocato, ricotta cheese, tomatoes and seeds."
         },
         {
           image: "/restaurantes/sarajevo/platillo2.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Huevos en Salsa Morita",
+          description: "Huevos estrellados con salsa de chile morita acompañados de frijoles, aguacate y tostadas de maíz horneadas."
         },
         {
           image: "/restaurantes/sarajevo/platillo3.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Huevos Rancheros",
+          description: "Huevos estrellados sobre tortilla de maíz con frijoles y hierbasanta, con salsa ranchera y chile habanero tatemado."
         },
         {
           image: "/restaurantes/sarajevo/platillo4.JPG",
@@ -248,11 +248,11 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "jardin",
-          label: "Café Jardín",
+          label: "San Cristobal de las Casas",
           content: "Contenido de la pestaña jardín",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.752863787192!2d-92.63577262510644!3d16.739178484041627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed45acbb7c6a41%3A0x10c6b24b0b114b27!2sSarajevo%20Caf%C3%A9%20Jardin!5e0!3m2!1ses-419!2smx!4v1699635971935!5m2!1ses-419!2smx",
           direction: "Flavio A. Paniagua 32, Barrio de Guadalupe, 29230 San Cristóbal de las Casas, Chiapas",
-          mail: "sarajevo.gerente@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "967-133-0415",
           facebook: "https://facebook.com/sarajevocafejardinsc",
           instagram: "https://instagram.com/sarajevo_cafejardin_sc",
@@ -272,7 +272,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "logos/SanJuanLeneroBlanco.svg",
       descripcion:
-        <p>Somos un restaurante cuya <span className="text-red">especialidad</span> es ser un asador de <span className="text-red">cortes internacionales</span> con una fuerte influencia mediterránea, con mixología de la casa, bajo un servicio especializado y <span className="text-red">ambiente agradable</span>.</p>,
+        <p>En nuestro idioma habitan sílabas <span className="text-red">volcánicas</span> que, cuando se desprenden de nuestra boca, pueden provocar <span className="text-red">pasiones</span> incontrolables para el viento… Y en nuestra cocina hay ingredientes que abrazan tan fuerte que nos hacen <span className="text-red">sentir</span> que los corazones alrededor de la mesa laten al mismo tiempo.</p>,
       hero_image: "/restaurantes/sanJuanLenero/hero.jpg",
       galeria1: "/restaurantes/sanJuanLenero/galeria1.JPG",
       galeria2: "/restaurantes/sanJuanLenero/galeria2.JPG",
@@ -282,18 +282,18 @@ const useStore = create((set) => ({
       platillos: [
         {
           image: "/restaurantes/sanJuanLenero/platillo1.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Rack de Cordero",
+          description: "Acompañado con puré de zanahoria, espárragos a la parrilla y salsa en su jugo."
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo2.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Flan con Dulce de Leche",
+          description: "Flan de huevo y crema, azúcar quemada, acompañado con dulce de leche."
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo3.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Camarones Adobados",
+          description: "Camarones Adobados"
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo4.JPG",
@@ -320,7 +320,7 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "tuxtla",
-          label: "Tuxtla",
+          label: "Tuxtla Gutierréz",
           content: "Contenido de la pestaña tuxtla",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2439.14966585488!2d-93.14002415433066!3d16.753844997300053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd933c4a0fe89%3A0xb3d46713f03b7acc!2sSan%20Juan%20Le%C3%B1ero%20Asador!5e0!3m2!1ses-419!2smx!4v1699636137304!5m2!1ses-419!2smx",
           openTableSrc: "//www.opentable.com.mx/widget/reservation/loader?rid=1197784&type=standard&theme=wide&color=6&dark=false&iframe=true&domain=commx&lang=es-MX&newtab=false&ot_source=Restaurant%20website&cfe=true",
@@ -338,7 +338,7 @@ const useStore = create((set) => ({
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.0022932674383!2d-106.44894362492475!3d23.27936637899467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8698ab3c39b43b03%3A0xd4f2acde59c95b72!2sSan%20Juan%20Le%C3%B1ero%20Asador!5e0!3m2!1ses-419!2smx!4v1699636177582!5m2!1ses-419!2smx",
           openTableSrc: "//www.opentable.com.mx/widget/reservation/loader?rid=1268224&type=standard&theme=wide&color=6&dark=false&iframe=true&domain=commx&lang=es-MX&newtab=false&ot_source=Restaurant%20website&cfe=true",
           direction: "Av. De la Marina 6107 Local 2",
-          mail: "sanjuanleneromazatlan@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "669-329-2715",
           facebook: "https://facebook.com/sanjuanleneromazatlan",
           instagram: "https://instagram.com/sanjuanleneromazatlan",
@@ -427,10 +427,10 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "cinema-stereo",
-          label: "Cinema Stereo",
+          label: "León",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.9715797585413!2d-101.6908150255624!3d21.153529280527135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf8895f1024d%3A0xe940d633e1d8e381!2sCinema%20Stereo!5e0!3m2!1ses-419!2smx!4v1721263447106!5m2!1ses-419!2smx",
           direction: "Paseo del Juncal 1030 Local 14A Col. Villas del Juncal León, Gto. C.P. 37180",
-          mail: "reservascinemastereo@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "477-498-4351",
           facebook: "https://facebook.com/cinemastereocafebar",
           instagram: "https://instagram.com/cinemastereoleon",
@@ -481,18 +481,18 @@ const useStore = create((set) => ({
       platillos: [
         {
           image: "/restaurantes/buhoCafe/platillo1.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Hot Cakes",
+          description: "De cajeta, frutas"
         },
         {
           image: "/restaurantes/buhoCafe/platillo2.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Churros",
+          description: ""
         },
         {
           image: "/restaurantes/buhoCafe/platillo3.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tapas",
+          description: ""
         },
         {
           image: "/restaurantes/buhoCafe/platillo4.JPG",
@@ -514,11 +514,11 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "san-cristobal",
-          label: "San Cristobal",
+          label: "San Cristobal de las Casas",
           content: "Contenido de la pestaña san cristobal",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.8345465859634!2d-92.64992012484971!3d16.735105284045108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed456f9e165f59%3A0x80abd43d8bdbc66e!2zQsO6aG8gQ2Fmw6k!5e0!3m2!1ses-419!2smx!4v1711592307036!5m2!1ses-419!2smx",
           direction: "Prolongacion Baja California #1, Col. San Ramón.",
-          mail: "buhocafetería@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "967-362-7993",
           facebook: "https://facebook.com/buhocafe",
           instagram: "https://instagram.com/buhocafesc",
@@ -606,11 +606,11 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "madero",
-          label: "Merendero Madero",
+          label: "León",
           content: "Contenido de la pestaña merendero",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.830712869926!2d-101.67562202499109!3d21.119314280552764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf08799576fd%3A0x8ff78940798e8315!2sMerendero%20Madero!5e0!3m2!1ses-419!2smx!4v1699636372831!5m2!1ses-419!2smx",
           direction: "Francisco I. Madero 835, Centro",
-          mail: "merenderomadero2023@gmail.com",
+          mail: "info@grupo500noches.com.mx",
           phone: "477-578-2051",
           facebook: "https://facebook.com/merenderomadero",
           instagram: "https://instagram.com/merenderomadero",
