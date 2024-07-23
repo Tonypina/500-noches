@@ -235,9 +235,9 @@ export default function Home() {
                     correo: values.correo,
                     mensaje: values.mensaje,
                   }).then( res => {
-                    console.log(res);
+                    window.alert("El mensaje fue enviado")
                   }).catch( err => {
-                    console.log(err);
+
                   })
                   
                   setSubmitting(false);

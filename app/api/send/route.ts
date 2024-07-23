@@ -1,45 +1,36 @@
 import { EmailTemplate } from '../../components/EmailTemplate';
+import { Resend } from 'resend';
 
-export async function POST( request ) {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST( request: Request ) {
 
     const body = await request.json()
 
-    let nodemailer = require('nodemailer')
-    const transporter = nodemailer.createTransport({
-        port: 465,
-        host: process.env.MAILER_HOST,
-        auth: {
-            user: process.env.MAILER_FROM,
-            pass: process.env.MAILER_PASS,
-        },
-        secure: true,
-    });
-    
-    transporter.verify(function (error, success) {
-        if (error) {
-            console.log(error);
-            return Response.json({error: error}, {status: 500})
-        } else {
-            console.log("Server is ready to take our messages");
-            return Response.json({status: 200})
-        }
-    });
+    try {
+        const res = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+            },
+            body: JSON.stringify({
+                from: 'Página Web Grupo 500 Noches <'+process.env.RESEND_FROM_EMAIL+'>',
+                to: [process.env.RESEND_TO_EMAIL],
+                subject: 'Página Web: Mensaje de '+body.nombre+ " " +body.apellido+".",
+                html: `<div>Correo: ${body.correo}</div><p>Mensaje: ${body.mensaje}</p>`
+                // react: EmailTemplate({ body: body }),
+            }),
+        });
 
-    const mailData = {
-        from: process.env.MAILER_FROM,
-        to: process.env.MAILER_TO,
-        subject: `Página Web: Mensaje de ${body.nombre} ${body.apellido}`,
-        html: `<div>Correo: ${body.nombre}</div><p>Mensaje: ${body.mensaje}</p>`,
-    }
-    
-    
-    transporter.sendMail(mailData, function (err, info) {
-        if (err) {
-            return Response.json({error: err}, {status: 500})
-        } else {
-            return Response.json({status: 200})
+        if (res.ok) {
+            const data = await res.json()
+            return Response.json(data)
         }
-    })
-    
-    return Response.json({status: 200})
+
+        return Response.json({response: res}, {status: 500})
+
+    } catch (error) {
+        return Response.json({ error }, { status: 500 });
+    }
 }
