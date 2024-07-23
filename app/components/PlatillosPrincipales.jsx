@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "../styles-swiper/swiper.css";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 const PlatillosPrincipales = () => {
   const { selectedStore } = useStore();
@@ -30,7 +30,9 @@ const PlatillosPrincipales = () => {
         </div>
         <div className="flex items-center justify-center mt-8 pb-14 contenedor-slides ">
           <Swiper
+            modules={[Pagination]}
             effect={"coverflow"}
+            pagination
             slidesPerView={3}
             spaceBetween={25}
             className="platillosEspecialesSwiper mt-8 mb-16 slide-size contenedor-slides"

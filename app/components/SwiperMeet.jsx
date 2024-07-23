@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import CardContent from "./CardContent";
 import "../styles-swiper/swiper.css";
 import "swiper/css/effect-coverflow";

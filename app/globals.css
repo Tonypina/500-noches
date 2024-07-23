@@ -66,8 +66,8 @@ html {
 }
 
 .platillosEspecialesSwiper {
-  width: 50vw;
-  height: 30vh;
+  width: 70vw;
+  height: fit-content;
   padding-inline: 25px !important;
 }
 

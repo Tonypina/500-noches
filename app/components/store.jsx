@@ -23,18 +23,18 @@ const useStore = create((set) => ({
       platillos: [
         {
           image: "/restaurantes/500Noches/platillo1.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Salmón Alicia",
+          description: "A la plancha con risotto de hongos, acompañado de ensaladilla de hojas y salsa de vino blanco."
         },
         {
           image: "/restaurantes/500Noches/platillo2.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tabla Mixta",
+          description: "Selección de quesos y carnes frías, pan, frutas y aderezos."
         },
         {
           image: "/restaurantes/500Noches/platillo3.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Borges",
+          description: "Espagueti con salsa cremosa de espinaca, acompañada con camarones a la plancha y queso parmesano."
         },
         {
           image: "/restaurantes/500Noches/platillo4.JPG",
