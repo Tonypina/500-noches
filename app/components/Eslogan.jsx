@@ -16,7 +16,7 @@ const Eslogan = () => {
       </div>
       <Boton
         variante={"solid"}
-        contenido={"Conocer más"}
+        contenido={"Descubrir"}
         style={"mt-10 bg-main text-white"}
         type="scroll"
         sectionId={"about-us"}

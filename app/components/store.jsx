@@ -177,10 +177,10 @@ const useStore = create((set) => ({
       descripcion:
         "A unas cuadras del centro, Sarajevo es un lugar alejado del bullicio que brinda tranquilidad en un ambiente relajado. Nuestros menús internacionales y veganos dan opción a todo tipo de estilos de vida.",
       hero_image: "/restaurantes/sarajevo/hero.jpg",
-      galeria1: "/restaurantes/sarajevo/galeria1.jpg",
-      galeria2: "/restaurantes/sarajevo/galeria2.jpg",
-      galeria3: "/restaurantes/sarajevo/galeria3.jpg",
-      galeria4: "/restaurantes/sarajevo/galeria4.jpg",
+      galeria1: "/restaurantes/sarajevo/galeria1.JPG",
+      galeria2: "/restaurantes/sarajevo/galeria2.JPG",
+      galeria3: "/restaurantes/sarajevo/galeria3.JPG",
+      galeria4: "/restaurantes/sarajevo/galeria4.JPG",
       plants: [
         "/texturas/planta1.png",
         "/texturas/planta2.png",
@@ -381,39 +381,39 @@ const useStore = create((set) => ({
       descripcion:
         <p>Somos un <span className="text-[#ff0080]">Resto-Bar</span> que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
       hero_image: "/restaurantes/cinemaStereo/hero.jpg",
-      galeria1: "/restaurantes/cinemaStereo/galeria1.JPG",
-      galeria2: "/restaurantes/cinemaStereo/galeria2.JPG",
-      galeria3: "/restaurantes/cinemaStereo/galeria3.JPG",
-      galeria4: "/restaurantes/cinemaStereo/galeria4.JPG",
+      galeria1: "/restaurantes/cinemaStereo/galeria1.jpg",
+      galeria2: "/restaurantes/cinemaStereo/galeria2.jpg",
+      galeria3: "/restaurantes/cinemaStereo/galeria3.jpg",
+      galeria4: "/restaurantes/cinemaStereo/galeria4.jpg",
       platillos_image: "/texturas/brown.jpg",
       platillos: [
         {
-          image: "/restaurantes/cinemaStereo/platillo1.JPG",
+          image: "/restaurantes/cinemaStereo/platillo1.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/cinemaStereo/platillo2.JPG",
+          image: "/restaurantes/cinemaStereo/platillo2.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/cinemaStereo/platillo3.JPG",
+          image: "/restaurantes/cinemaStereo/platillo3.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/cinemaStereo/platillo4.JPG",
+          image: "/restaurantes/cinemaStereo/platillo4.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/cinemaStereo/platillo5.JPG",
+          image: "/restaurantes/cinemaStereo/platillo5.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/cinemaStereo/platillo6.JPG",
+          image: "/restaurantes/cinemaStereo/platillo6.jpg",
           name: "Nombre",
           description: "Descripción"
         },
@@ -473,10 +473,10 @@ const useStore = create((set) => ({
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
       hero_image: "/restaurantes/buhoCafe/hero.jpg",
-      galeria1: "/restaurantes/buhoCafe/galeria1.jpg",
-      galeria2: "/restaurantes/buhoCafe/galeria2.jpg",
-      galeria3: "/restaurantes/buhoCafe/galeria3.jpg",
-      galeria4: "/restaurantes/buhoCafe/galeria4.jpg",
+      galeria1: "/restaurantes/buhoCafe/galeria1.JPG",
+      galeria2: "/restaurantes/buhoCafe/galeria2.JPG",
+      galeria3: "/restaurantes/buhoCafe/galeria3.JPG",
+      galeria4: "/restaurantes/buhoCafe/galeria4.JPG",
       platillos_image: '/texturas/textura_verde.png',
       platillos: [
         {
@@ -565,38 +565,38 @@ const useStore = create((set) => ({
       srcImagen: "logos/MerenderoMadero.svg",
       descripcion: "Descripción",
       hero_image: "/restaurantes/merendero/hero.jpg",
-      galeria1: "/restaurantes/merendero/galeria1.jpg",
-      galeria2: "/restaurantes/merendero/galeria2.jpg",
-      galeria3: "/restaurantes/merendero/galeria3.jpg",
-      galeria4: "/restaurantes/merendero/galeria4.jpg",
+      galeria1: "/restaurantes/merendero/galeria1.JPG",
+      galeria2: "/restaurantes/merendero/galeria2.JPG",
+      galeria3: "/restaurantes/merendero/galeria3.JPG",
+      galeria4: "/restaurantes/merendero/galeria4.JPG",
       platillos: [
         {
-          image: "/restaurantes/merendero/platillo1.JPG",
+          image: "/restaurantes/merendero/platillo1.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/merendero/platillo2.JPG",
+          image: "/restaurantes/merendero/platillo2.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/merendero/platillo3.JPG",
+          image: "/restaurantes/merendero/platillo3.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/merendero/platillo4.JPG",
+          image: "/restaurantes/merendero/platillo4.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/merendero/platillo5.JPG",
+          image: "/restaurantes/merendero/platillo5.jpg",
           name: "Nombre",
           description: "Descripción"
         },
         {
-          image: "/restaurantes/merendero/platillo6.JPG",
+          image: "/restaurantes/merendero/platillo6.jpg",
           name: "Nombre",
           description: "Descripción"
         },

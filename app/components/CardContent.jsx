@@ -11,7 +11,7 @@ const CardContent = ({ logo, imagen, id }) => {
           type={"tienda"}
           className="mt-auto"
           variante={"bordered"}
-          contenido={"Conocer Más"}
+          contenido={"Descubrir"}
           style={"bg-white text-main"}
         />
       </div>

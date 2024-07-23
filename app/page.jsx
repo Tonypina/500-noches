@@ -80,16 +80,16 @@ export default function Home() {
           <div className="md:w-1/2 flex flex-col px-10 ">
             <p className="text-xs md:text-sm text-gold mb-3">Bienvenid@</p>
             <h2 className="text-main text-md md:text-xlg font-bold">
-              Sobre Nosotros <br /> Grupo 500 Noches
+              Sobre<br /> Grupo 500 Noches
             </h2>
             <p className="text-main text-xs md:text-sm mt-4">
-              Nacimos en el 2011 con el único objetivo de tocar tus sentidos a
-              través de nuestros espacios; desde la luz de las velas, el libro
-              que evoca los mejores versos y las canciones que recuerdan
-              momentos especiales, sabores traídos desde el Mediterráneo,
-              jardines que le declaran la paz a la guerra diaria y espacios
-              llenos de detalles para que nos lleves siempre a donde quiera que
-              vayas.
+              Desde 2011, uniendo momentos.
+            </p>
+            <p className="text-main text-xs md:text-sm mt-4">
+              Creemos en las cosas bonitas que podemos disfrutar como la plática, una canción, un café, la compañía e incluso la soledad.
+            </p>
+            <p className="text-main text-xs md:text-sm mt-4">
+              Queremos tocar tus sentidos a través de nuestros espacios; cada detalle es importante, desde la luz de las velas, el libro que evoca los mejores versos y las canciones que recuerdan momentos especiales, sabores traídos desde el Mediterráneo, jardines que le declaran la paz a la guerra diaria y espacios llenos de magia para nunca olvidar lo imprescindible de la vida.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center mt-3 p-5 md:mt-0 md:p-5">
@@ -108,13 +108,11 @@ export default function Home() {
           id="conoce-la-familia"
           className="contianer  md:px-[8rem] min-h-3/4 flex items-center py-20 flex-wrap justify-center px-2 bg-[url(https://rossoft.com.mx/azul-concreto.png)]"
         >
-          <h2 className="text-white text-md md:text-xlg font-semibold text-center">
+          <h2 className="text-white text-md md:text-xlg font-semibold text-center w-full">
             Conoce a la Familia
           </h2>
-          <p className="text-white text-xs md:text-sm mt-4 text-center px-10">
-            En Grupo 500 Noches somos más que solo restaurantes, somos el
-            pretexto bien cuidado para hacer de tus momentos algo digno de
-            recordar y volver a vivir en cada visita.
+          <p className="text-white text-xs md:text-sm mt-4 text-center px-10 w-full">
+            Observa, escucha, celebra, disfruta… encuentra la experiencia que estás buscando.
           </p>
 
           <SwiperMeet />
@@ -127,7 +125,7 @@ export default function Home() {
             <div className=" flex flex-col px-10">
               <p className="text-xs md:text-sm text-gold mb-3">Galería</p>
               <h2 className="text-main text-md md:text-xlg font-bold">
-                Nuestra Galería Especial
+                Nuestra Galería
               </h2>
             </div>
             <p className="text-main text-xs md:text-sm mt-4 px-10 ">
@@ -252,7 +250,7 @@ export default function Home() {
                     <div className="space-y-12">
                       <div className="border-b border-gray-900/10 pb-12">
                         <h2 className="text-main text-md md:text-xlg font-semibold ">
-                          Ponte en contacto con nosotros
+                          Queremos saber de ti
                         </h2>
                         <p className="mt-1 text-xs md:text-sm leading-6 text-second">
                           Utilice una dirección permanente donde pueda recibir

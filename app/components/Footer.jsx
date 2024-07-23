@@ -48,7 +48,7 @@ const Footer = ({ params }) => {
         <div className="mb-4 md:mb-0">
           <h1 className="text-gold">CONTACTO</h1>
           <ul className="mt-3">
-            <li className="mt-1">contacto@contacto.com</li>
+            <li className="mt-1">info@grupo500noches.com.mx</li>
             <li className="mt-1">+52 55 5555 5555</li>
           </ul>
         </div>
