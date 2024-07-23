@@ -6,13 +6,14 @@ import SwiperMeet from "./components/SwiperMeet";
 import Gallery from "./components/Gallery";
 import VisualizadorPDF from "./components/VisualizadorPDF";
 import Link from "next/link";
-import { Formik } from "formik";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Footer from "./components/Footer";
+import axios from 'axios';
 
 export default function Home() {
   return (
     <>
-      <main className=" min-h-screen items-center">
+      <main className=" min-h-screen items- px-2center">
         <section
           id="hero"
           className="min-w-screen md:mx-auto hero pt-12 md:pt-0 min-h-screen flex items-center flex-wrap justify-center px-10 md:px-0 bg-black"
@@ -216,116 +217,102 @@ export default function Home() {
             </div>
             <div className="container justify-center items-center px-20 py-8">
               <Formik
-                initialValues={{ nombre: "", correo: "" }}
+                initialValues={{ nombre: '', apellido: '', correo: '', mensaje: '' }}
                 validate={(values) => {
                   const errors = {};
                   if (!values.correo) {
-                    errors.correo = "Required";
-                  } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                      values.correo
-                    )
-                  ) {
-                    errors.correo = "Invalid email address";
+                    errors.correo = 'Required';
+                  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.correo)) {
+                    errors.correo = 'Dirección de correo inválida';
                   }
                   return errors;
                 }}
-                onSubmit={(values, { setSubmitting }) => {
-                  setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                  }, 400);
+                onSubmit={async (values, { setSubmitting }) => {
+
+                  await axios.post('/api/send', {
+                    nombre: values.nombre,
+                    apellido: values.apellido,
+                    correo: values.correo,
+                    mensaje: values.mensaje,
+                  }).then( res => {
+                    console.log(res);
+                  }).catch( err => {
+                    console.log(err);
+                  })
+                  
+                  setSubmitting(false);
                 }}
               >
-                {({
-                  values,
-                  errors,
-                  touched,
-                  handleChange,
-                  handleBlur,
-                  handleSubmit,
-                  isSubmitting,
-                }) => (
-                  <form onSubmit={handleSubmit}>
+                {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
+                  <Form onSubmit={handleSubmit}>
                     <div className="space-y-12">
                       <div className="border-b border-gray-900/10 pb-12">
                         <h2 className="text-main text-md md:text-xlg font-semibold ">
                           Queremos saber de ti
                         </h2>
                         <p className="mt-1 text-xs md:text-sm leading-6 text-second">
-                          Utilice una dirección permanente donde pueda recibir
-                          correo.
+                          Utilice una dirección permanente donde pueda recibir correo.
                         </p>
 
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                           <div className="sm:col-span-3">
-                            <label
-                              htmlFor="nombre"
-                              className="block text-xs md:text-sm leading-6 text-main"
-                            >
+                            <label htmlFor="nombre" className="block text-xs md:text-sm leading-6 text-main">
                               Nombre
                             </label>
                             <div className="mt-2">
-                              <input
+                              <Field
                                 type="text"
                                 name="nombre"
                                 id="nombre"
                                 autoComplete="given-name"
-                                className="block w-full rounded-md border-0 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
+                                className="block w-full rounded-md border-0 px-2 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
                               />
                             </div>
                           </div>
 
                           <div className="sm:col-span-3">
-                            <label
-                              htmlFor="apellido"
-                              className="block text-xs md:text-sm leading-6 text-main"
-                            >
+                            <label htmlFor="apellido" className="block text-xs md:text-sm leading-6 text-main">
                               Apellido
                             </label>
                             <div className="mt-2">
-                              <input
+                              <Field
                                 type="text"
                                 name="apellido"
                                 id="apellido"
                                 autoComplete="family-name"
-                                className="block w-full rounded-md border-0 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
+                                className="block w-full rounded-md border-0 px-2 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
                               />
                             </div>
                           </div>
 
                           <div className="col-span-full">
-                            <label
-                              htmlFor="correo"
-                              className="block text-xs md:text-sm leading-6 text-main"
-                            >
+                            <label htmlFor="correo" className="block text-xs md:text-sm leading-6 text-main">
                               Correo electrónico
                             </label>
                             <div className="mt-2">
-                              <input
+                              <Field
+                                type="email"
                                 id="correo"
                                 name="correo"
-                                type="correo"
-                                autoComplete="correo"
-                                className="block w-full rounded-md border-0 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
+                                autoComplete="email"
+                                className="block w-full rounded-md border-0 px-2 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
                               />
+                              <ErrorMessage name="correo" component="div" className="text-red-500 text-xs md:text-sm leading-6" />
                             </div>
                           </div>
 
                           <div className="col-span-full">
-                            <label
-                              htmlFor="mensaje"
-                              className="block text-xs md:text-sm leading-6 text-main"
-                            >
+                            <label htmlFor="mensaje" className="block text-xs md:text-sm leading-6 text-main">
                               Mensaje
                             </label>
                             <div className="mt-2">
-                              <textarea
+                              <Field
+                                as="textarea"
                                 id="mensaje"
                                 name="mensaje"
                                 rows="3"
-                                className="block w-full rounded-md border-0 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
-                              ></textarea>
+                                className="block w-full rounded-md border-0 px-2 py-1.5 text-main shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-second sm:text-sm sm:leading-6"
+                              />
                             </div>
                             <p className="mt-3 text-xs md:text-sm leading-6 text-second">
                               Escríbenos un mensaje.
@@ -339,13 +326,15 @@ export default function Home() {
                       <button
                         type="submit"
                         className="rounded-md bg-main px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-second focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-second"
+                        disabled={isSubmitting}
                       >
                         Enviar
                       </button>
                     </div>
-                  </form>
+                  </Form>
                 )}
               </Formik>
+
             </div>
           </div>
         </section>
