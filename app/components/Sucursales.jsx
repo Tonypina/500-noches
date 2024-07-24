@@ -3,8 +3,9 @@ import useStore from "./store";
 import backImageReserv from "../../public/texturas/reservarFondo.png";
 import Menu from "./Menu";
 import OpenTableWidget from "./OpenTableWidget"
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Sucursales = () => {
@@ -172,9 +173,10 @@ const Sucursales = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <Linkedin
-                            size={24}
-                            absoluteStrokeWidth={true}
+                          <Image 
+                            src={"/logos/tik-tok.png"} 
+                            width={24} 
+                            height={24}
                             className="duration-300 hover:scale-110"
                           />
                         </Link>
