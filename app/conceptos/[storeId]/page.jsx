@@ -61,16 +61,18 @@ const Store = ({ params }) => {
         <PlatillosPrincipales />
         <Sucursales />
         <div className="mt-5 h-fit relative">
-          <div className="h-full absolute overflow-hidden">
+          <div className="h-full w-full absolute overflow-hidden">
             {selectedStore.comentarios_image === "/texturas/195.jpg" && 
               <div className="h-full w-full bg-black opacity-30 absolute z-10"></div>
             }
             {selectedStore.border_img && (
-              <div className="w-full absolute">
+              <div className="w-screen absolute">
                 <img className="w-full h-28" src={selectedStore.border_img} alt="" />
               </div>
             )}
-            <img src={selectedStore.comentarios_image} alt="Fondo de comentarios" />
+            <div className="w-screen">
+              <img className="w-full" src={selectedStore.comentarios_image} alt="Fondo de comentarios" />
+            </div>
           </div>
           <div className="z-10 relative py-20">
             <p className="text-center text-xs md:text-sm text-gold">Reseñas</p>

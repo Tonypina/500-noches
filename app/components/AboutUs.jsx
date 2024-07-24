@@ -9,7 +9,7 @@ const AboutUs = () => {
         <>
           <div className="hidden md:block relative">
             <img className="absolute -start-64 translate-y-28 scale-75 rotate-45" src={selectedStore.plants[0]} alt="plant1.png" />
-            <img className="absolute -right-10 -top-[4.40rem]  scale-80" src={selectedStore.plants[1]} alt="plant1.png" />
+            <img className="absolute -right-10 -top-[3.75rem]  scale-80" src={selectedStore.plants[1]} alt="plant1.png" />
           </div>
         </>
       )}
