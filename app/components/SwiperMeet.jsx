@@ -97,7 +97,7 @@ const SwiperMeet = () => {
             id={"san-juan-lenero"}
             imagen={
               <Image
-                src={"/restaurantes/sanJuanLenero/mesa.png"}
+                src={"/restaurantes/sanJuanLenero/hero.jpg"}
                 width={270}
                 height={250}
                 alt="logo San Juan Leñero"
@@ -119,7 +119,7 @@ const SwiperMeet = () => {
             id={"cinema-stereo"}
             imagen={
               <Image
-                src={"/restaurantes/cinema-stereo/foto.png"}
+                src={"/restaurantes/cinemaStereo/hero.jpg"}
                 width={270}
                 height={250}
                 alt="Imagen Cinema Stereo"
@@ -141,7 +141,7 @@ const SwiperMeet = () => {
             id={"historico-cafe-tostador"}
             imagen={
               <Image
-                src={"/restaurantes/historico/foto.png"}
+                src={"/restaurantes/historico/hero.jpg"}
                 width={270}
                 height={250}
                 alt="Imagen Histórico Tostador"
@@ -163,10 +163,10 @@ const SwiperMeet = () => {
             id={"buho-cafe"}
             imagen={
               <Image
-                src={"/restaurantes/buho-cafe/galeria2.JPG"}
+                src={"/restaurantes/buhoCafe/galeria2.JPG"}
                 width={270}
                 height={250}
-                alt="logo San Juan Leñero"
+                alt="logo Buho Cafe"
               />
             }
             logo={
@@ -174,7 +174,7 @@ const SwiperMeet = () => {
                 src="/logos/BuhoCafe.svg"
                 width={150}
                 height={100}
-                alt="logo la nación del taco"
+                alt="logo la Buho Cafe"
               />
             }
           />
@@ -186,10 +186,10 @@ const SwiperMeet = () => {
             id={"merendero-madero"}
             imagen={
               <Image
-                src={"/restaurantes/merendero/espacioMerenderoMadero.png"}
+                src={"/restaurantes/merendero/galeria3.JPG"}
                 width={270}
                 height={250}
-                alt="logo San Juan Leñero"
+                alt="logo Merendero Madero"
               />
             }
             logo={
