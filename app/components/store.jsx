@@ -12,7 +12,7 @@ const useStore = create((set) => ({
         2: "text-red",
         3: "text-gold",
       },
-      srcImagen: "logos/500Noches.svg",
+      srcImagen: "/logos/500Noches.svg",
       descripcion:
         <p>Un lugar dedicado a los encuentros, al tiempo y a la platica. Un lugar que a través del la música en vivo, la decoración, la gastronomía, el café, el vino y el ambiente, creamos momentos contigo, <span className="text-gold">Café Bar 500 Noches</span> está dedicado para ti.</p>,
       hero_image: "/restaurantes/500Noches/hero.jpg",
@@ -173,7 +173,7 @@ const useStore = create((set) => ({
         2: "text-[#D45D52]",
         3: "text-[#849072]",
       },
-      srcImagen: "logos/Sarajevo_blanco.svg",
+      srcImagen: "/logos/Sarajevo_blanco.svg",
       descripcion:
         "Sarajevo nace con la idea de crear un espacio de tranquilidad, un lugar pensado para disfrutar de un ambiente relajado, alejándose un poco del centro y del bullicio, busca crear una atmósfera que, entre su vegetación, la luminosidad y los espacios, te puedas transportar a otro rincón.",
       hero_image: "/restaurantes/sarajevo/hero.jpg",
@@ -270,7 +270,7 @@ const useStore = create((set) => ({
         2: "text-red",
         3: "text-gold",
       },
-      srcImagen: "logos/SanJuanLeneroBlanco.svg",
+      srcImagen: "/logos/SanJuanLeneroBlanco.svg",
       descripcion:
         <p>En nuestro idioma habitan sílabas <span className="text-red">volcánicas</span> que, cuando se desprenden de nuestra boca, pueden provocar <span className="text-red">pasiones</span> incontrolables para el viento… Y en nuestra cocina hay ingredientes que abrazan tan fuerte que nos hacen <span className="text-red">sentir</span> que los corazones alrededor de la mesa laten al mismo tiempo.</p>,
       hero_image: "/restaurantes/sanJuanLenero/hero.jpg",
@@ -377,7 +377,7 @@ const useStore = create((set) => ({
         2: "text-gold",
         3: "text-main",
       },
-      srcImagen: "logos/CinemaStereo.svg",
+      srcImagen: "/logos/CinemaStereo.svg",
       descripcion:
         <p>Somos un <span className="text-[#ff0080]">Resto-Bar</span> que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
       hero_image: "/restaurantes/cinemaStereo/hero.jpg",
@@ -469,7 +469,7 @@ const useStore = create((set) => ({
         2: "text-[#D45D52]",
         3: "text-[#849072]",
       },
-      srcImagen: "logos/BuhoCafe.svg",
+      srcImagen: "/logos/BuhoCafe.svg",
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
       hero_image: "/restaurantes/buhoCafe/hero.jpg",
@@ -562,7 +562,7 @@ const useStore = create((set) => ({
         2: "text-[#D45D52]",
         3: "text-[#849072]",
       },
-      srcImagen: "logos/MerenderoMadero.svg",
+      srcImagen: "/logos/MerenderoMadero.svg",
       descripcion: "Descripción",
       hero_image: "/restaurantes/merendero/hero.jpg",
       galeria1: "/restaurantes/merendero/galeria1.JPG",

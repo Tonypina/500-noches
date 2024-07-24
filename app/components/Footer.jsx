@@ -56,15 +56,15 @@ const Footer = ({ params }) => {
           <h1 className="text-gold">CONCEPTOS</h1>
           <div className="grid grid-cols-2 gap-2 mt-3">
             <ul>
-              <li className="mt-1"><a href="/cafe-500-noches">Café Bar 500 Noches</a></li>
-              <li className="mt-1"><a href="/sarajevo">Sarajevo Café Jardín</a></li>
-              <li className="mt-1"><a href="/san-juan-lenero">San Juan Leñero</a></li>
-              <li className="mt-1"><a href="/cinema-stereo">Cinema Stereo</a></li>
+              <li className="mt-1"><a href="/conceptos/cafe-500-noches">Café Bar 500 Noches</a></li>
+              <li className="mt-1"><a href="/conceptos/sarajevo">Sarajevo Café Jardín</a></li>
+              <li className="mt-1"><a href="/conceptos/san-juan-lenero">San Juan Leñero</a></li>
+              <li className="mt-1"><a href="/conceptos/cinema-stereo">Cinema Stereo</a></li>
             </ul>
             <ul>
               <li className="mt-1"><a href="https://www.facebook.com/eltostadorcafe/" target="_blank">Histórico Café Tostador</a></li>
-              <li className="mt-1"><a href="/buho-cafe">Búho Café</a></li>
-              <li className="mt-1"><a href="/merendero-madero">Merendero Madero</a></li>
+              <li className="mt-1"><a href="/conceptos/buho-cafe">Búho Café</a></li>
+              <li className="mt-1"><a href="/conceptos/merendero-madero">Merendero Madero</a></li>
             </ul>
           </div>
         </div>

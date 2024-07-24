@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import Eslogan from "../components/Eslogan";
-import AboutUs from "../components/AboutUs";
-import useStore from "../components/store";
+import Eslogan from "../../components/Eslogan";
+import AboutUs from "../../components/AboutUs";
+import useStore from "../../components/store";
 import React, { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import PlatillosPrincipales from "../components/PlatillosPrincipales";
-import Sucursales from "../components/Sucursales";
-import ReviewCard from "../components/ReviewCard";
-import Footer from "../components/Footer";
+import Loading from "../../components/Loading";
+import PlatillosPrincipales from "../../components/PlatillosPrincipales";
+import Sucursales from "../../components/Sucursales";
+import ReviewCard from "../../components/ReviewCard";
+import Footer from "../../components/Footer";
 
 const Store = ({ params }) => {
   const { selectedStore, setSelectedStore } = useStore();

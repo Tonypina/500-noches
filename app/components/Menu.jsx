@@ -5,11 +5,11 @@ const Menu = ({ folderPath }) => {
     return (
         <div className="my-10 w-5/6" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
             <ul>
-                {files.map((file, index) => (
-                <li key={index}>
-                    <img className="w-full" src={file} alt={`Image ${index}`} />
-                </li>
-                ))}
+                {files.map((file, index) => {
+                    return <li key={index}>
+                        <img className="w-full" src={file} alt={``} />
+                    </li>
+                })}
             </ul>
         </div>
     );

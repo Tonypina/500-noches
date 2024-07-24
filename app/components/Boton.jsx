@@ -16,7 +16,7 @@ const Boton = ({ contenido, style, sectionId, type, variante, storeId }) => {
 
   const redirectStore = () => {
     setSelectedStore(storeId);
-    router.push(`/${storeId}`);
+    router.push(`/conceptos/${storeId}`);
   };
 
   const handleClick =

@@ -70,19 +70,19 @@ const Navbar = () => {
   const restaurants = [
     {
       name: "Café Bar 500 Noches",
-      link: "/cafe-500-noches"
+      link: "/conceptos/cafe-500-noches"
     },
     {
       name: "Sarajevo Café Jardín",
-      link: "/sarajevo"
+      link: "/conceptos/sarajevo"
     },
     {
       name: "San Juan Leñero",
-      link: "/san-juan-lenero"
+      link: "/conceptos/san-juan-lenero"
     },
     {
       name: "Cinema Stereo",
-      link: "/cinema-stereo"
+      link: "/conceptos/cinema-stereo"
     },
     {
       name: "Histórico Café Tostador",
@@ -90,11 +90,11 @@ const Navbar = () => {
     },
     {
       name: "Buho Café",
-      link: "/buho-cafe"
+      link: "/conceptos/buho-cafe"
     },
     {
       name: "Merendero Madero",
-      link: "/merendero-madero"
+      link: "/conceptos/merendero-madero"
     },
   ]
 
