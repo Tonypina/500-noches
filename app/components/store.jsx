@@ -472,12 +472,16 @@ const useStore = create((set) => ({
       srcImagen: "/logos/BuhoCafe.svg",
       descripcion:
         "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
+      buho: [
+        "/texturas/buho.png",
+        "/texturas/nube.png",
+      ],
       hero_image: "/restaurantes/buhoCafe/hero.jpg",
       galeria1: "/restaurantes/buhoCafe/galeria1.JPG",
       galeria2: "/restaurantes/buhoCafe/galeria2.JPG",
       galeria3: "/restaurantes/buhoCafe/galeria3.JPG",
       galeria4: "/restaurantes/buhoCafe/galeria4.JPG",
-      platillos_image: '/texturas/textura_verde.png',
+      platillos_image: '/texturas/azul.jpg',
       platillos: [
         {
           image: "/restaurantes/buhoCafe/platillo1.JPG",

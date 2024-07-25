@@ -9,7 +9,17 @@ const AboutUs = () => {
         <>
           <div className="hidden md:block relative">
             <img className="absolute -start-64 translate-y-28 scale-75 rotate-45" src={selectedStore.plants[0]} alt="plant1.png" />
-            <img className="absolute -right-10 -top-[3.75rem]  scale-80" src={selectedStore.plants[1]} alt="plant1.png" />
+            <img className="absolute -right-10 -top-[3.75rem]  scale-80" src={selectedStore.plants[1]} alt="plant2.png" />
+          </div>
+        </>
+      )}
+      {selectedStore.buho && (
+        <>
+          <div className="hidden md:block relative">
+            <img className="absolute -left-52 -translate-y-10 scale-[0.65]" src={selectedStore.buho[0]} alt="buho1.png" />
+            <img className="absolute -right-2 top-5" src={selectedStore.buho[1]} alt="buho2.png" />
+            <img className="absolute -left-16 translate-y-[45vh]" src={selectedStore.buho[1]} alt="buho3.png" />
+            <img className="absolute translate-x-[40vw] translate-y-[65vh]" src={selectedStore.buho[1]} alt="buho3.png" />
           </div>
         </>
       )}
