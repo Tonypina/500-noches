@@ -75,20 +75,11 @@ const Sucursales = () => {
               aria-labelledby={`${tab.id}-tab`}
             >
               {/* Contenido de la pestaña */}
-              <div className={`md:px-[2rem] min-h-3/4 flex flex-col md:flex-row items-center py-10`}>
-                <div className="w-full md:flex md:flex-col bg-gray-50 px-5">
+              <div className={`md:px-[2rem] min-h-3/4 flex flex-col items-center py-10`}>
+                <div className="w-full justify-center flex bg-gray-50 px-5 md:pb-10">
                   <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-bold`}>
-                    ¿<span className={`${selectedStore.colors[2]}`}>DONDE</span> NOS UBICAMOS?
+                    ¿<span className={`${selectedStore.colors[2]}`}>DÓNDE</span> NOS UBICAMOS?
                   </h2>
-                  <p className="text-xs md:text-sm mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                    mollitia ullam iste numquam error voluptatem labore debitis
-                    aut hic perspiciatis, qui similique in sunt facere
-                    voluptates laboriosam cum repellendus pariatur dicta modi
-                    doloremque. Pariatur alias minima officiis tempora
-                    veritatis, quo ipsa aut sit suscipit inventore nisi animi
-                    quisquam dolores at.
-                  </p>
                 </div>
                 <div className="w-full flex justify-center mt-3 md:mt-0 px-5">
                   <div className={`${selectedStore.tabs_style.map_border} text-center container w-full`}>
@@ -107,12 +98,8 @@ const Sucursales = () => {
               {/* Menú */}
               <div>
                 <h2 className={`${selectedStore.titleFont} text-md md:text-xlg font-semibold text-center`}>
-                  CONOCE NUESTRO <span className={`${selectedStore.colors[2]}`}>MENU</span>
+                  CONOCE NUESTRO <span className={`${selectedStore.colors[2]}`}>MENÚ</span>
                 </h2>
-                <p className="text-xs md:text-sm mt-4 text-center px-10">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Illum, repudiandae.
-                </p>
               </div>
               <div className="flex items-center justify-center  px-8">
                 <Menu folderPath={selectedStore.menuSrc + "/" + tab.id}/>

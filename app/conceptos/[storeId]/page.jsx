@@ -79,11 +79,6 @@ const Store = ({ params }) => {
             <h2 className={`${selectedStore.titleFont} ${selectedStore.comentarios_image === "/texturas/195.jpg" ? "text-gold" : ""} text-md md:text-xlg font-semibold text-center`}>
               ¿QUE DICEN LAS <span className={`${selectedStore.colors[2]}`}>PERSONAS</span> SOBRE <span className={`${selectedStore.colors[3]}`}>NOSOTROS</span>?
             </h2>
-            <p className={`${selectedStore.comentarios_image === "/texturas/195.jpg" ? "text-white" : ""} text-xs md:text-sm mt-4 text-center px-10`}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et mollitia
-              ullam iste numquam error voluptatem labore debitis aut hic
-              perspiciatis,
-            </p>
             <div className="flex flex-wrap justify-center">
               <ReviewCard
                 tienda={selectedStore.name}
