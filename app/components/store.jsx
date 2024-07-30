@@ -248,7 +248,7 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "jardin",
-          label: "San Cristobal de las Casas",
+          label: "San Cristóbal de las Casas",
           content: "Contenido de la pestaña jardín",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.752863787192!2d-92.63577262510644!3d16.739178484041627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed45acbb7c6a41%3A0x10c6b24b0b114b27!2sSarajevo%20Caf%C3%A9%20Jardin!5e0!3m2!1ses-419!2smx!4v1699635971935!5m2!1ses-419!2smx",
           direction: "Flavio A. Paniagua 32, Barrio de Guadalupe, 29230 San Cristóbal de las Casas, Chiapas",
@@ -466,7 +466,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "/logos/BuhoCafe.svg",
       descripcion:
-        "Pasa grandes momentos de diversión en familia o con amigos en nuestros espacios mientras disfrutas de nuestro menú, juegos de mesa,  churrería y para los más pequeños del hogar nuestra área especialmente pensado en ellos.",
+        "Búho Café es un espacio dirigido a la familia, pensado principalmente para que los niños tuvieran un espacio donde jugar, convivir, divertirse y disfrutar. Pensando en crear un espacio sencillo, agradable y cómodo, Búho también propone que tanto los papás como la familia puedan convivir, ya sea desde una pizza, unos churros o uno de los tantos juegos de mesa.",
       buho: [
         "/texturas/buho.png",
         "/texturas/nube.png",
@@ -508,7 +508,7 @@ const useStore = create((set) => ({
       tabs: [
         {
           id: "san-cristobal",
-          label: "San Cristobal de las Casas",
+          label: "San Cristóbal de las Casas",
           content: "Contenido de la pestaña san cristobal",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.8345465859634!2d-92.64992012484971!3d16.735105284045108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed456f9e165f59%3A0x80abd43d8bdbc66e!2zQsO6aG8gQ2Fmw6k!5e0!3m2!1ses-419!2smx!4v1711592307036!5m2!1ses-419!2smx",
           direction: "Prolongacion Baja California #1, Col. San Ramón.",

@@ -4,7 +4,7 @@ import useStore from "./store";
 const AboutUs = () => {
   const { selectedStore } = useStore();
   return (
-    <section className="contianer">
+    <section className="contianer overflow-hidden">
       {selectedStore.plants && (
         <>
           <div className="hidden md:block relative">
