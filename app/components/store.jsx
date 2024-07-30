@@ -38,13 +38,13 @@ const useStore = create((set) => ({
         },
         {
           image: "/restaurantes/500Noches/platillo4.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tapas",
+          description: ""
         },
         {
           image: "/restaurantes/500Noches/platillo5.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Ensalada Leonora",
+          description: "Mix de lechugas, queso de cabra, nuez, arándanos, vinagreta de durazno y galleta de parmesano."
         },
       ],
       platillos_image: '/texturas/papel.jpg',
@@ -151,7 +151,7 @@ const useStore = create((set) => ({
         },
         {
           id: "san-cristobal",
-          label: "San Cristóbalde las Casas",
+          label: "San Cristóbal de las Casas",
           content: "Contenido de la pestaña San Cristobal",
           map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.823999416794!2d-92.64064922510654!3d16.73563128404464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed453e0f6924ab%3A0x50da7bd0198ab1dc!2sCaf%C3%A9%20Bar%20500%20Noches!5e0!3m2!1ses-419!2smx!4v1699635663638!5m2!1ses-419!2smx",
           direction: "Andador Miguel Hidalgo 6D, Zona Centro, 29200. San Cristóbal de las Casas, Chiapas",
@@ -203,18 +203,18 @@ const useStore = create((set) => ({
         },
         {
           image: "/restaurantes/sarajevo/platillo4.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tiradito de Chicharrón",
+          description: "Trozos crujientes de pork belly con ensalada de jitomate."
         },
         {
           image: "/restaurantes/sarajevo/platillo5.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Cazuela de Huevos",
+          description: "Huevos estrellados sobre guiso de papas, chile poblano, pimientos asados y nopales."
         },
         {
           image: "/restaurantes/sarajevo/platillo6.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Lasagna Blanca",
+          description: "Capas de pasta con guiso cremoso de pollo, verduras y hierbas, con queso gratinado. acompañada con ensalada verde y vinagreta de balsámico."
         },
       ],
       platillos_image: '/texturas/tablones.jpg',
@@ -297,18 +297,18 @@ const useStore = create((set) => ({
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo4.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Ensalada Capresse",
+          description: "DescripciónBouquet de hojas, albahaca italiana, mozzarella fresca, tomates aliñados con vinagre de Módena y aceite de albahaca."
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo5.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tabla de Quesos",
+          description: "Selección de quesos importados, compota de temporada, frutos y pan."
         },
         {
           image: "/restaurantes/sanJuanLenero/platillo6.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Cortes a la Parrilla",
+          description: ""
         },
       ],
       tabs_style: {
@@ -389,33 +389,28 @@ const useStore = create((set) => ({
       platillos: [
         {
           image: "/restaurantes/cinemaStereo/platillo1.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Menphis",
+          description: "Pan artesanal con carne de res, queso americano, lechuga y jitomate."
         },
         {
           image: "/restaurantes/cinemaStereo/platillo2.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tabla de Quesos y Carnes Frías",
+          description: "Selección de quesos y carnes frías, pan, frutas y aderezos."
         },
         {
           image: "/restaurantes/cinemaStereo/platillo3.jpg",
-          name: "Nombre",
-          description: "Descripción"
-        },
-        {
-          image: "/restaurantes/cinemaStereo/platillo4.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Bagel Jack",
+          description: "Panecillo con forma de rosca relleno con jamón serrano acompañado de una ensalada de lechuga, tomate cherry, aceituna, nuez, espinaca y vinagreta."
         },
         {
           image: "/restaurantes/cinemaStereo/platillo5.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Napolitana",
+          description: "300 gr. de carne de res empanizada con salsa pomodoro gratinada con papas a la francesa y ensalada."
         },
         {
           image: "/restaurantes/cinemaStereo/platillo6.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Bjork",
+          description: "Queso mozzarella, pepperoni."
         },
       ],
       tabs_style: {
@@ -500,18 +495,13 @@ const useStore = create((set) => ({
         },
         {
           image: "/restaurantes/buhoCafe/platillo4.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Quesadillas",
+          description: "Deliciosa tortilla de maíz con queso Oaxaca, acompañada de escabeche de verduras."
         },
         {
           image: "/restaurantes/buhoCafe/platillo5.JPG",
-          name: "Nombre",
-          description: "Descripción"
-        },
-        {
-          image: "/restaurantes/buhoCafe/platillo6.JPG",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Torta de Chilaquiles",
+          description: "Con huevo"
         },
       ],
       menuSrc: "/restaurantes/buhoCafe/menus",
@@ -575,34 +565,29 @@ const useStore = create((set) => ({
       galeria4: "/restaurantes/merendero/galeria4.JPG",
       platillos: [
         {
-          image: "/restaurantes/merendero/platillo1.jpg",
-          name: "Nombre",
-          description: "Descripción"
-        },
-        {
           image: "/restaurantes/merendero/platillo2.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Margarita Fresa",
+          description: ""
         },
         {
           image: "/restaurantes/merendero/platillo3.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Margarita Mango",
+          description: ""
         },
         {
           image: "/restaurantes/merendero/platillo4.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Nachos Merendero",
+          description: "Orden de totopos acompañados con queso cheddar, queso gratinado, carne molida, pico de gallo y jalapeños."
         },
         {
           image: "/restaurantes/merendero/platillo5.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Tostada de Pierna",
+          description: ""
         },
         {
           image: "/restaurantes/merendero/platillo6.jpg",
-          name: "Nombre",
-          description: "Descripción"
+          name: "Aguachile Tropic",
+          description: "Camarón reposado en limón con pepino, cebolla, cilantro, chile, mango y jícama."
         },
       ],
       platillos_image: '/texturas/papel.jpg',
