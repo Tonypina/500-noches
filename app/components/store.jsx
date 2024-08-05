@@ -371,7 +371,7 @@ const useStore = create((set) => ({
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: <p className="font-montserrat">Cinema Stereo</p>,
-      eslogan: <p className="font-georgia">La <span className="text-[#ff0080] text-xlg">magia</span> del sonido comienza <span className="text-[#ff0080] text-xlg">aquí</span></p>,
+      eslogan:       <p>Un tributo a la <span className="text-[#ff0080]">música</span> , una atmósfera donde vivirás experiencias que <span className="text-[#ff0080]">estimularán</span> todos tus sentidos.</p>,
       colors: {
         1: "text-black",
         2: "text-gold",
@@ -379,7 +379,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "/logos/CinemaStereo.svg",
       descripcion:
-        <p>Somos un <span className="text-[#ff0080]">Resto-Bar</span> que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
+        <p>Somos un  que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
       hero_image: "/restaurantes/cinemaStereo/hero.jpg",
       galeria1: "/restaurantes/cinemaStereo/galeria1.jpg",
       galeria2: "/restaurantes/cinemaStereo/galeria2.jpg",
@@ -458,15 +458,15 @@ const useStore = create((set) => ({
       titleFont: "font-black-coffee",
       textFont: "font-roboto",
       name: "Búho Café",
-      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      eslogan: <p>Creamos un <span className="font-black-coffee text-xlg text-[#92C2D6]">ambiente relajado</span> para toda la familia.</p>,
       colors: {
         1: "text-black",
         2: "text-[#D45D52]",
         3: "text-[#849072]",
       },
-      srcImagen: "/logos/BuhoCafe.svg",
+      srcImagen: "/logos/BuhoCafeBlanco.svg",
       descripcion:
-        "Búho Café es un espacio dirigido a la familia, pensado principalmente para que los niños tuvieran un espacio donde jugar, convivir, divertirse y disfrutar. Pensando en crear un espacio sencillo, agradable y cómodo, Búho también propone que tanto los papás como la familia puedan convivir, ya sea desde una pizza, unos churros o uno de los tantos juegos de mesa.",
+        <p><span className="font-black-coffee text-[#92C2D6]">Búho Café</span> es un espacio dirigido a la familia, pensado principalmente para que los <span className="font-black-coffee text-[#92C2D6]">niños</span> tuvieran un espacio donde jugar, convivir, divertirse y disfrutar. Pensando en crear un espacio sencillo, agradable y cómodo, Búho también propone que tanto los papás como la <span className="font-black-coffee text-[#92C2D6]">familia</span> puedan convivir, ya sea desde una pizza, unos churros o uno de los tantos juegos de mesa.</p>,
       buho: [
         "/texturas/buho.png",
         "/texturas/nube.png",
@@ -550,10 +550,10 @@ const useStore = create((set) => ({
       titleFont: "font-black-burger",
       textFont: "font-helvetica",
       name: "Merendero Madero",
-      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      eslogan: <p>Dedicado a la <span className="text-[#C98921]">tradición</span> y a al gente, un punto de <span className="text-[#C98921]">reunión</span> para todos los gustos.</p>,
       colors: {
         1: "text-black",
-        2: "text-[#D45D52]",
+        2: "text-[#C98921]",
         3: "text-[#849072]",
       },
       srcImagen: "/logos/MerenderoMadero.svg",
