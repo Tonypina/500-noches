@@ -149,7 +149,7 @@ const SwiperMeet = () => {
             }
             logo={
               <Image
-                src="/logos/HistoricoTostador.svg"
+                src="/logos/HistoricoNegro.svg"
                 width={100}
                 height={100}
                 alt="Logo Historico Tostador"
