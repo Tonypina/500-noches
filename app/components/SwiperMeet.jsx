@@ -141,7 +141,7 @@ const SwiperMeet = () => {
             id={"historico-cafe-tostador"}
             imagen={
               <Image
-                src={"/restaurantes/historico/hero.jpg"}
+                src={"/logos/HistoricoIcono.svg"}
                 width={270}
                 height={250}
                 alt="Imagen Histórico Tostador"
