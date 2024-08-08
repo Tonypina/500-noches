@@ -167,7 +167,7 @@ const useStore = create((set) => ({
       titleFont: "font-adam",
       textFont: "font-montserrat",
       name: <p className="tracking-widest">SARAJEVO CAFE JARDIN</p>,
-      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Deja que Fluya</span> la armonía y el latir <span className="font-bridge text-xlg text-[#D45D52]">de las sensaciones</span> en Sarajevo</p>,
+      eslogan: <p><span className="font-bridge text-xlg text-[#D45D52]">Fluye</span> con la <span className="font-bridge text-xlg text-[#D45D52]">armonía</span> del espacio</p>,
       colors: {
         1: "text-black",
         2: "text-[#D45D52]",
@@ -264,7 +264,7 @@ const useStore = create((set) => ({
       titleFont: "font-georgia",
       textFont: "font-raleway",
       name: <p className="font-bridge">San Juan Leñero</p>,
-      eslogan: <p className="font-georgia">Palabras que <span className="text-gold text-xlg">abrazan</span> y sabores que <span className="text-gold text-xlg">recuerdan</span></p>,
+      eslogan: <p className="font-georgia">Influenciados por la cocina <span className="text-gold text-xlg">mediterranea</span></p>,
       colors: {
         1: "text-black",
         2: "text-red",
@@ -371,7 +371,7 @@ const useStore = create((set) => ({
       titleFont: "font-montserrat",
       textFont: "font-news-goth",
       name: <p className="font-montserrat">Cinema Stereo</p>,
-      eslogan:       <p>Un tributo a la <span className="text-[#ff0080]">música</span> , una atmósfera donde vivirás experiencias que <span className="text-[#ff0080]">estimularán</span> todos tus sentidos.</p>,
+      eslogan: <p>Un tributo a la <span className="text-[#ff0080]">música</span> , una atmósfera donde vivirás experiencias que <span className="text-[#ff0080]">estimularán</span> todos tus sentidos.</p>,
       colors: {
         1: "text-black",
         2: "text-gold",
@@ -557,7 +557,7 @@ const useStore = create((set) => ({
         3: "text-[#849072]",
       },
       srcImagen: "/logos/MerenderoMadero.svg",
-      descripcion: "Descripción",
+      descripcion: <p>Un espacio de diversión, de colores, de amigos, de reuniones, un luagr para la familia y para hacer de él, una tradición. Un espacio que, a través de la sencillez y las costumbres que nos emanan, busca ser un sitio de encuentro para todo tipo de persona.</p>,
       hero_image: "/restaurantes/merendero/hero.jpg",
       galeria1: "/restaurantes/merendero/galeria1.JPG",
       galeria2: "/restaurantes/merendero/galeria2.JPG",

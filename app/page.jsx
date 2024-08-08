@@ -44,17 +44,8 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 flex flex-col items-center justify-center z-10">
             <div className="text-white text-center content-center	justify-center md:px-10 md:pr-20">
-              <p className="text-sm md:text-lg ">
-                En cada Rincón, en cada plato
-              </p>
-              <p className="text-md md:text-xlg mt-4 font-bold">
-                Explora un mundo de sabores y<br />
-                Experiencias únicas
-              </p>
-              <p className="text-sm md:text-lg mt-4">
-                Cada bocado es un paso hacia la exploración
-                <br />
-                de lo desconocido
+              <p className="text-md md:text-xlg mt-4">
+                Cuidamos cada detalle para que tu <span className="font-bold">experiencia</span> sea un momento <span className="font-bold">inolvidable</span>.
               </p>
             </div>
             <Boton
