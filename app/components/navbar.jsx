@@ -86,7 +86,7 @@ const Navbar = () => {
     },
     {
       name: "Histórico Café Tostador",
-      link: "https://www.facebook.com/eltostadorcafe/"
+      link: "https://www.instagram.com/historicocafetostador/?hl=es"
     },
     {
       name: "Buho Café",

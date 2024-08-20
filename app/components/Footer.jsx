@@ -62,7 +62,7 @@ const Footer = ({ params }) => {
               <li className="mt-1"><a href="/conceptos/cinema-stereo">Cinema Stereo</a></li>
             </ul>
             <ul>
-              <li className="mt-1"><a href="https://www.facebook.com/eltostadorcafe/" target="_blank">Histórico Café Tostador</a></li>
+              <li className="mt-1"><a href="https://www.instagram.com/historicocafetostador/?hl=es" target="_blank">Histórico Café Tostador</a></li>
               <li className="mt-1"><a href="/conceptos/buho-cafe">Búho Café</a></li>
               <li className="mt-1"><a href="/conceptos/merendero-madero">Merendero Madero</a></li>
             </ul>

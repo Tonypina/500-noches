@@ -379,7 +379,7 @@ const useStore = create((set) => ({
       },
       srcImagen: "/logos/CinemaStereo.svg",
       descripcion:
-        <p>Somos un  que le rinde tributo a la música, una atmósfera y ambiente relajado donde vivirás experiencias que <span className="text-gold">estimularán</span> todos tus sentidos.</p>,
+        <p>Cinema Stereo, es un espacio que celebra a la música, es un homenaje a las historias hechas películas, a los sucesos que nos han marcado, es un homenaje a esta generación: 80's, 90's y 00's.</p>,
       hero_image: "/restaurantes/cinemaStereo/hero.jpg",
       galeria1: "/restaurantes/cinemaStereo/galeria1.jpg",
       galeria2: "/restaurantes/cinemaStereo/galeria2.jpg",
